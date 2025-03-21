@@ -1,4 +1,3 @@
-import { AuthenticationInterceptor, AuthenticationModule } from '@albert/authentication';
 import { registerLocaleData } from '@angular/common';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import localePt from '@angular/common/locales/pt';
@@ -12,7 +11,8 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { GlobalHttpErrorService } from './core/service/global-http-error.service';
 import { LoaderAsyncModule, LoaderInterceptor } from '@albert/ui';
-
+import { AuthModule } from './core/auth/auth.module';
+import { AuthInterceptor } from './core/auth/auth.interceptor';
 
 registerLocaleData(localePt, environment.defaultLanguage);
 
@@ -35,17 +35,18 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    AuthenticationModule,
+    AuthModule,
     CoreModule,
     LoaderAsyncModule,
   ],
   providers: [
     {
-      provide: LOCALE_ID, useValue: environment.defaultLanguage
+      provide: LOCALE_ID,
+      useValue: environment.defaultLanguage
     },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: AuthenticationInterceptor,
+      useClass: AuthInterceptor,
       multi: true
     },
     {

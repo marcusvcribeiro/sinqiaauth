@@ -11,8 +11,6 @@ import { Config } from './config';
 })
 export class AppComponent implements AfterViewInit {
 
-  executarlogout: boolean = false;
-  
   constructor(
     private _compiler: Compiler,
     private translateService: TranslateService,
@@ -27,17 +25,12 @@ export class AppComponent implements AfterViewInit {
     this.translateService.setDefaultLang(environment.defaultLanguage);
   }
 
-
-  @HostListener('window:beforeunload',['$event'])
-  beforeUnloadHander($event){
-  if(this.authService.isAuthenticated){
-      localStorage.setItem('redirectUserLogout','true');
-      this.executarlogout = true;
-  }  
-    else{
-      this.executarlogout = false;
+  @HostListener('window:beforeunload', ['$event'])
+  beforeUnloadHandler($event) {
+    if (this.authService.isAuthenticated) {
+      localStorage.setItem('lastAuthState', 'authenticated');
+    } else {
+      localStorage.setItem('lastAuthState', 'unauthenticated');
     }
-    return; 
-  } 
-  
+  }
 }

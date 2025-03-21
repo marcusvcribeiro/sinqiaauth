@@ -1,7 +1,7 @@
 import { Injectable, OnDestroy } from '@angular/core';
 import { OidcSecurityService } from 'angular-auth-oidc-client';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, timer } from 'rxjs';
+import { takeUntil, filter } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService implements OnDestroy {
@@ -9,11 +9,15 @@ export class AuthenticationService implements OnDestroy {
   private _isAuthenticated: boolean;
   private _userData: any;
   private unsubscribe$ = new Subject();
+  private tokenRenewalTimer: any;
 
   constructor(
     private oidcSecurityService: OidcSecurityService
   ) {
-    // chamando callback para quand o modulo de authentication esta setado
+    this.setupAuthenticationListeners();
+  }
+
+  private setupAuthenticationListeners() {
     if (this.oidcSecurityService.moduleSetup) {
       this.doCallbackLogicIfRequired();
     } else {
@@ -24,14 +28,18 @@ export class AuthenticationService implements OnDestroy {
         });
     }
 
-    // atribuindo valor quando esta autorizado
     this.oidcSecurityService.getIsAuthorized()
-      .pipe(takeUntil(this.unsubscribe$))
+      .pipe(
+        takeUntil(this.unsubscribe$),
+        filter(auth => auth !== undefined)
+      )
       .subscribe(auth => {
         this._isAuthenticated = auth;
+        if (auth) {
+          this.setupTokenRenewal();
+        }
       });
 
-    // atribuindo valores quando dados do usuario sao retornados
     this.oidcSecurityService.getUserData()
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(userData => {
@@ -39,13 +47,37 @@ export class AuthenticationService implements OnDestroy {
       });
   }
 
-  // override
+  private setupTokenRenewal() {
+    if (this.tokenRenewalTimer) {
+      clearInterval(this.tokenRenewalTimer);
+    }
+
+    // Renovar o token a cada 4 minutos (240000 ms)
+    this.tokenRenewalTimer = setInterval(() => {
+      if (this._isAuthenticated) {
+        this.oidcSecurityService.refreshSession().subscribe(
+          () => {
+            console.debug('Token renovado com sucesso');
+          },
+          error => {
+            console.error('Erro ao renovar token:', error);
+            if (error.status === 401 || error.status === 403) {
+              this.logout();
+            }
+          }
+        );
+      }
+    }, 240000);
+  }
+
   ngOnDestroy(): void {
+    if (this.tokenRenewalTimer) {
+      clearInterval(this.tokenRenewalTimer);
+    }
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
 
-  // metodo de login, antes de chamar o autorize precisa verificar se o modulo ja foi carregado.
   login() {
     if (this.oidcSecurityService.moduleSetup) {
       this.oidcSecurityService.authorize();
@@ -59,6 +91,9 @@ export class AuthenticationService implements OnDestroy {
   }
 
   logout() {
+    if (this.tokenRenewalTimer) {
+      clearInterval(this.tokenRenewalTimer);
+    }
     this.oidcSecurityService.logoff();
   }
 
@@ -74,8 +109,10 @@ export class AuthenticationService implements OnDestroy {
     return this._userData;
   }
 
-  // callback para chamar authorizacao com code
   private doCallbackLogicIfRequired() {
-    this.oidcSecurityService.authorizedCallbackWithCode(window.location.toString());
+    // Verifica se estamos em uma URL de callback
+    if (window.location.href.indexOf('code=') > -1) {
+      this.oidcSecurityService.authorizedCallbackWithCode(window.location.toString());
+    }
   }
 }

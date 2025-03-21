@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, timer } from 'rxjs';
-import { map, timeout } from 'rxjs/operators';
+import { Observable, timer, fromEvent, merge } from 'rxjs';
+import { map, timeout, debounceTime } from 'rxjs/operators';
 import { ParametrosGlobais } from '../model/parametros-globais';
 import { SegParametro } from '../model/seg-parametro';
 import { HttpClientService } from './http-client.service';
@@ -18,6 +18,8 @@ import { ParametrosGerais } from '../model/parametros-gerais';
 export class ParametrosGlobaisService {
   dataReferenciaDashboard: Date;
   private _parametrosGlobais: ParametrosGlobais;
+  private userActivitySubscription: any;
+
   //#region properties
   get dataReferencia(): Date {
     return this._parametrosGlobais.dataReferencia;
@@ -31,7 +33,7 @@ export class ParametrosGlobaisService {
     return this._parametrosGlobais.dataUltimoLogin;
   }
 
-  get controleSessao(): boolean{
+  get controleSessao(): boolean {
     return this._parametrosGlobais.flagControleSessao;
   }
   //#endregion
@@ -44,7 +46,23 @@ export class ParametrosGlobaisService {
     private pixMessageService: PixMessageService,
   ) {
     this._parametrosGlobais = new ParametrosGlobais();
-   }
+    this.setupUserActivityMonitoring();
+  }
+
+  private setupUserActivityMonitoring() {
+    const userActions = merge(
+      fromEvent(document, 'mousemove'),
+      fromEvent(document, 'keydown'),
+      fromEvent(document, 'click'),
+      fromEvent(document, 'wheel')
+    );
+
+    this.userActivitySubscription = userActions.pipe(
+      debounceTime(1000)
+    ).subscribe(() => {
+      this.sessionIdle.resetTimer();
+    });
+  }
 
   obterParametrosGlobais(): Observable<ParametrosGlobais> {
     return zip(
@@ -61,26 +79,33 @@ export class ParametrosGlobaisService {
       param_sistema.dataUltimoLogin = param_seg.dat_lgi;
       this._parametrosGlobais = param_sistema;
 
-         
-      this.sessionIdle.updateExpiredTime(param_seg.timeout);
-      this.verificarSessionIdle();
+      if (this.controleSessao) {
+        this.sessionIdle.updateExpiredTime(param_seg.timeout);
+        this.verificarSessionIdle();
+      }
 
       return param_sistema;
     }));
   }
 
   private verificarSessionIdle() {
-    let msgErro = this.translateService.instant('alerta.sessaoExpirada');
-    timer(5000)
+    const VERIFICACAO_INTERVALO = 30000; // 30 segundos
+    const msgErro = this.translateService.instant('alerta.sessaoExpirada');
+
+    timer(VERIFICACAO_INTERVALO, VERIFICACAO_INTERVALO)
       .subscribe(() => {
-        if (this.sessionIdle.ExpiredTime) {
+        if (this.sessionIdle.ExpiredTime && this.authenticationService.isAuthenticated) {
           this.pixMessageService.toastErro(msgErro);
-          setTimeout(()=>{
+          setTimeout(() => {
             this.authenticationService.logout();
-          },4000);
-        } else {
-          this.verificarSessionIdle();
+          }, 4000);
         }
       });
+  }
+
+  ngOnDestroy() {
+    if (this.userActivitySubscription) {
+      this.userActivitySubscription.unsubscribe();
+    }
   }
 }
