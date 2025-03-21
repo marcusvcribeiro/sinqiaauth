@@ -1,0 +1,17 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+@import 'table';
+@import 'tabs';
+@import 'dashboard';
+
+// estilos do projeto
+@import 'boleto-edicao';
+@import 'boleto-campo';
+@import 'campo-obrigatorio';
+@import 'label';
+@import 'utils';
+@import 'reprocessamento';
+
+.alb-dialog-container{
+  max-width: 520px;
+}

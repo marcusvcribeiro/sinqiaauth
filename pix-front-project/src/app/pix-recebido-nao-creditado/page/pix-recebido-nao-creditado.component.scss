@@ -1,0 +1,16 @@
+.aside-tabs {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+
+  .divisor-button {
+    margin-left: 10px;
+  }
+}
+
+.divisor-button {
+  margin-left: 10px;
+}
+.selecionado {
+    background-color: var(--athens);
+  }

@@ -1,0 +1,170 @@
+<alb-body *segFuncao="seg.MON_MENU">
+  <h1>{{ 'titulo.monitorRepositorio' | t }}</h1>
+
+  <alb-accordion icon="filter_list" [open]="true" [title]="'titulo.pesquisar' | t">
+    <form [formGroup]="filtroForm">
+      <section class="grid-template-left">
+        <div class="processamento">
+          <div class="label-accordion">{{'titulo.processamento' | t}}</div>
+          <div class="alb-divisor --two">
+            <alb-datetimepicker [placeholder]="'campo.de' | t" formControlName='deProcessamento'></alb-datetimepicker>
+            <alb-datetimepicker [placeholder]="'campo.ate' | t" formControlName='ateProcessamento'></alb-datetimepicker>
+          </div>
+        </div>
+        <div class="inclusao">
+          <div class="label-accordion">{{'titulo.inclusao' | t}}</div>
+          <div class="alb-divisor --two">
+            <alb-datetimepicker [placeholder]="'campo.de' | t" formControlName='deInclusao'></alb-datetimepicker>
+            <alb-datetimepicker [placeholder]="'campo.ate' | t" formControlName='ateInclusao'></alb-datetimepicker>
+          </div>
+        </div>
+        <div class="agendamento" *ngIf="abaSelecionada === TipoMonitorRepositorio.ENTRADA">
+          <div class="label-accordion">{{'titulo.agendamento' | t}}</div>
+          <div class="alb-divisor --two">
+            <alb-datetimepicker [placeholder]="'campo.de' | t" formControlName='deAgendamento'></alb-datetimepicker>
+            <alb-datetimepicker [placeholder]="'campo.ate' | t" formControlName='ateAgendamento'></alb-datetimepicker>
+          </div>
+        </div>
+
+        <div class="filtro-right">
+          <div class="grid grid-template-right">
+            <div class="alb-divisor --two line1">
+
+              <alb-datepicker class="width-20" [placeholder]="'campo.data' | t" formControlName='dataReferencia'>
+              </alb-datepicker>
+
+              <div class="width-20">
+                <alb-input [placeholder]="'campo.chaveLegado' | t" formControlName='chaveLegado'></alb-input>
+              </div>
+
+              <div class="width-20">
+                <alb-number [placeholder]="'campo.operacaoBancaria' | t" formControlName='operacaoBancaria'>
+                </alb-number>
+              </div>
+
+              <div class="width-20">
+                <alb-number [placeholder]="'campo.liquidacao' | t" formControlName='liquidacao'></alb-number>
+              </div>
+
+              <div class="width-20">
+                <alb-number [placeholder]="'campo.complemento' | t" formControlName='complemento'></alb-number>
+              </div>
+
+            </div>
+            <div class="alb-divisor --two line2">
+
+              <app-situacao-mensagem-dropdown class="width-20" [placeholder]="'campo.situacao' | t" [clearable]="true"
+                formControlName="situacao">
+              </app-situacao-mensagem-dropdown>
+
+              <app-sistema-original-dropdown class="width-20" [placeholder]="'campo.sistemaOriginal' | t" [clearable]="true"
+                formControlName="sistemaOriginal">
+              </app-sistema-original-dropdown>
+
+              <app-sistema-dropdown class="width-20" [placeholder]="'campo.descricaoSistema' | t" [clearable]="true"
+                formControlName="sistema">
+              </app-sistema-dropdown>
+
+              <app-entidade-conveniada-dropdown class="width-20" [placeholder]="'campo.entidadeConveniada' | t" [clearable]="true"
+                formControlName="entidadeConveniada">
+              </app-entidade-conveniada-dropdown>
+
+              <app-produto-dropdown class="width-20" [placeholder]="'campo.produto' | t" formControlName="produto" [clearable]="true">
+              </app-produto-dropdown>
+
+            </div>
+            <div class="alb-divisor --two line3">
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.ENTRADA">
+                <alb-number [placeholder]="'campoAbreviado.composicaoOperacaoIdentificada' | t"
+                  formControlName='composicaoOperacaoIdentificada'></alb-number>
+              </div>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.ENTRADA">
+                <alb-input [placeholder]="'campo.arquivoEntrada' | t" autocomplete="off"
+                  formControlName="arquivoEntrada"></alb-input>
+              </div>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.ENTRADA">
+                <alb-input [placeholder]="'campo.layoutIntegracao' | t" autocomplete="off"
+                  formControlName="layoutIntegracao"></alb-input>
+              </div>
+
+              <div class="width-20 permite-alteracao-toggle" *ngIf="abaSelecionada === TipoMonitorRepositorio.ENTRADA">
+                <alb-slide-toggle [label]="'campo.permiteAlteracao' | t" formControlName="permiteAlteracao">
+                </alb-slide-toggle>
+              </div>
+
+              <alb-datepicker class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.SAIDA"
+                [placeholder]="'campo.dataReferenciaTransacao' | t" formControlName='dataReferenciaTransacao'>
+              </alb-datepicker>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.SAIDA">
+                <alb-input [placeholder]="'campo.chavePIX' | t" autocomplete="off" formControlName="chaveSPI">
+                </alb-input>
+              </div>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.SAIDA">
+                <alb-input [placeholder]="'campo.codigoMensagem' | t" autocomplete="off"
+                  formControlName="codigoMensagem"></alb-input>
+              </div>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.SAIDA">
+                <alb-input [placeholder]="'campo.numeroSequencialTransacao' | t" autocomplete="off"
+                  formControlName="numeroSequencialTransacao"></alb-input>
+              </div>
+
+              <div class="width-20" *ngIf="abaSelecionada === TipoMonitorRepositorio.SAIDA">
+                <alb-input [placeholder]="'campo.arquivoSaida' | t" autocomplete="off" formControlName="arquivoSaida">
+                </alb-input>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="aside-accordion">
+        <button alb-button color="primary" color="accent" (click)="onPesquisar()">
+          {{'botao.pesquisar' | t }}
+        </button>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <alb-tab-group class="white" (selectedTabChange)="onMudarTab($event)">
+    <alb-tab [label]="'tabs.repositorioEntrada' | t" [id]="TipoMonitorRepositorio.ENTRADA">
+      <ng-template albTabBodyWrapper>
+        <div class="alb-box">
+          <div class="alb-divisor --two">
+            <app-monitor-entrada class="width-30" [mensagensRepositorioEntrada]="mensagensRepositorioEntrada$ | async"
+              [itemSelecionadoEntrada]="itemSelecionadoEntrada" (onSelecionado)="itemSelecionadoEntrada = $event" (onPesquisar)="listarMonitorEntrada($event)">
+            </app-monitor-entrada>
+
+            <div *ngIf="itemSelecionadoEntrada?.hash" class="width-70">
+              <app-repositorio-entrada [selecionado]="itemSelecionadoEntrada" [dataReferencia]="dataReferencia">
+              </app-repositorio-entrada>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </alb-tab>
+    <alb-tab [label]="'tabs.repositorioSaida' | t" [id]="TipoMonitorRepositorio.SAIDA">
+      <ng-template albTabBodyWrapper>
+        <div class="alb-box">
+          <div class="alb-divisor --two">
+            <app-monitor-saida class="width-30" [mensagensRepositorioSaida]="mensagensRepositorioSaida$ | async"
+              [itemSelecionadoSaida]="itemSelecionadoSaida" (onSelecionado)="itemSelecionadoSaida = $event" (onPesquisar)="listarMonitorSaida($event)">
+            </app-monitor-saida>
+
+            <div *ngIf="itemSelecionadoSaida?.hash" class="width-70">
+              <app-repositorio-saida [selecionado]="itemSelecionadoSaida" [dataReferencia]="dataReferencia" (onPesquisar)="listarMonitorSaida($event)">
+              </app-repositorio-saida>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </alb-tab>
+  </alb-tab-group>
+
+</alb-body>

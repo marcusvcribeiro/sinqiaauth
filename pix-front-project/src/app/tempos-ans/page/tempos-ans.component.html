@@ -1,0 +1,33 @@
+<alb-body *segFuncao="seg.CTA_MENU">
+  <h1>{{'titulo.temposAns' | t}}</h1>
+  <alb-accordion icon="filter_list" [open]="true" [title]="'titulo.pesquisar' | t">
+    <form [formGroup]="filtroForm">
+      <div class="aside-accordion">
+        <button alb-button color="primary" (click)="onPesquisar()" color="accent">
+          {{'botao.pesquisar' | t }}
+        </button>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <alb-tab-group class="white">
+    <alb-tab [label]="'tabs.temposAns' | t" [id]="TemposAnsTipo.ANALITICO">
+      <ng-template albTabBodyWrapper>
+        <app-tempos-ans-lista-analitico (lista)="listaTemposAnsAnalitico($event)" [filtro]="filtro$ | async">
+        </app-tempos-ans-lista-analitico>
+      </ng-template>
+    </alb-tab>
+    <div aside class="acoes">
+      <button
+      alb-button
+      type="secondary"
+      class="divisor-button"
+      (click)="onExportarExcel()"
+      *segFuncao="seg.CTA_BTN_EXPORTAR"
+      [track]="seg.CTA_BTN_EXPORTAR"
+      >
+      {{ "botao.exportarTodos" | t }}
+    </button>
+  </div>
+</alb-tab-group>
+</alb-body>

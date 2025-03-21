@@ -1,0 +1,29 @@
+<alb-body *segFuncao="seg.CMT_MENU">
+  <h1>{{'titulo.conciliacaoMensagens' | t}}</h1>
+
+  <alb-accordion icon="filter_list" [open]="true" [title]="'titulo.pesquisar' | t">
+    <form [formGroup]="filtroForm">
+      <div class="alb-divisor">
+        <alb-datepicker class="width-50" formControlName="dataInicio" [placeholder]="'campo.de' | t"></alb-datepicker>
+
+        <alb-datepicker class="width-50" formControlName="dataFim" [placeholder]="'campo.ate' | t"></alb-datepicker>
+
+        <div class="action-button">
+          <button alb-button type="primary" (click)="pesquisarMensagensTarifadas()" color="accent" [disabled]="filtroForm.invalid">
+            {{'botao.pesquisar' | t }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </alb-accordion>
+
+
+  <div class="alb-box">
+    <app-conciliacao-mensagens-tarifadas
+    [dataInicio]="filtroForm.value.dataInicio"
+    [dataFim]="filtroForm.value.dataFim"
+    [dadosTreeNode]="grupoMensagemTarifada">
+    </app-conciliacao-mensagens-tarifadas>
+  </div>
+
+</alb-body>

@@ -1,0 +1,125 @@
+<div class="boleto__campo">
+  <ng-container [ngSwitch]="tag.tipoCampo">
+    <ng-template [ngSwitchCase]="tipoCampo.STRING && !isSelect()">
+      <alb-input
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        type="text"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        (keypress)="keyPressMaskFromTag($event)"
+        (paste)="onPaste($event)"
+        (change)="change($event.target.value)"
+        [maxLength]="tag.qtdMaximaCaracter ? tag.qtdMaximaCaracter : null"
+        (focusout)="onTouched()"></alb-input>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.MEMO">
+      <alb-textarea
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [value]="value"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        (changeValue)="change($event)"
+        (focusout)="onTouched()"
+        [rows]="5"
+        (keypress)="keyPressMaskFromTag($event)"
+        [length]="tag.qtdMaximaCaracter !== null ? tag.qtdMaximaCaracter : 500">
+      </alb-textarea>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="isSelect()">
+      <ng-select
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        class="alb-ng-select"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [items]="list"
+        bindValue="key"
+        [disabled]="tag.tagReadonly ? true : false"
+        [ngModel]="value"
+        (change)="onChangeSelect($event)"
+        (blur)="onTouched()"
+        [clearable]="!tag.campoObrigatorio"
+        >
+      </ng-select>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.NUMERIC">
+      <alb-input
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        type="text"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        [maxLength]="tag.qtdMaximaCaracter ? tag.qtdMaximaCaracter : null"        
+        (keypress)="keyPress($event)"
+        (paste)="onPaste($event)"
+        (changeValue)="change($event)"
+        (focusout)="onTouched()">
+      </alb-input>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.INTEGER">
+      <alb-number
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        [length]="tag.qtdMaximaCaracter ? tag.qtdMaximaCaracter : null"
+        [decimalLength]="0"
+        (changeValue)="change($event)"
+        (keypress)="keyPressMaskFromTag($event)"
+        (focusout)="onTouched()">
+      </alb-number>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.REAL">
+      <alb-number
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        [length]="tag.qtdMaximaCaracter ? tag.qtdMaximaCaracter : null"
+        [decimalLength]="tag.qtdCasasDecimais ? tag.qtdCasasDecimais : null"
+        (changeValue)="change($event)"
+        (focusout)="onTouched()">
+      </alb-number>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.DATE">
+      <alb-datepicker
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        (changeValue)="onChangeDate($event)"
+        (focusout)="onTouched()">
+      </alb-datepicker>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.DATETIME">
+      <alb-datetimepicker
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        (changeValue)="onChangeDateTime($event)"
+        (focusout)="onTouched()">
+      </alb-datetimepicker>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.TIME">
+      <alb-timepicker
+        [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+        [placeholder]="(tag.campoObrigatorio ? '* ' : '') + tag.labelCampo"
+        [value]="value"
+        (changeValue)="onChangeTime($event)"
+        (focusout)="onTouched()">
+      </alb-timepicker>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.CPF_CNPJ">
+      <sq-cpf-cnpj-input
+        [erro]="erro"
+        [placeholder]="tag.labelCampo + (tag.campoObrigatorio ? ' *' : '')"
+        [value]="value"
+        (changeValue)="change($event)"
+        [maxLength]="tag.qtdMaximaCaracter ? tag.qtdMaximaCaracter : null"
+        (focusout)="onTouched()"
+      ></sq-cpf-cnpj-input>
+    </ng-template>
+  </ng-container>
+</div>

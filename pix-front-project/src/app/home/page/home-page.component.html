@@ -1,0 +1,11 @@
+<alb-container>
+  <alb-header class="alb-container-header" name="PIX" logoColor="#3e50b4">
+    <app-global-action-buttons></app-global-action-buttons>
+  </alb-header>
+  <!-- <alb-navigation albUIMNavigationProvider class="alb-container-sidenav"></alb-navigation> -->
+  <alb-navigation id="vdscruz" [items]="items" class="alb-container-sidenav"></alb-navigation>
+  <alb-loader-async class="loader-position"></alb-loader-async>
+  <div class="alb-container-body">
+    <router-outlet></router-outlet>
+  </div>
+</alb-container>

@@ -1,0 +1,55 @@
+<p-table class="alb-table" [value]="rows | async" [scrollable]="true">
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-sm" />
+    <col class="sq-col-sm" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+    <col class="sq-col-md" />
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>{{ "campo.data" | t }}</th>
+      <th>{{ "campo.dataProcEmissor" | t }}</th>
+      <th>{{ "campo.evento" | t }}</th>
+      <th>{{ "campo.tipo" | t }}</th>
+      <th>{{ "campo.situacao" | t }}</th>
+      <th>{{ "campo.chaveLegado" | t }}</th>
+      <th>{{ "campo.chavePIX" | t }}</th>
+      <th>{{ "campo.dataPostagemMqSeries" | t }}</th>
+      <th>{{ "campo.dataInclusaoMensagem" | t }}</th>
+      <th>{{ "campo.contingencia" | t }}</th>
+      <th>{{ "campo.copiaMensagem" | t }}</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-trilhaMensagemTransacao>
+    <tr>
+      <td>{{ trilhaMensagemTransacao.dataInclusaoMensagem | dateTime }}</td>
+      <td>{{ trilhaMensagemTransacao.dataProcEmissor | dateTime }}</td>
+      <td>{{ trilhaMensagemTransacao.evento }}</td>
+      <td>{{ trilhaMensagemTransacao.tipo }}</td>
+      <td>{{ trilhaMensagemTransacao.situacao }}</td>
+      <td>{{ trilhaMensagemTransacao.chaveLegado }}</td>
+      <td>{{ trilhaMensagemTransacao.chavePIX }}</td>
+      <td>
+        {{ trilhaMensagemTransacao.dataPostagemMqSeries | date: "shortDate" }}
+      </td>
+      <td>{{ trilhaMensagemTransacao.dataInclusao | date: "shortDate" }}</td>
+      <td>{{ trilhaMensagemTransacao.contingencia }}</td>
+      <td>{{ trilhaMensagemTransacao.copiaMensagem }}</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="11" class="text-center">
+        {{ "validacoes.nenhumaInformacao" | t }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

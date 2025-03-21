@@ -1,0 +1,5 @@
+export class Seg {
+  CER_MENU = 'CER_MENU';
+  CER_ACESSO_TOTAL = 'CER_ACESSO_TOTAL';
+  CER_BTN_NOVO = 'CER_BTN_NOVO';
+}

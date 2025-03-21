@@ -1,0 +1,19 @@
+<alb-tab-group>
+  <alb-tab label="{{ 'tabs.blocoControle' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-bloco-xml-mensagem [xml]="mensagem.xmlMensagemControle"></app-bloco-xml-mensagem>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab label="{{ 'tabs.sistema' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-bloco-xml-mensagem [xml]="mensagem.xmlMensagemSistema"></app-bloco-xml-mensagem>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab label="{{ 'tabs.trilhaMensagemTransacao' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-consulta-trilha-mensagem [mensagem]="mensagem"></app-consulta-trilha-mensagem>
+    </ng-template>
+  </alb-tab>
+</alb-tab-group>

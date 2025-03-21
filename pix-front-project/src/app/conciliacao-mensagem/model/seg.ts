@@ -1,0 +1,5 @@
+export default class Seg{
+  CMT_MENU = "CMT_MENU";
+  CMT_ACESSO_TOTAL = "CMT_ACESSO_TOTAL";
+  CMT_BTN_VISUALIZAR = 'CMT_BTN_VISUALIZAR';
+}

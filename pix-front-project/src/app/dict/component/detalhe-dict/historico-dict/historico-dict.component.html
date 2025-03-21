@@ -1,0 +1,32 @@
+<p-table class="alb-table" [value]="rows$ | async" [scrollable]="true">
+
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-sm" />
+    <col class="sq-col-md" />
+  </ng-template>
+
+  <ng-template pTemplate="header" let-dict>
+    <tr class="--text-left">
+      <th>{{'campo.dataInclusao' | t}}</th>
+      <th>{{'campo.descricaoMotivo' | t}}</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-value let-dict>
+    <tr>
+      <td> {{dict.dataInclusao | date: 'shortDate'}} </td>
+      <td> {{dict.descricaoTipoMotivoDict}} </td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="4" class="text-center">
+        {{'validacoes.nenhumaInformacao' | t}}
+      </td>
+    </tr>
+  </ng-template>
+
+</p-table>
+
+

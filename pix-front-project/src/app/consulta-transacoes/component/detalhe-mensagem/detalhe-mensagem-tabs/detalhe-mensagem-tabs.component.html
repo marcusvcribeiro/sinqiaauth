@@ -1,0 +1,53 @@
+<alb-tab-group>
+  <alb-tab [label]="'tabs.mensagemTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-mensagem-transacao-tran [filtro]="filtro"></app-mensagem-transacao-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-transacao-manual [filtro]="filtro"></app-trilha-transacao-manual>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaMensagem' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-mensagem-tran [filtro]="filtro"></app-trilha-mensagem-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.logOcorrencias' | t">
+    <ng-template albTabBodyWrapper>
+      <app-log-ocorrencia-tran [filtro]="filtro"></app-log-ocorrencia-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaMensagemTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-mensagem-tran-transacao-manual [filtro]="filtro"></app-trilha-mensagem-tran-transacao-manual>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.mensagensRelacionadas' | t">
+    <ng-template albTabBodyWrapper>
+      <app-mensagem-relacionada-tran [filtro]="filtro"></app-mensagem-relacionada-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaAlcadaLiberacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-alcada-liberacao-tran [filtro]="filtro"></app-trilha-alcada-liberacao-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaAlcadaReserva' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-alcada-reserva-tran [filtro]="filtro"></app-trilha-alcada-reserva-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.alcadaGestaoReserva' | t">
+    <ng-template albTabBodyWrapper>
+      <app-alcada-gestao-reserva-tran [filtro]="filtro"></app-alcada-gestao-reserva-tran>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.logWebhook' | t ">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-log-webhook-tran [filtro]="filtro"></app-detalhe-log-webhook-tran>
+    </ng-template>
+  </alb-tab>
+
+</alb-tab-group>

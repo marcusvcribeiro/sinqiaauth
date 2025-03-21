@@ -1,0 +1,41 @@
+<p-table class="alb-table" [value]="rows$ | async" [scrollable]="true">
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-xs">
+    <col class="sq-col-sm">
+    <col class="sq-col-sm">
+    <col class="sq-col-sm">
+    <col class="sq-col-sm">
+    <col class="sq-col-sm">
+  </ng-template>
+
+  <ng-template pTemplate="header">
+    <tr class="--text-left">
+      <th></th>
+      <th>{{'campo.dataInclusao' | t}}</th>      
+      <th>{{'campo.codigoMensagem' | t}}</th>
+      <th>{{'campo.fluxo' | t}}</th>
+      <th>{{'campo.piResourceID' | t}}</th>
+      <th>{{'campo.identificadorUnico' | t}}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-transacao>
+    <tr>
+      <td>
+        <button class="alb-icon-size" alb-button-icon icon="remove_red_eye" (click)="onVisualizarTransacao(transacao)" pure>
+        </button>
+      </td>
+      <td> {{transacao.dataInclusao | dateTime}} </td>      
+      <td> {{transacao.idMensagem}} </td>
+      <td> {{transacao.descricaoSituacao}} </td>
+      <td> {{transacao.idMensagemEnviada}} </td>
+      <td> {{transacao.identificadorUnico}} </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="6" class="text-center">
+        {{'validacoes.nenhumaInformacao' | t}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

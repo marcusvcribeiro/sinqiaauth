@@ -1,0 +1,61 @@
+<alb-body *segFuncao="seg.CGU_MENU">
+  <h1>{{ "composicaoGprUsu.titulo.composicaoGpr" | t }}</h1>
+  <alb-tab-group class="white" (selectedTabChange)="onTrocarTab($event)">
+    <alb-tab
+      [label]="'seg.tabs.usuarios' | t"
+      [id]="tab_usuarios"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-comp-lista-usuarios
+          [filtro]="filtroUsuario"
+          [eventUpdate]="eventEmitterUsuarioUpdate"
+        ></app-comp-lista-usuarios>
+      </ng-template>
+    </alb-tab>
+    <alb-tab
+      [label]="'seg.tabs.grupos' | t"
+      [id]="tab_grupos"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-lista-grupos-usuarios
+          [filtro]="filtroGrupo"
+          [eventUpdate]="eventEmitterGrupoUpdate"
+          [readMore]="true"
+          ></app-lista-grupos-usuarios>
+      </ng-template>
+    </alb-tab>
+    <div aside class="acoes">
+      <div class="width-50" style="margin-top: -2px">
+        <button
+          [hidden]="tab_selected == tab_usuarios"
+          alb-button
+          type="primary"
+          class="divisor-button"
+          *segFuncao="seg.GRP_BTN_NOVO"
+          [track]="seg.GRP_BTN_NOVO"
+          (click)="onNovoGrupo()"
+        >
+          {{ "seg.botao.novogrupo" | t }}
+        </button>
+      </div>
+      <div>
+        <div class="width-50">
+          <alb-input
+            type="text"
+            [(ngModel)]="filtroUsuario"
+            placeholder="Filtro"
+            [hidden]="tab_selected == tab_grupos"
+          >
+          </alb-input>
+          <alb-input
+            type="text"
+            [(ngModel)]="filtroGrupo"
+            placeholder="Filtro"
+            [hidden]="tab_selected == tab_usuarios"
+          >
+          </alb-input>
+        </div>
+      </div>
+    </div>
+  </alb-tab-group>
+</alb-body>

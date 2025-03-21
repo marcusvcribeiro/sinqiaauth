@@ -1,0 +1,22 @@
+<div *ngIf="hasRefreshObservers" class="control-container">
+  <button alb-button-icon icon="play_arrow" type="button" (click)="start()" *ngIf="!isRefreshing">
+  </button>
+  <button alb-button-icon icon="pause" type="button" (click)="stop()" *ngIf="isRefreshing">
+  </button>
+  <button alb-button-icon icon="autorenew" type="button"
+    [class.dashboard-refresh-control__refresh]="isRefreshing" (click)="refreshNow()">
+  </button>
+  <alb-datepicker [value]="date" (changeValue)="onChangeDate($event)" class="alb-divisor-dashboard">
+  </alb-datepicker>
+  <alb-menu  *segFuncao="seg.DAS_3PONTOS">
+    <alb-menu-item id="1" (click)="opcoesRefreshDashboard()" *segFuncao="seg.DAS_3PONTOS_OPCOES" [track]="seg.DAS_3PONTOS_OPCOES">
+      <ng-template albMenuTemplate>{{'botao.opcoes' | t}}</ng-template>
+    </alb-menu-item>
+    <alb-menu-item id="2" (click)="drawerSolicitaDeposito()" *segFuncao="seg.DAS_3PONTOS_DEPOSITO" [track]="seg.DAS_3PONTOS_DEPOSITO">
+      <ng-template albMenuTemplate>{{'botao.solicitaDeposito' | t}}</ng-template>
+    </alb-menu-item>
+    <alb-menu-item id="3" (click)="drawerSolicitaSaque()" *segFuncao="seg.DAS_3PONTOS_SAQUE" [track]="seg.DAS_3PONTOS_SAQUE">
+      <ng-template albMenuTemplate>{{'botao.solicitaSaque' | t}}</ng-template>
+    </alb-menu-item>
+  </alb-menu>
+</div>

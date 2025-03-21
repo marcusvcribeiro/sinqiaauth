@@ -1,0 +1,73 @@
+<alb-body>
+  <div class="alb-divisor --three">
+    <div class="width-5">
+      <button alb-button-icon icon="call" pure></button>
+    </div>
+    <div class="width-30">
+      {{'titulo.posicional' | t}} {{selecionado.idChaveLegado}}
+    </div>
+    <div *ngIf="selecionado.idSituacaoOperacaoLegado" class=" width-15">
+      <sq-chip [label]="selecionado.descricaoSituacaoOperacaoLegado" [status]="selecionado.status"></sq-chip>
+    </div>
+  </div>
+
+  <div class="alb-divisor --five">
+    <alb-input [placeholder]="'campo.chaveLegado' | t" [value]="selecionado.idChaveLegado | nullable" readonly></alb-input>
+    <alb-input [placeholder]="'campo.dataInclusao' | t" [value]="selecionado.dataInclusao  | dateTime" readonly></alb-input>
+  </div>
+
+  <div class="alb-divisor --five">
+    <alb-input [placeholder]="'campo.arquivoEntrada' | t" [value]="selecionado.nomeArquivoEntrada | nullable"></alb-input>
+    <alb-input [placeholder]="'campo.descricaoSistema' | t" [value]="selecionado.descricaoSistema | nullable"></alb-input>
+    <alb-input [placeholder]="'campo.dataProcessamento' | t" [value]="selecionado.dataProcessamento  | dateTime"></alb-input>
+  </div>
+
+  <div class="alb-divisor --five">
+    <alb-input [placeholder]="'campo.dataAgendamento' | t" [value]="selecionado.dataMovimento | dateTime"></alb-input>
+  </div>
+
+  <div class="alb-divisor">
+    <alb-tab-group>
+      <alb-tab [label]="'titulo.xml' | t">
+        <ng-template albTabBodyWrapper>
+          <app-xml-pretty-display [elemento]="xml"></app-xml-pretty-display>
+        </ng-template>
+      </alb-tab>
+      <alb-tab [label]="'tabs.logOcorrencia' | t">
+        <ng-template albTabBodyWrapper>
+          <p-table [value]="logOcorrencia" class="alb-table">
+            <ng-template pTemplate="colgroup">
+              <col class="sq-col-xs">
+              <col class="sq-col-sm">
+              <col class="sq-col-sm">
+              <col class="sq-col-sm">
+            </ng-template>
+            <ng-template pTemplate="header">
+              <tr>
+                <th>{{'campo.dataInclusao' | t}}</th>
+                <th>{{'campo.dataReferencia' | t}}</th>
+                <th>{{'campo.ocorrencia' | t}}</th>
+                <th>{{'campo.sistema' | t}}</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-logOcorrencia>
+              <tr class="--click" (click)="abrirLogOcorrencia(logOcorrencia)">
+                <td>{{logOcorrencia.dataInclusao | dateTime}}</td>
+                <td>{{logOcorrencia.dataReferencia | date: 'shortDate'}}</td>
+                <td>{{logOcorrencia.ocorrencia | nullable}}</td>
+                <td>{{logOcorrencia.sistema | nullable}}</td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage" let-columns>
+              <tr>
+                <td colspan="4" class="text-center">
+                  {{'validacoes.logOcorrencia' | t}}
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </ng-template>
+      </alb-tab>
+    </alb-tab-group>
+  </div>
+</alb-body>

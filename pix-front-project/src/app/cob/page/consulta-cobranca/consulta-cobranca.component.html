@@ -1,0 +1,202 @@
+<alb-body >
+  <form [formGroup]="filtroAvancadoForm" class="form">
+    <h1>{{'titulo.consultaCobranca' | t}}</h1>
+  
+    <alb-accordion icon="filter_list" [open]="true" [title]="'titulo.pesquisar' | t">
+  
+      <div class="grid-template-pesquisa-filtros">
+        
+          <div class="alb-divisor --three filter">
+
+            <alb-input class="colspan-2" formControlName="revisao" [placeholder]="'campo.revisao' | t"></alb-input>
+
+            <alb-datepicker placeholder="{{'campo.dataInicio' | t }}" formControlName="dataInicio"></alb-datepicker>
+
+            <alb-datepicker placeholder="{{'campo.dataFim' | t }}" formControlName="dataFim"></alb-datepicker>
+
+            <alb-number [placeholder]="'campo.vlrOriginalMaior' | t" formControlName="idVlrOriginalMaior" [decimalLength]="2" [length]="14" [decimal]="true" [allowNegative]="true">
+            </alb-number>
+            <alb-number [placeholder]="'campo.vlrOriginalMenor' | t" formControlName="idVlrOriginalMenor" [decimalLength]="2" [length]="14" [decimal]="true" [allowNegative]="true">
+            </alb-number>
+    
+            <ng-select class="alb-ng-select" [placeholder]="'campo.situacao' | t" [items]="tipoSituacaoList" bindValue="value" bindLabel="label"
+            formControlName="idSituacaoCobranca" clearable="true">
+            </ng-select>
+
+            <ng-select class="alb-ng-select" [placeholder]="'campo.tipo' | t" [items]="tipoCobList" bindValue="value" bindLabel="label"
+            formControlName="idTipoCobranca" clearable="true">
+            </ng-select>
+
+            <ng-select class="alb-ng-select" [placeholder]="'campo.flgApiPix' | t" [items]="simNaoList" bindValue="value" bindLabel="label"
+            formControlName="idFlgApiPix" clearable="true">
+            </ng-select>
+
+            <ng-select class="alb-ng-select"  [placeholder]="'campo.integracaoCobranca' | t" [items]="situacaoItgList" bindValue="value" bindLabel="label"
+            formControlName="idIntCob" clearable="true">
+            </ng-select>
+          
+
+            <alb-input class="colspan-2" formControlName="chave" [placeholder]="'campo.chaveEnderecamento' | t"></alb-input>
+
+            <alb-input class="colspan-2" formControlName="idCpfCnpjRec" [placeholder]="'campo.numCpfRec' | t"></alb-input>
+            <alb-input class="colspan-2" formControlName="idCpfCnpjDev" [placeholder]="'campo.numCpfDev' | t"></alb-input>
+      
+           
+  
+          </div>
+        
+       
+        <div class="footer action-button">
+          <button  alb-button [disabled]="ds.selection.isEmpty()" (click)="onReprocessar()" color="accent">
+            {{'botao.reprocessar' | t }}
+          </button>
+          <br/>
+          <br/>
+          <br/>
+          <button alb-button (click)="pesquisar()">{{'botao.pesquisar' | t }}</button>
+        </div>
+      </div>
+    </alb-accordion>
+  
+  
+    <div class="table">
+      <p-table class="alb-table" [sq-data-source]="ds" rowHover="true" [scrollable]="true" [paginator]="true">
+        <ng-template pTemplate="colgroup">
+          <col class="sq-col-sm"> <!-- processar -->
+          <col class="sq-col-sm"> <!-- detalhe -->
+          <col class="sq-col-sm"> <!-- Copia e Cola -->
+          <col class="sq-col-lg"> <!-- txid -->
+          <col class="sq-col-sm"> <!-- Revisão -->
+          <col class="sq-col-md"> <!-- Data Hora Criação (dat_cri_cob_qrc) -->
+          <col class="sq-col-md"> <!-- Valor Original (vr_oal_doc) -->
+          <col class="sq-col-md"> <!-- Situação (dsc_sit_cob)  -->
+          <col class="sq-col-md"> <!-- Token de acesso a URL (id_pyl -->
+          <col class="sq-col-sm"> <!-- Tipo de Cobrança (dsc_tip_cob) -->
+          <col class="sq-col-sm"> <!-- eAPI Pix (flg_cob_api_pix) -->
+          <col class="sq-col-sm"> <!-- Integração (dsc_sit_itg_cob) -->
+          <col class="sq-col-md"> <!-- CPF/CNPJ do Recebedor (num_cpf_cnpj_rec) -->
+          <col class="sq-col-md"> <!-- Chave de Endereçamento (dsc_chv_end_rec) -->
+          <col class="sq-col-md"> <!-- Usuário Recebedor API Pix (nom_usu_rec) -->
+          <col class="sq-col-md"> <!-- Nome do Recebedor (nom_raz_soc_rec) -->
+          <col class="sq-col-md"> <!-- CPF/CNPJ do Devedor (num_cpf_cnpj_dev) -->
+          <col class="sq-col-md"> <!-- Nome do Devedor (nom_usu_dev) -->
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>{{ 'cob.campo.processar' | t }}</th>
+            <th>{{ 'cob.campo.copiaCola' | t }}</th>
+            <th>{{ 'campo.detalhe' | t }}</th>
+            <th>{{ 'campo.txid' | t }}</th>
+            <th>{{ 'campo.revisao' | t }}</th>
+            <th>{{ 'campo.dtCriacaoCob' | t }}</th>
+            <th>{{ 'campo.vlrOriginal' | t }}</th>
+            <th>{{ 'campo.situacao' | t }}</th>
+            <th>{{ 'campo.tokenAcesso' | t }}</th>
+            <th>{{ 'campo.dscTipCob' | t }}</th>
+            <th>{{ 'campo.flgApiPix' | t }}</th>
+            <th>{{ 'campo.integracaoCobranca' | t }}</th>
+            <th>{{ 'campo.numCpfRec' | t }}</th>
+            <th>{{ 'campo.chaveEnderecamento' | t }}</th>
+            <th>{{ 'campo.usuRec' | t }}</th>
+            <th>{{ 'campo.nomeUsuRec' | t }}</th>
+            <th>{{ 'campo.numCpfDev' | t }}</th>
+            <th>{{ 'campo.nomeUsuDev' | t }}</th>
+            <th>{{ 'campo.solPag' | t }}</th>
+          </tr>
+          <tr>
+            <th>
+              <ng-container *ngIf="ds?.data$ | async as cobrancas">
+              <alb-checkbox
+              (change)="ds.selectAllToggle(cobrancas)"
+              [value]="ds.selection.hasValue() && ds.isAllSelected(cobrancas)"
+              [indeterminate]="ds.selection.hasValue() && !ds.isAllSelected(cobrancas)">
+            </alb-checkbox>
+          </ng-container>
+            </th>
+            <th></th>
+            <th></th>
+            <th><alb-input formControlName="txid" [placeholder]="'campo.txid' | t"></alb-input></th>
+            <th><alb-input formControlName="revisao" [placeholder]="'campo.revisao' | t"></alb-input></th>
+            <th><alb-datepicker formControlName="dtCriacaoCob" [placeholder]="'campo.dtCriacaoCob' | t"></alb-datepicker></th>
+            <th><alb-input formControlName="vlrOriginal" [placeholder]="'campo.vlrOriginal' | t"></alb-input></th>
+            <th>
+              <ng-select [placeholder]="'campo.situacao' | t" [items]="tipoSituacaoList" bindValue="value" bindLabel="label"
+              formControlName="idSituacaoCobranca" clearable="true">
+              </ng-select>
+            </th>
+            <th><alb-input formControlName="tokenAcesso" [placeholder]="'campo.tokenAcesso' | t"></alb-input></th>
+            <th>
+              <ng-select  [placeholder]="'campo.tipo' | t" [items]="tipoCobList" bindValue="value" bindLabel="label"
+              formControlName="idTipoCobranca" clearable="true">
+              </ng-select>
+            </th>
+            <th>            
+              <ng-select  [placeholder]="'campo.flgApiPix' | t" [items]="simNaoList" bindValue="value" bindLabel="label"
+              formControlName="idFlgApiPix" clearable="true">
+              </ng-select>
+            </th>
+            <th>
+            <ng-select [placeholder]="'campo.integracaoCobranca' | t" [items]="situacaoItgList" bindValue="value" bindLabel="label"
+            formControlName="idIntCob" clearable="true">
+            </ng-select>
+          </th>
+            <th>
+              <alb-input formControlName="idCpfCnpjRec" [placeholder]="'campo.numCpfRec' | t"></alb-input>
+            </th>
+            <th>
+              <alb-input formControlName="chave" [placeholder]="'campo.chaveEnderecamento' | t"></alb-input>
+            </th>
+            <th><alb-input formControlName="usuRec" [placeholder]="'campo.usuRec' | t"></alb-input></th>
+            <th><alb-input formControlName="nomeRec" [placeholder]="'campo.nomeUsuRec' | t"></alb-input></th>
+            <th>
+              <alb-input formControlName="idCpfCnpjDev" [placeholder]="'campo.numCpfDev' | t"></alb-input>
+            </th>
+            <th><alb-input formControlName="nomeDev" [placeholder]="'campo.nomeUsuDev' | t"></alb-input></th>
+            <th><alb-input formControlName="solPag" [placeholder]="'campo.solPag' | t"></alb-input></th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-cobranca>
+          <tr >
+            <td *ngIf="cobranca.integracaoCob == 'ERRO' && cobranca.tokenAcesso != null">
+              <alb-checkbox (change)="ds.selection.toggle(cobranca)" [value]="this.ds.selection.isSelected(cobranca)">
+              </alb-checkbox>
+            </td>
+            <td *ngIf="cobranca.integracaoCob != 'ERRO' || cobranca.tokenAcesso == null">
+              <alb-checkbox [disabled]="true"  >
+              </alb-checkbox>
+            </td>
+            <td>
+              <button  alb-button-icon type="button" icon="remove_red_eye" (click)="onCopiaCola(cobranca)" pure>
+              </button>
+            </td>
+            <td>
+              <button class="alb-icon-size" alb-button-icon icon="remove_red_eye" (click)="onCobranca(cobranca)" pure>
+              </button>
+            </td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.txid  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.rev  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.dtCriacaoCob | dateTime  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.vlrOriginal  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.situacao  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.tokenAcesso  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.dscTipCob  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.flgApiPix  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.integracaoCob  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.numCpfRec  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.chvEnd  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.usuRec  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.nomeRec  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.numCpfDev  }}</td>
+            <td   (click)="onDetalhe(cobranca)">{{ cobranca.nomeDev  }}</td>
+            <td   (click)="onDetalhe(cobranca)" >{{ cobranca.solPag  }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="16" class="text-center">{{ 'validacoes.nenhumaInformacao' | t }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </form>
+  </alb-body>

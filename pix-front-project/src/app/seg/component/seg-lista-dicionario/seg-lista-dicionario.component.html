@@ -1,0 +1,31 @@
+
+<p-table
+class="alb-table"
+[value]="lista | filter : filtro : 'senha' | sortBy: 'asc':'senha'"
+[scrollable]="true"
+[rows]="numeroLinhas"
+[paginator]="true"
+[rowsPerPageOptions]="listaQuantidadeLinhas"
+>
+<ng-template pTemplate="header">
+  <tr>
+    <th>{{'seg.campo.usuario_nome' | t}}</th>
+
+    <th style="width:8rem"></th>
+  </tr>
+</ng-template>
+<ng-template pTemplate="body" let-item>
+  <tr>
+    <td>{{ item.senha }}</td>
+
+    <td style="width:8rem" class="text-center">
+      <button alb-button-icon icon="edit" type="button" style="border: none; background:transparent" 
+      (click)="onEdit(item)" *segFuncao="permissoes.SEG_EDI_DICIONARIO" [track]="permissoes.SEG_EDI_DICIONARIO">
+      </button>
+      <button alb-button-icon icon="delete" type="button" style="border: none; background:transparent" 
+      (click)="onRemover(item.id) " *segFuncao="permissoes.SEG_BTN_DEL_DICIONARIO" [track]="permissoes.SEG_BTN_DEL_DICIONARIO">
+      </button>
+    </td>
+  </tr>
+</ng-template>
+</p-table>

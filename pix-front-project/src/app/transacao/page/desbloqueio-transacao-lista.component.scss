@@ -1,0 +1,30 @@
+.table-header {
+  display: flex;
+
+  button {
+    margin-right: 5px;
+  }
+}
+.table-header-title {
+  padding: 5px;
+  flex: auto;
+  h3 {
+    padding-left: 5px;
+  }
+}
+
+.valorLiberado {
+  padding: 5px;
+}
+
+.liberarTransacao {
+  margin: 10px;
+}
+
+// Classe que pode ser usada para alinhar elementos no header da page
+.vertical-align-header {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 42px;
+  height: 42px;
+}

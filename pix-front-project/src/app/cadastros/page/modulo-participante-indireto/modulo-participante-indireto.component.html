@@ -1,0 +1,26 @@
+<alb-body *segFuncao="seg.PTI_MENU">
+  <h1>{{ 'participanteIndireto.titulo.participanteIndireto' | t }}</h1>
+  <aside>
+    <div class="alb-divisor">
+      <div class="width-100">
+        <button
+        alb-button
+        type="primary"
+        class="divisor-button"
+        (click)="onNovoParticipanteIndireto()"
+        *segFuncao="seg.PTI_BTN_NOVO"
+        [track]="seg.PTI_BTN_NOVO"
+        >
+        {{ "participanteIndireto.botao.novo" | t }}
+      </button>
+      </div>
+    </div>
+  </aside>
+
+  <alb-card title="{{'participanteIndireto.titulo.listaParticipanteIndireto' | t}}">
+    <app-lista-participante-indireto
+        [eventUpdate]="eventEmitterIndiretoUpdate"
+      >
+      </app-lista-participante-indireto>
+  </alb-card>
+</alb-body>

@@ -1,0 +1,46 @@
+<alb-body>
+    <h1 alb-drawer-title>{{ "seg.titulo.alteracaoUsuario" | t }}</h1>
+    <app-drawer-content>
+      <form [formGroup]="form">
+        <div class="alb-divisor --two line3">
+            <div class="width-100">
+                <p>
+                    {{ "seg.campo.nomeAplicacao" | t }}
+                </p>
+                <p class="textarea-like">
+                    {{edit.nomeAplicacao}}
+                </p>
+            </div>
+
+            <div class="width-60">
+                <p>
+                    {{ "seg.campo.nomeUsuario" | t }}
+                </p>
+                <p class="textarea-like">
+                    {{edit.nomeUsuario}}
+                </p>
+            </div>
+
+            <div class="width-40">
+                <p>
+                    {{ "seg.campo.dataInclusao" | t }}
+                </p>
+                <p class="textarea-like">
+                    {{edit.dataHoraInclusao | dateTime}}
+                </p>
+            </div>
+          <div class="width-100">
+            <p>
+                {{ "seg.campo.descricaoOperacao" | t }}
+            </p>
+            <p class="textarea-like">
+                {{edit.descricaoOperacao}}
+            </p>
+          </div>
+
+  
+        </div>
+      </form>
+    </app-drawer-content>
+  </alb-body>
+  

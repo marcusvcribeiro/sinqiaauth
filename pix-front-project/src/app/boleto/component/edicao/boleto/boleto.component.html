@@ -1,0 +1,47 @@
+<app-drawer-content>
+
+  <div class="boleto">
+    <ng-container *ngIf="boleto && form">
+      <form [formGroup]="form">
+        <header class="alb-divisor --five">
+
+          <div>
+            <ng-select class="alb-ng-select" formControlName="situacao" [placeholder]="'campo.situacao' | t"
+              [items]="listaSituacaoBoleto" bindLabel="descricao" bindValue="id">
+            </ng-select>
+          </div>
+
+          <alb-datepicker  [placeholder]="'campo.dataAgendamento' | t" formControlName="dataMovimento">
+          </alb-datepicker>
+
+          <div>
+            <app-canal-mensagem-dropdown formControlName="canalMensagem" [idSelecionado]="1"
+              [placeholder]="'campo.canalMensagem' | t" [mostrarOpcaoTodos]="false">
+            </app-canal-mensagem-dropdown>
+          </div>
+          
+          <div>
+            <alb-input *ngIf="mostrarNomeModelo" type="text" [placeholder]="'campo.nomeModelo' | t" formControlName="nomeModelo">
+            </alb-input>
+          </div>
+
+          <div class="action-button">
+            <button alb-button [disabled]="form.invalid || clicked" (debounceClick)="onSalvarClick()"> {{ 'botao.salvar' | t }}
+            </button>
+          </div>
+        </header>
+
+        <div class="content">
+          <app-boleto-grupo [grupo]="boleto" [formParent]="form" [parentSidenavItems]="sidenavItems"
+            [validatable]="true" [primeiroGrupo]="true">
+          </app-boleto-grupo>
+        </div>
+      </form>
+    </ng-container>
+
+    <app-sidenav class="sidenav" [items]="sidenavItems" [selectedItemId]="idBoletoSelecionado"
+      (navigate)="onNavigate($event)">
+    </app-sidenav>
+  </div>
+
+</app-drawer-content>

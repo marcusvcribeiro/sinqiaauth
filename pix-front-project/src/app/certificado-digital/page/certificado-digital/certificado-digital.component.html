@@ -1,0 +1,101 @@
+<alb-body *segFuncao="seg.CER_MENU">
+  <h1>{{ 'titulo.certificadoDigital' | t }}</h1>
+
+  <alb-accordion icon="filter_list" [title]="'titulo.pesquisar' | t" [open]="true">
+    <form [formGroup]="filtroForm">
+      <div class="alb-divisor --two">
+        <app-finalidade-certificado-dropdown [placeholder]="'campo.finalidade' | t"
+          formControlName="idFinalidadeCertificadoDigital" [clearable]="true">
+        </app-finalidade-certificado-dropdown>
+        <app-situacao-certificado-dropdown [placeholder]="'campo.situacao' | t"
+          formControlName="idSituacaoCertificadoDigital" [clearable]="true">
+        </app-situacao-certificado-dropdown>
+      </div>
+      <div class="aside-accordion">
+        <button alb-button color="primary" (click)="onPesquisar()" color="accent">
+          {{'botao.pesquisar' | t }}
+        </button>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <alb-box>
+    <aside class="acoes">
+      <button alb-button type="primary" (click)="onAdicionar()" *segFuncao="seg.CER_BTN_NOVO" [track]="seg.CER_BTN_NOVO">
+        {{'botao.novo' | t}}
+      </button>
+    </aside>
+    <p-table class="alb-table" rowHover="true"  [scrollable]="true" [paginator]="true" [sq-data-source]="ds">
+      <ng-template pTemplate="colgroup">
+        <col class="sq-col-sm"> <!-- nome entidade participante -->
+        <col class="sq-col-md"> <!-- nome autoridade certificadora -->
+        <col class="sq-col-sm"> <!-- id certificado digital -->
+        <col class="sq-col-md"> <!-- descricao finalidade certificado digital -->
+        <col class="sq-col-md"> <!-- numero serie -->
+        <col class="sq-col-xs"> <!-- descricao situacao -->
+        <col class="sq-col-sm"> <!-- data inicio certificado -->
+        <col class="sq-col-sm"> <!-- data fim certificado -->
+        <col class="sq-col-sm"> <!-- código usuário última manutenção -->
+        <col class="sq-col-sm"> <!-- data última manutenção -->
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th [pSortableColumn]="'nomeEntidadeParticipante'">
+            {{ 'campo.entidadeParticipante' | t }}
+          </th>
+          <th [pSortableColumn]="'nomeAutoridadeCertificadora'">
+            {{ 'campo.autoridadeCertificadora' | t }}
+          </th>
+          <th [pSortableColumn]="'idCertificadoDigital'">
+            {{ 'campo.identificador' | t }}
+          </th>
+          <th [pSortableColumn]="'descricaoFinalidadeCertificadoDigital'">
+            {{ 'campo.finalidade' | t }}
+          </th>
+          <th [pSortableColumn]="'numeroSerie'">
+            {{ 'campo.numeroSerial' | t }}
+          </th>
+          <th [pSortableColumn]="'descricaoSituacaoCertificado'">
+            {{ 'campo.situacao' | t }}
+          </th>
+          <th [pSortableColumn]="'dataInicioCertificado'">
+            {{ 'campo.dataInicio' | t }}
+          </th>
+          <th [pSortableColumn]="'dataFimCertificado'">
+            {{ 'campo.dataFim' | t }}
+          </th>
+          <th [pSortableColumn]="'codigoUsuarioUltimaManutencao'">
+            {{ 'campo.usuarioUltimaManutencao' | t }}
+          </th>
+          <th [pSortableColumn]="'dataUltimaManutencao'">
+            {{ 'campo.dataUltimaManutencao' | t }}
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-certificado>
+        <tr>
+          <td>{{ certificado.nomeEntidadeParticipante }}</td>
+          <td>{{ certificado.nomeAutoridadeCertificadora }}</td>
+          <td>{{ certificado.idCertificadoDigital }}</td>
+          <td>{{ certificado.descricaoFinalidadeCertificadoDigital }}</td>
+          <td>{{ certificado.numeroSerie }}</td>
+          <td>{{ certificado.descricaoSituacaoCertificadoDigital }}</td>
+          <td>{{ certificado.dataInicioCertificado | date: 'shortDate' }}</td>
+          <td>{{ certificado.dataFimCertificado | date: 'shortDate' }}</td>
+          <td>{{ certificado.codigoUsuarioUltimaManutencao }}</td>
+          <td>{{ certificado.dataUltimaManutencao | dateTime }}</td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="9" class="text-center">
+            {{ 'validacoes.nenhumaInformacao' | t }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </alb-box>
+</alb-body>

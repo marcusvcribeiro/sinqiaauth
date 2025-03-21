@@ -1,0 +1,86 @@
+<alb-body *segFuncao="seg.PRC_MENU">
+  <h1>{{'titulo.pixRecebidoNaoCreditado' | t}}</h1>
+
+    <alb-tab-group class="white">
+      <alb-tab [label]="'titulo.pixNaoCreditado' | t"></alb-tab>
+      <div aside class="acoes">
+        <button
+        alb-button
+        class="divisor-button"
+        type="secondary"
+        (click)="onReenviar()"
+        [track]="seg.PRC_BTN_REENVIAR"
+      >
+      {{ "botao.reprocessarselecionados" | t }}</button>
+      <button
+        alb-button
+        class="divisor-button"
+        type="secondary"
+        (click)="onPesquisar()"
+      >
+      {{ "botao.atualizar" | t }}</button>
+      </div>
+    </alb-tab-group> 
+  
+    <div class="table">
+      <p-table 
+      scrollHeight="calc(100vh - 360px)"
+      class="alb-table" rowHover="true"
+      [sq-data-source]="ds"
+      [scrollable]="true" 
+      [paginator]="true" 
+      >
+        <ng-template pTemplate="colgroup">
+          <col class="sq-col-xs"> <!-- botao -->       
+          <col class="sq-col-sm"> <!-- dataHoraInclusao -->
+          <col class="sq-col-sm"> <!-- situacao -->
+          <col class="sq-col-md"> <!-- e2eid -->
+          <col class="sq-col-md"> <!-- Status -->
+          <col class="sq-col-md"> <!-- motivo -->
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>
+              <ng-container *ngIf="ds?.data$ | async as mensagens">
+                <alb-checkbox
+                  (change)="onCheckAll(mensagens)"
+                  [value]="ds.selection.hasValue() && ds.isAllSelected(mensagens)"
+                  [indeterminate]="
+                    ds.selection.hasValue() && !ds.isAllSelected(mensagens)
+                  "
+                >
+                </alb-checkbox>
+              </ng-container>
+            </th>         
+            <th >{{ 'campo.dataHoraInclusao' | t }}</th>
+            <th >{{ 'campo.tipoNotificacao' | t }}</th>
+            <th >{{ 'campo.e2eid' | t }}</th>
+            <th >{{ 'campo.situacao' | t }}</th>
+            <th >{{ 'campo.erro' | t }}</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-msg>
+          <tr [ngClass]="{ 'selecionado': msg === selected }">
+            <td (click)="$event.stopPropagation()">
+              <alb-checkbox
+              (change)="onCheck($event, msg)"
+              [value]="ds.selection.isSelected(msg)"
+              >
+              </alb-checkbox>
+            </td>       
+            <td>{{ msg.dataInclusao | dateTime  }}</td>
+            <td>{{ msg.tipoMengemNotificada | tipoNotificacaoWebhook  }}</td>
+            <td>{{ msg.idUniOpe  }}</td>
+            <td>{{ msg.flgRvoMsgDeadLetter | situacaoReprocessamento }}</td>
+            <td>{{ msg.dscErr  }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="16" class="text-center">{{ 'validacoes.nenhumaInformacao' | t }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <ng-keyboard-shortcuts [shortcuts]="shortcuts"></ng-keyboard-shortcuts>
+  </alb-body>

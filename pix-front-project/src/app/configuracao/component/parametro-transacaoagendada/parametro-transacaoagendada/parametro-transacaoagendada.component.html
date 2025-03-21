@@ -1,0 +1,34 @@
+<p-table class="alb-table"
+    [value]="listaTransacaoAgendada"
+    [scrollable]="false"
+    [rows]="12"
+    [paginator]="false">
+    <ng-template pTemplate="header" >
+        <tr>
+            <th>{{'campo.horarioFechamentoPerInicial' | t}}</th>
+            <th>{{'campo.horarioFechamentoPerFinal' | t}}</th>
+            <th>{{'campo.QuantidadeMensagensAgendadas' | t}}</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-listaTransacaoAgendada>
+        <tr>
+            <td>{{listaTransacaoAgendada.horIniEnvLiq}}</td>
+            <td>{{listaTransacaoAgendada.horFimEnvLiq}}</td>
+            <td>{{listaTransacaoAgendada.qtdLimTrnSgo}}</td>
+            <td style="width:8rem" class="text-center">
+              <button alb-button-icon icon="edit" type="button" style="border: none; background:transparent" 
+              (click)="onEdit(listaTransacaoAgendada)"
+              *segFuncao="seg.PAR_TAB_PARAMETRO_GERAL" [track]="seg.PAR_TAB_PARAMETRO_GERAL">
+              </button>
+            </td>
+            <td style="width:8rem" class="text-center">
+              <button alb-button-icon icon="delete" type="button" style="border: none; background:transparent" 
+              (click)="remover(listaTransacaoAgendada)"
+              *segFuncao="seg.PAR_TAB_PARAMETRO_GERAL" [track]="seg.PAR_TAB_PARAMETRO_GERAL">
+              </button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

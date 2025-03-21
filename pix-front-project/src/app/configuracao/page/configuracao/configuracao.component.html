@@ -1,0 +1,75 @@
+<alb-body>
+  <h1>{{'titulo.configuracoes' | t }}</h1>
+  <form [formGroup]="exibicaoForm">
+
+    <!-- Alterar Senha -->
+    <alb-box (click)="onTrocarSenha()">
+      <div class="configuracao__item configuracao__click">
+        <i class="alb-icon configuracao__icon">lock_open</i>
+
+        <div class="alb-divisor configuracao__content">
+          <h3>{{'titulo.alterarSenha' | t }}</h3>
+          <span>{{'campo.alterarSenha' | t }}</span>
+        </div>
+
+        <div>
+          <i class="alb-icon">trending_flat</i>
+        </div>
+      </div>
+    </alb-box>
+
+    <!-- Parâmetros Gerais -->
+    <alb-box *segFuncao="seg.PAR_GRUPO" [track]="seg.PAR_GRUPO" (click)="onParametrosGerais()">
+      <div class="configuracao__item configuracao__click">
+        <i class="alb-icon configuracao__icon">settings_applications</i>
+
+        <div class="alb-divisor configuracao__content">
+          <h3>{{'titulo.parametros' | t }}</h3>
+          <span>{{'campo.parametrosGerais' | t }}</span>
+        </div>
+
+        <div>
+          <i class="alb-icon">trending_flat</i>
+        </div>
+      </div>
+    </alb-box>
+
+    <!-- Exibicao -->
+    <alb-box>
+      <div class="configuracao__item">
+        <i class="alb-icon configuracao__icon">desktop_mac</i>
+
+        <div class="alb-divisor configuracao__content">
+          <h3>{{'titulo.exibicao' | t }}</h3>
+          <span>{{'campo.preferenciasExibicao' | t }}</span>
+
+          <div>
+            <alb-number formControlName="numeroLinhas" [length]="2" [placeholder]="'campo.numeroLinhas' | t">
+            </alb-number>
+            <span class="configuracao__invalid"
+              *ngIf="exibicaoFormControls.numeroLinhas.invalid">{{'validacao.valorMenorIgual50' | t}}
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </alb-box>
+
+    <!-- Notificação -->
+    <alb-box>
+      <div class="configuracao__item">
+        <i class="alb-icon configuracao__icon">notifications_none</i>
+
+        <div class="alb-divisor configuracao__content">
+          <h3>{{'titulo.notificacoes' | t }}</h3>
+          <span class="txt-sm">{{'campo.tempoAtualizacaoAlerta' | t }}</span>
+          <alb-number formControlName="tempoAtualizacaoAlerta" [length]="2" [placeholder]="'campo.tempoEmSegundos' | t">
+          </alb-number>
+        </div>
+      </div>
+    </alb-box>
+
+
+  </form>
+
+</alb-body>

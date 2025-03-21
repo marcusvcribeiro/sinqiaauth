@@ -1,0 +1,27 @@
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: auto;
+
+  .divisor-button {
+    margin-left: 10px;
+  }
+
+  .action-btns{
+    align-self: center;
+  }
+}
+
+.info-composicao{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+
+  p{
+    span{
+      color: var(--santas);
+      font-size: 95%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="search-icon">
+    <button alb-button-icon icon="search" (click)="onClick()" *ngIf="(posicaoReserva.calculado) || (posicaoReserva.valor > 0)"></button>
+  </div>
+  <div class="description" [title]="posicaoReserva.descricao">
+    <div class="title" [ngClass]="posicaoReserva?.destaque === true ? 'destaque' : 'false'">
+      {{ posicaoReserva.label }}
+    </div>
+    <div class="content" [ngClass]="posicaoReserva?.destaque === true ? 'destaque' : 'false'">
+      {{ posicaoReserva.valor | valorFinanceiro }}
+    </div>
+  </div>
+</div>

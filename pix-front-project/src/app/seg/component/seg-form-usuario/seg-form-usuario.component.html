@@ -1,0 +1,46 @@
+<alb-body>
+  <h1 alb-drawer-title>{{ "seg.titulo.usuario" | t }}</h1>
+  <app-drawer-content>
+    <form [formGroup]="form">
+      <div class="alb-divisor --two line3">
+        <div class="width-100">
+          <alb-input [placeholder]="'seg.campo.nomeUsuario' | t" formControlName="nome">
+          </alb-input>
+        </div>
+
+        <div class="width-60">
+          <alb-input [disabled]="!isInsert" [placeholder]="'seg.campo.loginUsuario' | t" formControlName="login"
+            pattern="^[a-zA-Z0-9.]*">
+          </alb-input>
+          <div class="error" *ngIf="controls.login.errors?.pattern">
+            {{'seg.mensagem.caracterinvalido_login_usuario' | t}}
+          </div>
+        </div>
+
+        <div class="width-40">
+          <ng-select class="alb-ng-select" [placeholder]="'seg.campo.status' | t" [items]="statusLista"
+            bindValue="value" bindLabel="label" formControlName="status" clearable="true">
+          </ng-select>
+        </div>
+        <div class="width-100">
+          <alb-input [placeholder]="'seg.campo.email' | t" formControlName="email">
+          </alb-input>
+        </div>
+
+        <div class="width-100" style="margin-top: 16px;">
+          <alb-slide-toggle label="Autenticação em 2 fatores" formControlName="autenticacao"></alb-slide-toggle>
+        </div>
+        <div class="width-100" style="margin-top: 16px;">
+          <alb-slide-toggle label="Alterar senha no próximo login" formControlName="resetarSenha"></alb-slide-toggle>
+        </div>
+
+      </div>
+
+      <div style="display: flex; justify-content: end; padding-top: 24px">
+        <button alb-button type="primary" (click)="onSave()" [disabled]="form.invalid">
+          {{ "botao.salvar" | t }}
+        </button>
+      </div>
+    </form>
+  </app-drawer-content>
+</alb-body>

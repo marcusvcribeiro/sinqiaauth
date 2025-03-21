@@ -1,0 +1,36 @@
+<alb-body *segFuncao="seg.AUT_MENU">
+  <h1>
+    {{ "titulo.autorizacaoLiberacao" | t }}
+  </h1>
+  <div class="action-btns">
+    <div class="info-composicao">
+      <p>Código: <span>{{ composicao?.idTipoMensagem || '-' }}</span></p>
+      <p>Composição: <span>{{ composicao?.descricaoResumida || '-' }}</span></p>
+    </div>
+    <button
+      alb-button-icon
+      icon="add"
+      type="button"
+      [disabled]="!composicao"
+      (click)="onAdicionar()"
+      *segFuncao="seg.AUT_BTN_ADICIONAR"
+      [track]="seg.AUT_BTN_ADICIONAR"
+    ></button>
+    <button
+      alb-button
+      type="primary"
+      class="divisor-button"
+      (click)="onSelecaoComposicaoAutorizacao()"
+      *segFuncao="seg.AUT_BTN_PESQUISAR"
+      [track]="seg.AUT_BTN_PESQUISAR"
+      >
+        {{ "botao.pesquisar" | t }}
+    </button>
+  </div>
+  <div>
+    <app-lista-autorizacao-liberacao
+      [composicao]="composicao"
+      [eventUpdate]="eventEmitterAutorizacaoUpdate"
+    ></app-lista-autorizacao-liberacao>
+  </div>
+</alb-body>

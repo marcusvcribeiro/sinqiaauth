@@ -1,0 +1,37 @@
+<p-table class="alb-table" [value]="rows | async" [scrollable]="true">
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-xs">
+    <col class="sq-col-md">
+    <col class="sq-col-md">
+    <col class="sq-col-md">
+    <col class="sq-col-md">
+  </ng-template>
+  <ng-template pTemplate="header" let-logs>
+    <tr class="--text-left">
+      <th></th>
+      <th>{{'campo.inclusao' | t}}</th>
+      <th>{{'campo.dataReferencia' | t}}</th>
+      <th>{{'campo.ocorrencia' | t}}</th>
+      <th>{{'campo.sistema' | t}}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-value let-logs>
+    <tr>
+      <td>
+        <button class="alb-icon-size" alb-button-icon icon="remove_red_eye" (click)="onVisualizarOcorrencia(logs)" pure>
+        </button>
+      </td>
+      <td> {{logs.dataInclusao | date: 'shortDate'}} </td>
+      <td> {{logs.dataReferencia | date: 'shortDate'}} </td>
+      <td> {{logs.ocorrencia}} </td>
+      <td> {{logs.sistema}} </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="4" class="text-center">
+        {{'validacoes.nenhumaInformacao' | t}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,21 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: bancos-pix-front-configmap
+data:
+  APP_BASE_HREF: "{{ .Values.application.APP_BASE_HREF }}"
+  APP_BASE_URL: "{{ .Values.application.APP_BASE_URL }}"
+
+  BACK_UIMANAGER: "{{ .Values.application.BACK_UIMANAGER }}"
+  BACK_PIX_CORE: "{{ .Values.application.BACK_PIX_CORE }}"
+  BACK_SEG_CORE: "{{ .Values.application.BACK_SEG_CORE }}"
+  BACK_PIX_WS: "{{ .Values.application.BACK_PIX_WS }}"
+  BACK_RELATORIOS_CORE: "{{ .Values.application.BACK_RELATORIOS_CORE }}"
+  BACK_GCOB_CORE: "{{ .Values.application.BACK_GCOB_CORE }}"
+  BACK_LOG_LEG: "{{ .Values.application.BACK_LOG_LEG }}"
+  
+  AUTH_ISSUER_URL: "{{ .Values.application.AUTH_ISSUER_URL }}"
+  AUTH_CLIENT_ID: "{{ .Values.application.AUTH_CLIENT_ID }}"
+  AUTH_SCOPE: "{{ .Values.application.AUTH_SCOPE }}"
+  AUTH_LOG_WARNING_ACTIVE: "{{ .Values.application.AUTH_LOG_WARNING_ACTIVE }}"
+  AUTH_LOG_DEBUG_ACTIVE: "{{ .Values.application.AUTH_LOG_DEBUG_ACTIVE }}"

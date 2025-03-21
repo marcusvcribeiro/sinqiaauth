@@ -1,0 +1,21 @@
+<p-table class="alb-table" [value]="rows$ | async" [scrollable]="true">
+  <ng-template pTemplate="header" let-alcadaGestaoReserva>
+    <tr class="--text-left">
+      <th>{{'campo.usuario' | t}}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-value let-alcadaGestaoReserva>
+    <tr>
+      <td>
+        {{alcadaGestaoReserva.usuario}}
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td colspan="1" class="text-center">
+        {{'validacoes.nenhumaInformacao' | t}}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

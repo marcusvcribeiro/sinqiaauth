@@ -1,0 +1,89 @@
+<alb-body *segFuncao="seg.HAU_MENU">
+    <h1>{{ "titulo.historicoAlteracaoUsuarios" | t }}</h1>
+    <alb-accordion
+      icon="filter_list"
+      [open]="false"
+      [title]="'titulo.pesquisar' | t"
+  
+    >
+  <form [formGroup]="filtroForm">
+  <div class="alb-divisor --four" >
+    <alb-input placeholder="Nome Aplicação" value="SQPIX" disabled></alb-input>
+    <alb-input placeholder="Usuário" id="nomeUsuario" formControlName="nomeUsuario"></alb-input>
+  
+    <div class="sq-col-dt">
+      <alb-datepicker
+        [placeholder]="'campo.de' | t"
+        [value]="dataReferencia"
+        #datIni
+        formControlName="dataIniTrilha"
+      ></alb-datepicker>
+    </div>
+    <div class="sq-col-dt">
+      <alb-datepicker
+        [placeholder]="'campo.ate' | t"
+        [value]="dataReferencia"
+        #datFim
+        formControlName="dataFimTrilha"
+      ></alb-datepicker>
+    </div>
+  </div>
+  <div class="aside-accordion">
+    <button
+      alb-button
+      color="primary"
+      color="accent"
+      (click)="onPesquisar()"
+    >
+      {{ "botao.pesquisar" | t }}
+    </button>
+  </div>
+  </form>
+  </alb-accordion>
+  <!-- <div class="exportar">
+    <button
+    alb-button
+    type="secondary"
+    (click)="onExportarExcel()"
+    class="divisor-button"
+    >
+    {{ "botao.exportarTodos" | t }}
+    </button>
+  </div> -->
+    <p-table
+    class="alb-table"
+    rowHover="true"
+    [scrollable]="true"
+    [paginator]="true"
+    [sq-data-source]="ds"
+  >
+  
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="sq-col-md">{{ "seg.campo.nomeAplicacao" | t }}</th>
+        <th class="sq-col-md">{{ "seg.campo.nomeUsuario" | t }}</th>
+        <th class="sq-col-md">{{ "seg.campo.dataInclusao" | t }}</th>
+        <th>{{ "seg.campo.descricaoOperacao" | t }}</th>
+      </tr></ng-template>
+  
+    <ng-template pTemplate="body" let-item>
+      <tr (click)="onEdit(item)">
+       <td class="sq-col-md">{{item.nomeAplicacao}}</td>
+       <td class="sq-col-md">{{item.nomeUsuario}}</td>
+       <td class="sq-col-md">{{item.dataHoraInclusao | dateTime}}</td>
+       <td>{{item.descricaoOperacao}}</td>
+      </tr>
+    </ng-template>
+  
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="4" class="text-center">
+          {{ "validacoes.nenhumaInformacao" | t }}
+        </td>
+      </tr>
+    </ng-template>
+  
+  </p-table>
+  </alb-body>
+  
+  

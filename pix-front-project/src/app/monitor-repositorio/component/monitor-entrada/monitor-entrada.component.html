@@ -1,0 +1,46 @@
+<div class="list-detail" *ngIf="mensagensRepositorioEntrada">
+  <div class="titulo">{{'titulo.apirest' | t}}</div>
+  <div *ngFor="let mensagem of mensagensRepositorioEntrada.records">
+    <div class="itens" [class.active]="itemSelecionadoEntrada?.hash === mensagem.hash"
+      (click)="onSelecionado.emit(mensagem)">
+      <div class="alb-divisor --three">
+        <div class="width-10">
+          <button alb-button-icon icon="call" pure></button>
+        </div>
+        <div class="width-50">
+          <alb-input [placeholder]="'campo.legado' | t" [value]="mensagem.idChaveLegado" readonly>
+          </alb-input>
+          <alb-input [placeholder]="'campo.dataProcessamento' | t" [value]="mensagem.dataProcessamento | dateTime"
+            readonly></alb-input>
+        </div>
+        <div class="width-40">
+          <alb-input [placeholder]="'campo.descricaoSistema' | t" [value]="mensagem.descricaoSistema" readonly>
+          </alb-input>
+          <sq-chip [label]="mensagem.descricaoSituacaoOperacaoLegado" [status]="mensagem.status"></sq-chip>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer *ngIf="mensagensRepositorioEntrada">
+  <div class="alb-divisor --five">
+    <div class="text width-30">{{itemMinimo}} - {{itemMaximo}}</div>
+    <div class="width-15">
+      <button alb-button-icon [disabled]="this.itemMinimo < this.mensagensRepositorioEntrada.metadata.itemPerPage"
+        (click)="onVoltarTodos()" icon="skip_previous" pure></button>
+    </div>
+    <div class="width-15">
+      <button alb-button-icon [disabled]="this.itemMinimo < this.mensagensRepositorioEntrada.metadata.itemPerPage"
+        (click)="onVoltar()" icon="keyboard_arrow_left" pure></button>
+    </div>
+    <div class="width-15">
+      <button alb-button-icon [disabled]="this.itemMaximo >= this.mensagensRepositorioEntrada.metadata.totalCount"
+        (click)="onProsseguir()" icon="keyboard_arrow_right" pure></button>
+    </div>
+    <div class="width-15">
+      <button alb-button-icon [disabled]="this.itemMaximo >= this.mensagensRepositorioEntrada.metadata.totalCount"
+        (click)="onPularTodos()" icon="skip_next" pure></button>
+    </div>
+  </div>
+</footer>

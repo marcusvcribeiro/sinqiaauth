@@ -1,0 +1,83 @@
+# Default values for bancos-pix-front.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: sinqia.azurecr.io/core-bancario/pix/bancos-pix-front
+  tag: pre
+  pullPolicy: Always
+
+imagePullSecrets: []
+imagePullSecret: admin-k8s
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 80
+
+# ----------------------------------------
+# Limite de CPU e RAM
+# ----------------------------------------
+#resources:
+#  #Mínimo
+#  requests:
+#    cpu: 100m
+#    memory: 128Mi
+#  #Máximo
+#  limits:
+#    cpu: 700m
+#    memory: 1024Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+application:
+  APP_BASE_HREF: /bancos/pix/
+  #APP_BASE_URL: https://pre.sinqia.com.br/bancos/pix
+  APP_BASE_URL: https://atendimento-psti.sinqia.com.br/bancos/pix
+
+  #BACK_UIMANAGER: https://pre.sinqia.com.br/core-ui-manager-server/api/v1/
+  #BACK_UIMANAGER: https://atendimento-psti.sinqia.com.br/core/ui-manager/api/v1/
+  BACK_UIMANAGER: https://atendimento-psti.sinqia.com.br/core-ui-manager-server/api/v1/
+  # BACK_PIX_CORE: https://pre.sinqia.com.br/pix/gestao/j/v1
+  # BACK_PIX_WS: https://pre.sinqia.com.br/pix/gestao/d/api/v1
+  BACK_PIX_CORE: https://atendimento-psti.sinqia.com.br/api-bancos-pix-core/v1
+  BACK_SEG_CORE: https://atendimento-psti.sinqia.com.br/api-bancos-seg-core
+  BACK_PIX_WS: https://api-atendimento-psti.sinqia.com.br/pix/gestao/d/api/v1
+  BACK_RELATORIOS_CORE: https://atendimento-psti.sinqia.com.br/bancos-spi-relatorios/api/v1
+  BACK_GCOB_CORE: https://atendimento-psti.sinqia.com.br/api-bancos-gcob-core/api
+  BACK_LOG_LEG: https://atendimento-psti.sinqia.com.br/aks/bancos-pix-api-log-legado
+
+  AUTH_ISSUER_URL: https://atendimento-psti.sinqia.com.br/auth/realms/sinqia
+  AUTH_CLIENT_ID: sq-bancos-pix-front
+  AUTH_SCOPE: openid profile email
+  AUTH_LOG_WARNING_ACTIVE: false
+  AUTH_LOG_DEBUG_ACTIVE: false
+
+ingress:
+  namespace: pre
+  kubernetesIoIngressClass: traefik
+  traefikFrontendRuleType: PathPrefixStrip
+  #host: pre.sinqia.com.br
+  host: atendimento-psti.sinqia.com.br
+  path: /bancos/pix
+
+labels:
+  release: pre
+  product: core-bancario
+  tier: front
+
+nodeAffinity:
+  first:
+    weight: 99
+    label: dhp-core-bancario
+  second:
+    weight: 1
+    label: dhp-core-bancario

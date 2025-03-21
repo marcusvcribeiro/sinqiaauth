@@ -1,0 +1,37 @@
+
+<alb-body>
+    <p-table
+    frozenWidth="80"
+    class="alb-table"
+    [value]="detalhes"
+    [scrollable]="true"
+    [rows]="10"
+    [paginator]="true"
+    [rowsPerPageOptions]="[10, 25, 50]"
+  >
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th>{{ "marcacaoFraude.campo.cpfCnpj" | t }}</th>
+      <th>{{ "marcacaoFraude.campo.nome" | t}}</th>
+      <th>{{ "marcacaoFraude.campo.agencia" | t}}</th>
+      <th>{{ "marcacaoFraude.campo.conta" | t}}</th>
+      <th>{{ "marcacaoFraude.campo.tipoConsultaFraude" | t }}</th>
+      <th>{{ "marcacaoFraude.campo.dataUltimaConsultaDateTime" | t }}</th>
+      <th></th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-item>
+    <tr>
+        <td>{{ item.cpfCnpj | cpfCnpj}}</td>
+        <td>{{ item.nomePessoa | nullable}}</td>
+        <td>{{ item.codigoAgencia | nullable }}</td>
+        <td>{{ item.numeroConta | nullable }}</td>
+        <td>{{ item.tipoConsultaFraude == 1 ? "Pessoa" : "Chave: " + item.chaveEnderecamento }}</td>
+        <td>{{ item.dataUltimaMarcacaoFraude | dateTime }}</td>
+        <td><button (click)="onVisualizarXml(item.xml)" alb-button-icon icon="remove_red_eye" type="button" pure></button></td>
+    </tr>
+  </ng-template>
+</p-table>
+</alb-body>

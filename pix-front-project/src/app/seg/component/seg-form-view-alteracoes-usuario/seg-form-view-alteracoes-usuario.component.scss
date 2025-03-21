@@ -1,0 +1,12 @@
+p.textarea-like {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e9e9ef;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    white-space: pre-wrap; /* Preserves whitespace and line breaks */
+}

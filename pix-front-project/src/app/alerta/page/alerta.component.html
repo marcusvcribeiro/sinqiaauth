@@ -1,0 +1,95 @@
+<alb-body *segFuncao="seg.ALE_MENU">
+  <h1>{{ 'titulo.alertas' | t }}</h1>
+
+  <alb-accordion icon="filter_list" [open]="true" icon="filter_list" [title]="'titulo.pesquisar' | t">
+    <form [formGroup]="filtroForm">
+      <div class="alb-divisor">
+
+        <div class="width-30">
+          <alb-input [placeholder]="'campo.assunto' | t" formControlName="assunto" autocomplete="off">
+          </alb-input>
+        </div>
+
+        <div class="width-20">
+          <ng-select class="alb-ng-select" [placeholder]="'campo.tipo' | t" [items]="tipoAlertaList" bindValue="value" bindLabel="label"
+            formControlName="tipo" clearable="true">
+          </ng-select>
+        </div>
+
+        <div class="width-20">
+          <alb-input [placeholder]="'campo.usuario' | t" formControlName="usuario" autocomplete="off">
+          </alb-input>
+        </div>
+
+        <div class="width-20">
+          <alb-datepicker [placeholder]="'campo.data' | t" formControlName="dataReferencia">
+          </alb-datepicker>
+        </div>
+
+        <div class="action-button">
+          <button alb-button (click)="ds.filter()" color="accent">
+            {{'botao.pesquisar' | t }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <p-table [sq-data-source]="ds" class="alb-table">
+    <ng-template pTemplate="colgroup">
+      <col class="sq-col-xs">
+      <col class="sq-col-sm">
+      <col class="sq-col-sm">
+      <col class="sq-col-sm">
+      <col class="sq-col-lg">
+      <col class="sq-col-md">
+      <col class="sq-col-md">
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th></th>
+        <th>{{'campo.dataReferencia' | t}}</th>
+        <th>{{'campo.dataEnvio' | t}}</th>
+        <th>{{'campo.dataRecebimento' | t}}</th>
+        <th>{{'campo.assunto' | t}}</th>
+        <th>{{'campo.alarme' | t}}</th>
+        <th>{{'campo.usuario' | t}}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-alerta>
+      <tr [class.naoLido]="!alerta.dataRecebimento" class="--click" (click)="onAbrirAlerta(alerta)">
+        <td class="overflow-unset">
+          <span>
+            <ng-container [ngSwitch]="alerta.tipoAlerta">
+              <span class="alb-warn-color" *ngSwitchCase="tipoAlerta.Erro">
+                <i class="alb-icon">error</i>error
+              </span>
+              <span class="alb-alert-color" *ngSwitchCase="tipoAlerta.Aviso">
+                <i class="alb-icon">warning</i>warning
+              </span>
+              <span class="info-alerta" *ngSwitchCase="tipoAlerta.Informacao">
+                <i class="alb-icon">info</i>info
+              </span>
+            </ng-container>
+          </span>
+        </td>
+        <td>{{alerta.dataReferencia | date: 'shortDate'}}</td>
+        <td>{{alerta.dataEnvio | dateTime}}</td>
+        <td>{{alerta.dataRecebimento | dateTime}}</td>
+        <td>{{alerta.assunto}}</td>
+        <td>{{alerta.descricao}}</td>
+        <td>{{alerta.usuario}}</td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td colspan="7" class="text-center">
+          {{'validacoes.semAlertas' | t}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</alb-body>

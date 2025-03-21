@@ -1,0 +1,103 @@
+<alb-body  *segFuncao="seg.MAF_MENU">
+  <h1>{{ "marcacaoFraude.titulo" | t }}</h1>
+
+  <alb-accordion
+  icon="filter_list"
+  [open]="false"
+  [title]="'titulo.pesquisar' | t">
+    <form [formGroup]="filtroForm">
+      <div class="alb-divisor --three">
+        <div>
+          <sq-cpf-cnpj-input [placeholder]="'marcacaoFraude.filtro.cpfCnpj' | t"
+                             formControlName="cpfCnpj"
+                             [erro]="filtroForm.get('cpfCnpj').invalid && filtroForm.get('cpfCnpj').touched">
+          </sq-cpf-cnpj-input>
+        </div>
+        <div class="sq-col-dt">
+          <alb-datepicker
+            formControlName="dataInicio"
+            [placeholder]="'marcacaoFraude.filtro.dataInicio' | t"
+          ></alb-datepicker>
+        </div>
+        <div class="sq-col-dt">
+          <alb-datepicker
+            formControlName="dataFim"
+            [placeholder]="'marcacaoFraude.filtro.dataFim' | t"
+          ></alb-datepicker>
+        </div>
+
+      </div>
+      <div class="aside-accordion">
+        <button
+          alb-button
+          color="primary"
+          (click)="onPesquisar()"
+          color="accent" [disabled]="filtroForm?.invalid"
+          >
+          {{ "botao.pesquisar" | t }}
+        </button>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <alb-box>
+    <aside class="acoes">
+      <button alb-button type="primary" (click)="exportar()">
+        {{ "marcacaoFraude.botao.exportar" | t }}
+      </button>
+    </aside>
+  </alb-box>
+    <p-table
+      class="alb-table"
+      rowHover="true"
+      [scrollable]="true"
+      [paginator]="true"
+      [sq-data-source]="ds"
+    >
+      <ng-template pTemplate="colgroup">
+        <col class="sq-col-sm" />
+        <!-- cpfCnpj -->
+        <col class="sq-col-md" />
+        <!-- Tipos de Marcações -->
+        <col class="sq-col-md" />
+        <!-- data ultima consulta -->
+        <col class="sq-col-xs" />
+        <!-- ações -->
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+            <th>
+                {{ "marcacaoFraude.campo.cpfCnpj" | t }}
+            </th>
+            <th>
+                {{ "marcacaoFraude.campo.tipoConsultaFraude" | t }}
+            </th>
+            <th>
+                {{ "marcacaoFraude.campo.dataUltimaConsultaDateTime" | t }}
+            </th>
+
+            <th></th>
+
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-marcacao>
+        <tr>
+            <td>{{ marcacao.cpfCnpj | cpfCnpj}}</td>
+            <td>{{ toStatus(marcacao.tipoConsultaFraude) }}</td>
+            <td>{{ marcacao.dataUltimaConsultaDateTime | dateTime }}</td>
+            <td><button (click)="openDrawer(marcacao.cpfCnpj, marcacao.consultas)" alb-button-icon icon="remove_red_eye" type="button" pure></button></td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="4" class="text-center">
+            {{ 'validacoes.nenhumaInformacao' | t }}
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+</alb-body>

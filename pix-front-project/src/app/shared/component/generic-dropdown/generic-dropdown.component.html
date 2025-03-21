@@ -1,0 +1,6 @@
+<ng-select class="alb-ng-select" [items]="valores" bindValue="id" bindLabel="descricao" [placeholder]="placeholder" [ngModel]="value"
+  [clearable]="clearable" (change)="onChange($event)" [required]="required" [disabled]="disabled">
+  <ng-template ng-option-tmp let-item="item">
+    <div title="{{item.descricao}}">{{item.descricao}}</div>
+  </ng-template>
+</ng-select>

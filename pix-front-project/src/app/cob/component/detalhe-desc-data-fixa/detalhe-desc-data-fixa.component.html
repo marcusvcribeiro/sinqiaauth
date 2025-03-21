@@ -1,0 +1,25 @@
+<div class="table">
+    <p-table class="alb-table" [value]="data" [scrollable]="true">
+      <ng-template pTemplate="colgroup">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>{{ 'cob.campo.dtLimiteDesc' | t }}</th>
+          <th>{{ 'cob.campo.vlrDesconto' | t }}</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dt>
+        <tr >
+          <td>{{ dt.dtLimiteDesc  | dateTime  }}</td>
+          <td>{{ dt.vlrDesconto  }}</td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="16" class="text-center">{{ 'validacoes.nenhumaInformacao' | t }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>

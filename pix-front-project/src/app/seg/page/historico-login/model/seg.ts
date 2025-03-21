@@ -1,0 +1,6 @@
+export class Seg {
+
+  HLO_MENU='HLO_MENU';
+  HLO_ACESSO_TOTAL='HLO_ACESSO_TOTAL';
+
+}

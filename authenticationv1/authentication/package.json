@@ -1,0 +1,15 @@
+{
+  "name": "@albert/authentication",
+  "version": "1.1.0-alpha.27",
+  "scripts": {
+    "build": "ng build authentication && cp -r ./src/assets/ ../../dist/authentication/lib/"
+  },
+  "peerDependencies": {
+    "@angular/common": "^9.1.2",
+    "@angular/core": "^9.1.2",
+    "angular-auth-oidc-client": "^10.0.15"
+  },
+  "dependencies": {
+    "@albert/ui": "1.1.0-alpha.27"
+  }
+}

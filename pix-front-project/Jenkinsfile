@@ -1,0 +1,172 @@
+#!groovy
+
+def vertical = "core-bancario"
+def productName = "pix"
+def projectName = "bancos-pix-front"
+
+def dockerFilePath = "docs/docker/."
+def environment = getEnvironmentFromBranch()
+def dockerTag = getEnvironmentFromBranch()
+def projectPrefix = getProjectPrefix(vertical, productName)
+def registryPushCredentials = getRegistryToken( vertical, productName )
+def registryZone = getRegistryZone()
+def dockerPrefix = getDockerPrefix( registryZone, projectPrefix)
+def dockerImage = projectName
+def imageVersion
+
+//HELM
+def namespace = getEnvironmentFromBranch()
+def helmParameters = ""
+
+//JENKINS
+def scmVars
+def label = getJenkinsSlaveLabel(vertical, productName, projectName)
+def sonarLogin = getSonarLogin( vertical, productName, projectName )
+
+
+try {
+
+  podTemplate(
+    label: label,
+    containers: [
+      containerTemplate(name: 'nodejs', image: 'sinqia.azurecr.io/infra/container/nodejs-nexus:node13', command: 'cat', ttyEnabled: true, privileged: true),
+      containerTemplateJavascriptSonarqubeScanner('sonar-scanner'),
+      containerTemplateDocker('docker'),
+      containerTemplateHelm('helm')
+    ],
+    imagePullSecrets: getPodTemplateImagePullSecrets(),
+    volumes: getPodTemplateVolumes()
+  ){
+
+    timeout(time: 90, unit: 'MINUTES') {
+      node(label) {
+
+        container('nodejs') {
+
+          stage('Checkout') {
+              scmVars = checkout scm
+          }
+
+          stage('Tags') {
+                    echo "environment ${environment}"
+
+                    if (environment == 'pre') {
+                    // VERIFICA A VERSÃO DA APLICAÇÃO
+                    sh "ls"
+                    def packageJson = readJSON file: 'package.json'
+                    def versionFromFile = packageJson['version']
+                    versionFromFile = versionFromFile.trim()
+
+                    echo "VERSION: ${imageVersion}"
+
+                    // VERIFICAR A VERSÃO DO GIT
+                    def versionFromGit = sh([returnStdout: true, script: 'git tag --contains']).trim()
+
+                    // COMPARAR AS DUAS VERSÕES, CASO SEJAM DIFERENTES NÃO PASSA
+                    if (versionFromFile != versionFromGit) {
+                    echo "Versão do arquivo ${versionFromFile} não bate com a versão do git ${versionFromGit}, corrija antes de continuar..."
+                    throw "Versão do arquivo ${versionFromFile} não bate com a versão do git ${versionFromGit}, corrija antes de continuar..."
+                    }
+
+                    // VERIFICAR SE A VERSÃO JA EXISTE NO REPOSITÓDIO DE IMAGENS, CASO EXISTA NÃO PASSA
+                    def checkContainerRegister = ''
+                    def notfound = false
+
+                    container('docker') {
+                        try {
+                        checkContainerRegister = sh([
+                            returnStdout: true,
+                            script: "docker inspect ${dockerPrefix}/${dockerImage}:${versionFromFile} --format='{{.Id}}'"]).trim()
+                        } catch (Exception e) {
+                            notfound = true
+                            checkContainerRegister = 'Not Found'
+                        }
+                    }
+
+                    echo "Versão no arquivo: ${versionFromFile} \n" +
+                            "Versão no git: ${versionFromGit} \n" +
+                            "docker inspect ${dockerPrefix}/${dockerImage}:${versionFromFile} --format='{{.Id}}' \n" +
+                            "${checkContainerRegister}"
+
+                    // CASO ESTEJA TUDO OK, DOCKERTAG RECEBE A VERSÃO DA APLICAÇÃO
+                    if (notfound) {
+                            imageVersion = versionFromFile
+                        }else {
+                    echo 'Já existe uma imagem com a mesma dockertag, corrija antes de continuar...'
+                    throw 'Já existe uma imagem com a mesma dockertag, corrija antes de continuar...'
+                    }
+                    }
+                }
+
+          stage('Dependências') {
+              sh "npm install"
+          }
+
+          stage('Build Prod') {
+              sh "npm run buildprod"
+          }
+
+          stage('Executando Testes') {
+            try {
+              echo "Instalando chromium"
+              // imagem usada é baseada no alpine, nao possui chrome oficial mas possui chromium
+              sh "apk add chromium"
+              // TODO - fazer com que os testes passem
+              echo "Executando dos testes"
+              def comandoTestes = "npm run test" +
+                                  " --" +
+                                  " --no-watch" + // executa uma unica vez, sem ficar observando os arquivos por alteracoes
+                                  " --no-progress" + // nao reporta progresso de compilacao
+                                  " --browsers=ChromiumHeadlessCI" // nome do browser a ser utilizado para execucao dos testes, pode ser nomes definidos em 'customLaunchers' nas configs do karma
+                                  // TODO: verificar pq ocorre erro na cobertura com chromium headless no alpine
+                                  // " --code-coverage " + // coleta cobertura
+              sh comandoTestes
+            } catch (Exception testEx) {
+              throw testEx;
+            } finally {
+              // Grava resultado do teste
+              // TODO: plugin resultante do angular...
+            }
+          }
+
+          stage('Executa lint') {
+            //sh "npm run lint"
+          }
+
+        }
+
+        container('sonar-scanner') {
+          stage('Generate metrics') {
+            sh "npm run sonar"
+          }
+        }
+
+        container('docker') {
+          stage('Gerando Docker...') {
+            echo 'Gerando imagem docker... '
+            dockerBuild( dockerFilePath, dockerPrefix, dockerImage, dockerTag )
+            echo 'Docker gerado =)'
+          }
+
+          stage('Package') {
+            echo 'Publicando Docker....'
+            dockerRegistryLogin(registryZone, registryPushCredentials) {
+              dockerPushWithBuildTagsV2(scmVars, dockerPrefix, dockerImage, dockerTag, imageVersion)
+            }
+          }
+        }
+
+        //Deploy Kubernetes
+        container('helm') {
+           stagesHelm( environment, projectName, namespace, dockerTag, helmParameters )
+        }
+
+      }
+    }
+  }
+} catch (e) {
+  currentBuild.result = 'FAILURE'
+  throw e
+} finally {
+  onFinally(vertical, productName, projectName )
+}

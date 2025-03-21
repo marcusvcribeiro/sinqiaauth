@@ -1,0 +1,26 @@
+<alb-tab-group>
+  <alb-tab label="{{ 'tabs.logOcorrencia' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-log-ocorrencia [cobranca]="cobranca"></app-detalhe-log-ocorrencia>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab label="{{ 'tabs.informacaoAdicional' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-info-adicionais [cobranca]="cobranca"></app-detalhe-info-adicionais>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab label="{{ 'tabs.descontoDataFixa' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-desc-data-fixa [cobranca]="cobranca"></app-detalhe-desc-data-fixa>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab label="{{ 'tabs.logWebhook' | t }}">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-log-webhook [cobranca]="cobranca"></app-detalhe-log-webhook>
+    </ng-template>
+  </alb-tab>
+
+</alb-tab-group>

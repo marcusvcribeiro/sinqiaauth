@@ -1,0 +1,76 @@
+<alb-body *segFuncao="seg.GRP_MENU">
+  <h1 alb-drawer-title>{{ "gruposUsuarios.titulo.gruposUsuarios" | t }}</h1>
+  <app-drawer-content>
+    <form [formGroup]="formData">
+      <div class="alb-divisor">
+        <div class="width-100">
+          <alb-input
+            [placeholder]="'gruposUsuarios.campo.nome' | t"
+            formControlName="nome"
+          >
+          </alb-input>
+          <div
+            class="error"
+            *ngIf="controls.nome.errors?.pattern"
+            style="color: red"
+            >
+            {{'seg.mensagem.caracterinvalido_codigo_grupo' | t}}
+          </div>
+        </div>
+
+        <div>
+          <alb-textarea
+            [placeholder]="'gruposUsuarios.campo.descricao' | t"
+            formControlName="descricao"
+            [rows]="5"
+            [length]="500">
+          </alb-textarea>
+          <div class="error" *ngIf="controls.descricao.errors?.pattern">
+            {{'seg.mensagem.caracterinvalido_codigo_grupo' | t}}
+          </div>
+        </div>
+        <div>
+          <ng-select
+            class="alb-ng-select"
+            [items]="niveisHierarquicosList"
+            [placeholder]="'Nivel Hierárquico'"
+            formControlName="nivelHierarquico"
+            bindValue="codNivHie"
+            bindLabel="vrNivHie"
+            clearable="true"
+          >
+          </ng-select>
+        </div>
+        <div>
+          <alb-checkbox
+            [label]="'gruposUsuarios.campo.permConsultaIrrestritiva' | t"
+            formControlName="consulta"
+            >
+          </alb-checkbox>
+        </div>
+        <div>
+          <alb-box [title]="'gruposUsuarios.campo.situacao' | t" formview>
+            <alb-radio-group formControlName="situacao">
+              <alb-radio-button value="A" checked> {{ "gruposUsuarios.campo.ativo" | t }} </alb-radio-button>
+              <alb-radio-button value="I">{{ "gruposUsuarios.campo.inativo" | t }} </alb-radio-button>
+            </alb-radio-group>
+          </alb-box>
+
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: end; padding-top: 24px">
+        <button
+          alb-button
+          type="primary"
+          (click)="onSave()"
+          [disabled]="formData.invalid"
+          *segFuncao="seg.GRP_BTN_ADICIONAR"
+          [track]="seg.GRP_BTN_ADICIONAR"
+          >
+          {{ "botao.salvar" | t }}
+        </button>
+      </div>
+    </form>
+  </app-drawer-content>
+</alb-body>

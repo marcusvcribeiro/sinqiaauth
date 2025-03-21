@@ -1,0 +1,73 @@
+<div class="boleto__campo">
+  <ng-container [ngSwitch]="campo.tipoCampo">
+    <ng-template [ngSwitchCase]="tipoCampo.STRING">
+      <alb-input
+        [id]="campo.idCampo"
+        [value]="value"
+        (change)="onChange($event.target.value)"
+        (focusout)="onTouched()">
+      </alb-input>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.MEMO">
+      <alb-textarea
+        [value]="value"
+        [placeholder]="campo.descricao"
+        (change)="onChange($event.target.value)"
+        (blur)="onTouched()">
+      </alb-textarea>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.NUMERIC">
+      <alb-number
+        [id]="campo.idCampo"
+        [value]="value"
+        (change)="onChangeNumber($event.target.value)"
+        (focusout)="onTouched()"
+      ></alb-number>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.INTEGER">
+      <alb-number
+        [id]="campo.idCampo"
+        [value]="value"
+        (change)="onChangeNumber($event.target.value)"
+        (focusout)="onTouched()"
+      ></alb-number>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.REAL">
+      <alb-number
+        [id]="campo.idCampo"
+        [value]="value"
+        (change)="onChangeNumber($event.target.value)"
+        (focusout)="onTouched()"
+      ></alb-number>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.DATE">
+      <alb-datepicker
+        [id]="campo.idCampo"
+        [value]="value"
+        (changeValue)="onChangeDate($event)"
+        (focusout)="onTouched()">
+      </alb-datepicker>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.DATETIME">
+      <alb-datetimepicker
+        [value]="value"
+        (changeValue)="onChangeDateTime($event)"
+        (focusout)="onTouched()">
+      </alb-datetimepicker>
+    </ng-template>
+
+    <ng-template [ngSwitchCase]="tipoCampo.TIME">
+      <alb-timepicker
+        [value]="value"
+        (changeValue)="onChangeTime($event)"
+        (focusout)="onTouched()">
+      </alb-timepicker>
+    </ng-template>
+  </ng-container>
+</div>

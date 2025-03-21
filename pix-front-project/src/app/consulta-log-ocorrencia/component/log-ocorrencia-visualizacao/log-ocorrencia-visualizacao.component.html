@@ -1,0 +1,99 @@
+<alb-body>
+  <div class="grid-container">
+    <div class="dados-gerais"
+      *ngIf="logOcorrencia.dataReferencia && logOcorrencia.dataInclusao && logOcorrencia.sistema && logOcorrencia.tipoOcorrencia && logOcorrencia.ocorrencia">
+      <div class="title">
+        <span>{{ 'titulo.dadosGerais' | t }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataReferencia">
+        <span>{{ 'campo.data' | t }}</span>
+        <span>{{ logOcorrencia.dataReferencia | date: 'shortDate'}}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataInclusao">
+        <span>{{ 'campo.dataInclusao' | t }}</span>
+        <span>{{ logOcorrencia.dataInclusao | dateTime }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.sistema">
+        <span>{{ 'campo.sistema' | t }}</span>
+        <span>{{ logOcorrencia.sistema }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.tipoOcorrencia">
+        <span>{{ 'campoAbreviado.numero' | t }}</span>
+        <span>{{ logOcorrencia.tipoOcorrencia }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.ocorrencia">
+        <span>{{ 'campo.ocorrencia' | t }}</span>
+        <span>{{ logOcorrencia.ocorrencia }}</span>
+      </div>
+    </div>
+    <div class="transacao" *ngIf="logOcorrencia.dataReferencia && logOcorrencia.numSequenciaTransacao">
+      <div class="title">
+        <span>{{ 'titulo.transacao' | t }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataReferencia">
+        <span>{{ 'campoAbreviado.dataReferencia' | t }}</span>
+        <span>{{ logOcorrencia.dataReferencia | date: 'shortDate' }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.numSequenciaTransacao">
+        <span>{{ 'campoAbreviado.numero' | t }}</span>
+        <span>{{ logOcorrencia.numSequenciaTransacao }}</span>
+      </div>
+    </div>
+    <div class="mensagem"
+      *ngIf="logOcorrencia.dataReferenciaMensagem && logOcorrencia.numSequenciaTransacao && logOcorrencia.numSequenciaTransacaoMensagem && logOcorrencia.codigoMensagem">
+      <div class="title">
+        <span>{{ 'titulo.mensagem' | t }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataReferenciaMensagem">
+        <span>{{ 'campoAbreviado.dataReferencia' | t }}</span>
+        <span>{{ logOcorrencia.dataReferenciaMensagem | date: 'shortDate' }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.numSequenciaTransacao">
+        <span>{{ 'campoAbreviado.numero' | t }}</span>
+        <span>{{ logOcorrencia.numSequenciaTransacao }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.numSequenciaTransacaoMensagem">
+        <span>{{ 'campoAbreviado.numeroSequenciaMensagem' | t }}</span>
+        <span>{{ logOcorrencia.numSequenciaTransacaoMensagem }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.codigoMensagem">
+        <span>{{ 'campo.codigoMensagem' | t }}</span>
+        <span>{{ logOcorrencia.codigoMensagem }}</span>
+      </div>
+    </div>
+    <div class="repositorio-entrada" *ngIf="logOcorrencia.dataReferenciaRepositorioEntrada && logOcorrencia.numSequenciaRepositorioEntrada">
+      <div class="title">
+        <span>{{ 'titulo.repositorioEntrada' | t }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataReferenciaRepositorioEntrada">
+        <span>{{ 'campoAbreviado.dataReferencia' | t }}</span>
+        <span>{{ logOcorrencia.dataReferenciaRepositorioEntrada | date: 'shortDate' }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.numSequenciaRepositorioEntrada">
+        <span>{{ 'campoAbreviado.numero' | t }}</span>
+        <span>{{ logOcorrencia.numSequenciaRepositorioEntrada }}</span>
+      </div>
+    </div>
+    <div class="repositorio-saida" *ngIf="logOcorrencia.dataReferenciaRepositorioSaida && logOcorrencia.numSequenciaRepositorioSaida">
+      <div class="title">
+        <span>{{ 'titulo.repositorioSaida' | t }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.dataReferenciaRepositorioSaida">
+        <span>{{ 'campoAbreviado.dataReferencia' | t }}</span>
+        <span>{{ logOcorrencia.dataReferenciaRepositorioSaida | date: 'shortDate' }}</span>
+      </div>
+      <div class="label" *ngIf="logOcorrencia.numSequenciaRepositorioSaida">
+        <span>{{ 'campoAbreviado.numero' | t }}</span>
+        <span>{{ logOcorrencia.numSequenciaRepositorioSaida }}</span>
+      </div>
+    </div>
+    <div class="descricao" *ngIf="logOcorrencia.descricaoLog">
+      <div class="title">
+        <span>{{ 'titulo.descricao' | t }}</span>
+      </div>
+      <div class="descricao-conteudo">
+        {{ logOcorrencia.descricaoLog }}
+      </div>
+    </div>
+  </div>
+</alb-body>

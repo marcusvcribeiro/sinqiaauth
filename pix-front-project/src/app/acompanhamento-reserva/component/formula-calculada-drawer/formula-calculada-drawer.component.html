@@ -1,0 +1,12 @@
+<alb-body>
+  <h1 alb-drawer-title>
+    {{ 'titulo.formulaCalculadaDrawer' | t }}
+    <span class="--text-warn">{{ posicaoReserva.valor | valorFinanceiro }}</span>
+  </h1>
+  <div>
+    <alb-input readonly [placeholder]="'campo.descricao' | t" [value]="formulaCampo.descricao">
+    </alb-input>
+    <alb-input readonly [placeholder]="'campo.formula' | t" [value]="formulaCampo.formula">
+    </alb-input>
+  </div>
+</alb-body>

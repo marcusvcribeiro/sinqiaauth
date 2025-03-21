@@ -1,0 +1,51 @@
+<div class="table">
+    <p-table class="alb-table" [value]="data" rowHover="true" [scrollable]="true">
+      <ng-template pTemplate="colgroup">
+        <col class="sq-col-xs">
+        <col class="sq-col-xs">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+        <col class="sq-col-sm">
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th id="detalhe"></th>
+          <th id="icone"></th>
+          <th>{{ 'campo.numeroSequencialDaTransacao' | t }}</th>
+          <th>{{ 'campo.dataReferencia' | t }}</th>
+          <th>{{ 'campo.dataHoraInclusao' | t }}</th>
+          <th>{{ 'campo.ocorrencia' | t }}</th>
+          <th>{{ 'campo.sistema' | t }}</th>
+          <th>{{ 'campo.nomeUsuario' | t }}</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-msg>
+        <tr [ngClass]="{ 'selecionado': msg === selected }">
+            <td (click)="$event.stopPropagation()">
+                <button alb-button-icon icon="remove_red_eye" (click)="onDetalhe(msg)" pure></button>
+              </td>
+              <td>
+                <ng-container [ngSwitch]="msg.tipoOcorrencia">
+                  <button alb-button-icon class="error" icon="error" pure *ngSwitchCase="tipoAlerta.Erro"></button>
+                  <button alb-button-icon class="warning" icon="warning" pure *ngSwitchCase="tipoAlerta.Aviso"></button>
+                  <button alb-button-icon class="info" icon="info" pure *ngSwitchCase="tipoAlerta.Informacao"></button>
+                </ng-container>
+              </td>
+          <td >{{ msg.numSequencia   }}</td>
+          <td >{{ msg.dataReferencia | date: 'shortDate' }}</td>
+          <td >{{ msg.dataHoraInclusao |  dateTime  }}</td>
+          <td >{{ msg.dscOcorrencia    }}</td>
+          <td >{{ msg.sistema  }}</td>
+          <td >{{ msg.nomUsu  }}</td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="16" class="text-center">{{ 'validacoes.nenhumaInformacao' | t }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>

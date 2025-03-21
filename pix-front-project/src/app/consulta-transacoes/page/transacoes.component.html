@@ -1,0 +1,138 @@
+<alb-body *segFuncao="seg.TMD_MENU">
+  <h1>{{ "titulo.transacao-manual" | t }}</h1>
+
+  <alb-accordion
+    icon="filter_list"
+    [open]="false"
+    [title]="'titulo.pesquisar' | t"
+    *segFuncao="seg.TMD_SECAO_PESQUISA"
+    [track]="seg.TMD_SECAO_PESQUISA"
+  >
+    <form [formGroup]="filtroForm">
+      <div class="alb-divisor --six">
+        <div>
+          <alb-button-toggle-group>
+            <alb-button-toggle
+              checked
+              (click)="filtrarMensagem = true; onTipo()"
+              >{{ "campo.mensagem" | t }}</alb-button-toggle
+            >
+            <alb-button-toggle (click)="filtrarMensagem = false; onTipo()">{{
+              "campo.grupoMensagem" | t
+            }}</alb-button-toggle>
+          </alb-button-toggle-group>
+          <span *ngIf="filtrarMensagem === true">
+            <app-mensagem-dropdown
+              formControlName="mensagem"
+              [placeholder]="'campo.mensagens' | t"
+              [clearable]="true"
+            ></app-mensagem-dropdown>
+          </span>
+          <span *ngIf="filtrarMensagem === false">
+            <app-mensagem-dropdown
+              formControlName="mensagem"
+              [placeholder]="'campo.grupoMensagem' | t"
+              [clearable]="true"
+              [groupMensagem]="true"
+            ></app-mensagem-dropdown>
+          </span>
+        </div>
+        <alb-number
+          [placeholder]="'campo.valorInicial' | t"
+          formControlName="valorInicio"
+          [decimalLength]="2"
+          [length]="14"
+          [decimal]="true"
+          [allowNegative]="true"
+        >
+        </alb-number>
+        <alb-number
+          [placeholder]="'campo.valorAte' | t"
+          formControlName="valorFim"
+          [decimalLength]="2"
+          [length]="14"
+          [decimal]="true"
+          [allowNegative]="true"
+        >
+        </alb-number>
+        <div>
+          <app-situacao-mensagem-dropdown
+            [placeholder]="'campo.situacaoMensagem' | t"
+            formControlName="idSituacaoMensagem"
+            clearable="true"
+          >
+          </app-situacao-mensagem-dropdown>
+        </div>
+        <div class="sq-col-dt">
+          <alb-datepicker
+            formControlName="dataReferenciaInicio"
+            [placeholder]="'campo.de' | t"
+          ></alb-datepicker>
+        </div>
+        <div class="sq-col-dt">
+          <alb-datepicker
+            formControlName="dataReferenciaFim"
+            [placeholder]="'campo.ate' | t"
+          ></alb-datepicker>
+        </div>
+        <div>
+          <app-canal-mensagem-dropdown
+          formControlName="canalMensagem"
+          [clearable]="true"
+          [placeholder]="'campo.canalMensagem' | t"
+        ></app-canal-mensagem-dropdown>
+        </div>
+      </div>
+      <div class="aside-accordion">
+        <button
+          alb-button
+          color="primary"
+          (click)="onPesquisar()"
+          color="accent"
+        >
+          {{ "botao.pesquisar" | t }}
+        </button>
+      </div>
+    </form>
+  </alb-accordion>
+
+  <alb-tab-group (selectedTabChange)="onTrocarTab($event)" class="white">
+    
+    
+    <alb-tab
+      [label]="'tabs.liberada' | t"
+      [id]="TipoBoletagem.LIBERADA"
+      selected
+      *segFuncao="seg.TMD_TAB_LIBERADA"
+      [track]="seg.TMD_TAB_LIBERADA"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-consulta-transacoes-lista
+          [filtro]="filtro$ | async"
+          [tipoBoletagem]="TipoBoletagem.LIBERADA"
+          (selecionados)="onSelecionados($event)"
+          (keyPressed)="pesquisarByKey()"
+          (mensagemSelecionada)="onMensagensSelecionadas($event)"
+        >
+        </app-consulta-transacoes-lista>
+      </ng-template>
+    </alb-tab>
+
+    <div aside class="acoes">
+     
+      <button
+        alb-button
+        type="secondary"
+        (click)="onPesquisar()"
+        class="divisor-button"
+        *segFuncao="seg.TMD_BTN_EXECUTAR_FILTROS"
+        [track]="seg.TMD_BTN_EXECUTAR_FILTROS"
+      >
+        {{ "botao.executarFiltros" | t }}
+      </button>
+      
+      
+    </div>
+  </alb-tab-group>
+  <ng-keyboard-shortcuts [shortcuts]="shortcuts"></ng-keyboard-shortcuts>
+</alb-body>

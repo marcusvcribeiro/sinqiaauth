@@ -1,0 +1,27 @@
+.valorLiberado{
+  margin-top: 15px;
+}
+
+.button-transacao {
+  margin-left: 10px;
+}
+
+.button-area {
+  text-align: end;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 60px;
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.drawer-title {
+  font-size: var(--font-size-title);
+  font-weight: 700;
+}

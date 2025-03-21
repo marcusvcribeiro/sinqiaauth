@@ -1,0 +1,139 @@
+<h1 alb-drawer-title>{{ "seg.titulo.grupo" | t }}</h1>
+
+<app-drawer-content>
+  <div style="margin: -16px">
+    <form [formGroup]="formData">
+      <alb-tab-group class="white">
+        <alb-tab [label]="'seg.tabs.cadastroBasico' | t" [id]="'A'">
+          <ng-template albTabBodyWrapper>
+            <div class="alb-divisor" style="margin: auto;">
+              <div class="width-100">
+                <alb-input [placeholder]="'seg.campo.codigo' | t" formControlName="codigo" pattern="^[a-zA-Z0-9_]*"
+                  maxLength="8" [disabled]="!isInsert">
+                </alb-input>
+                <div class="error" *ngIf="controls.codigo.errors?.pattern">
+                  {{'seg.mensagem.caracterinvalido_codigo_grupo' | t}}
+                </div>
+              </div>
+
+              <div class="width-100">
+                <alb-input [placeholder]="'seg.campo.grupo_nome' | t" formControlName="descricao" maxLength="40">
+                </alb-input>
+              </div>
+            </div>
+          </ng-template>
+        </alb-tab>
+        <alb-tab [label]="'seg.tabs.parametrosAcesso' | t" [id]="'B'">
+          <ng-template albTabBodyWrapper>
+            <div class="alb-divisor" style="margin: auto; padding-top: 5px;">
+              <div class="width-100">
+                <alb-box title="Gerais">
+                  <div class="alb-divisor">
+                    <div class="width-50">
+                      <alb-input [placeholder]="'seg.campo.diasSenhaExpirar' | t" formControlName="diasSenhaExpirar">
+                      </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-number [placeholder]="'seg.campo.numTentativasInvalidas' | t"
+                        formControlName="numTentativasInvalidas"> </alb-number>
+                    </div>
+                    <div class="width-100">
+                      <alb-number [placeholder]="'seg.campo.qtdDiasSemAcesso' | t" formControlName="qtdDiasSemAcesso">
+                      </alb-number>
+                    </div>  
+                    <div class="width-100" style="margin-top: 16px;">
+                      <alb-slide-toggle label="Utilizar Dicionário de Senhas Fracas" formControlName="utzDioSenFra"></alb-slide-toggle>
+                  </div>
+                  </div>
+                </alb-box>
+              </div>
+              <div class="width-40">
+                <alb-box title="Tipo de Caracter da Senha">
+                  <alb-radio-group formControlName="tipCaracSenha" (changeValue)="tipCaracSenhaChangeValue($event)">
+                    <alb-radio-button value="A"> Alfanumérico </alb-radio-button>
+                    <alb-radio-button value="C"> Caracter </alb-radio-button>
+                    <alb-radio-button value="N"> Numérico </alb-radio-button>
+                  </alb-radio-group>
+                </alb-box>
+              </div>
+              <div class="width-60">
+                <alb-box title="Tamanho da Senha">
+                  <div class="alb-divisor">
+                    <div class="width-50">
+                      <alb-number [placeholder]="'seg.campo.numMinimoCaracteres' | t"
+                        formControlName="numMinimoCaracteres"> </alb-number>
+                    </div>
+                    <div class="width-50">
+                      <alb-number [placeholder]="'seg.campo.numMaximoCaracteres' | t"
+                        formControlName="numMaximoCaracteres"> </alb-number>
+                    </div>
+                  </div>
+                </alb-box>
+              </div>
+              <div class="width-100">
+                <alb-box title="Características da Senha">
+                  <div class="alb-divisor">
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.numCarRepetidos' | t"
+                        formControlName="numCarRepetidos" [minlength]="0">
+                      </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMaximaAlteracoesSenhaDia' | t"
+                        formControlName="qtdMaximaAlteracoesSenhaDia" [minlength]="0"> </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinSenhasConsecutivasDistintas' | t"
+                        formControlName="qtdMinSenhasConsecutivasDistintas" [minlength]="0"> </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinCaracteresLetras' | t"
+                        formControlName="qtdMinCaracteresLetras"
+                        [minlength]="controls.tipCaracSenha.value == 'C' || controls.tipCaracSenha.value == 'A' ? 1 : 0"
+                        [disabled]="controls.tipCaracSenha.value == 'N'">
+                      </alb-input>
+                    </div>
+
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinLetrasMaiusculas' | t"
+                        formControlName="qtdMinLetrasMaiusculas" [disabled]="controls.tipCaracSenha.value == 'N'"
+                        [minlength]="0">
+                      </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinLetrasMinusculas' | t"
+                        formControlName="qtdMinLetrasMinusculas" [disabled]="controls.tipCaracSenha.value == 'N'"
+                        [minlength]="0">
+                      </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinCarcEspeciais' | t"
+                        formControlName="qtdMinCarcEspeciais" [disabled]="controls.tipCaracSenha.value == 'N'"
+                        [minlength]="0">
+                      </alb-input>
+                    </div>
+                    <div class="width-50">
+                      <alb-input type="number" [placeholder]="'seg.campo.qtdMinCarcMimericos' | t"
+                        formControlName="qtdMinCarcMimericos"
+                        [minlength]="controls.tipCaracSenha.value == 'N' || controls.tipCaracSenha.value == 'A' ? 1 : 0"
+                        [disabled]="controls.tipCaracSenha.value == 'C'">
+                      </alb-input>
+                    </div>
+                  </div>
+                </alb-box>
+              </div>
+            </div>
+          </ng-template>
+        </alb-tab>
+      </alb-tab-group>
+
+    </form>
+  </div>
+
+  <div style="display: flex; justify-content: end; padding-top: 24px; margin-right: 16px">
+    <button alb-button type="primary" (click)="onSave()" [disabled]="formData.invalid">
+      {{ "botao.salvar" | t }}
+    </button>
+  </div>
+
+</app-drawer-content>

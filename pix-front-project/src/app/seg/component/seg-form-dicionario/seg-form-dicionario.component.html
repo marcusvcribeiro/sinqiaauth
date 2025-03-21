@@ -1,0 +1,20 @@
+<alb-body>
+  <h1 alb-drawer-title>{{ "seg.titulo.dicionarioSenha" | t }}</h1>
+  <app-drawer-content>
+    <form [formGroup]="form">
+      <div class="alb-divisor --two line3">
+        <div class="width-100">
+          <alb-input [placeholder]="'seg.campo.senhaFraca' | t" formControlName="senha">
+          </alb-input>
+        </div>
+
+      </div>
+
+      <div style="display: flex; justify-content: end; padding-top: 24px">
+        <button alb-button type="primary" (click)="onSave()">    <!--[disabled]="form.invalid" -->
+          {{ "botao.salvar" | t }}
+        </button>
+      </div>
+    </form>
+  </app-drawer-content>
+</alb-body>

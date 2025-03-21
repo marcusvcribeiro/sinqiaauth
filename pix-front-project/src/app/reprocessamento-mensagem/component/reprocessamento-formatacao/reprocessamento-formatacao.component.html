@@ -1,0 +1,63 @@
+<div class="alb-divisor --two button">
+  <div class="titulo">{{'titulo.formatacao' | t}}</div>
+  <div class="reprocessar">
+    <button alb-button [disabled]="ds.selection.isEmpty()" (click)="onReprocessar()" color="accent"  *segFuncao="seg.REP_BTN_FORMATACAO"  [track]="seg.REP_BTN_FORMATACAO">
+      {{'botao.reprocessar' | t }}
+    </button>
+  </div>
+</div>
+
+<div class="reprocessamento-list">
+  <p-table class="alb-table" rowHover="true" [scrollable]="true" [sq-data-source]="ds">
+    <ng-template pTemplate="colgroup">
+      <col class="sq-col-xs">
+      <col class="sq-col-md">
+      <col class="sq-col-md">
+      <col class="sq-col-md">
+      <col class="sq-col-md">
+      <col class="sq-col-md">
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>
+          <ng-container *ngIf="ds?.data$ | async as mensagens">
+            <alb-checkbox
+              (change)="ds.selectAllToggle(mensagens)"
+              [value]="ds.selection.hasValue() && ds.isAllSelected(mensagens)"
+              [indeterminate]="ds.selection.hasValue() && !ds.isAllSelected(mensagens)">
+            </alb-checkbox>
+          </ng-container>
+        </th>
+        <th>{{'campo.composicaoOperacao' | t}}</th>
+        <th>{{'campo.evento' | t}}</th>
+        <th class="text-end">{{'campo.valor' | t}}</th>
+        <th class="text-center">{{'campo.agendamento' | t}}</th>
+        <th>{{'campo.sequencial' | t}}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-mensagem>
+      <tr>
+        <td>
+          <alb-checkbox (change)="ds.selection.toggle(mensagem)"
+            [value]="ds.selection.isSelected(mensagem)">
+          </alb-checkbox>
+        </td>
+        <td>{{mensagem.composicaoOperacao}}</td>
+        <td>{{mensagem.evento}}</td>
+        <td class="text-end">{{mensagem.valor | valorFinanceiro}}</td>
+        <td class="text-center">{{mensagem.dataMovimento | date: 'shortDate'}}</td>
+        <td>{{mensagem.numeroSequenciaTransacao }}</td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td colspan="6" class="text-center">
+          {{'validacoes.nenhumaInformacao' | t}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

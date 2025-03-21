@@ -1,0 +1,13 @@
+<ng-select
+    [ngClass]="{'ng-pristine ng-invalid ng-touched': !!erro }"
+    class="alb-ng-select"
+    [placeholder]="'* ' + placeholder"
+    [items]="keyValues$ | async"
+    bindValue="id"
+    bindLabel="descricao"
+    (change)="onValorSelecionado($event)"
+    [ngModel]="idSelecionado"
+    (blur)="onTouched()"
+    [clearable]="clearable"
+  >
+</ng-select>
