@@ -1,0 +1,24 @@
+.campos-posicao-reserva {
+  background-color: var(--background);
+  padding: 16px;
+
+  .content {
+    background-color: var(--contrast);
+    padding: 16px;
+
+    .posicao-reserva-item {
+      border: 1pt;
+      border-style: solid;
+      border-color: #bfbfc4;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: white;
+      cursor: pointer;
+
+      .descricao {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

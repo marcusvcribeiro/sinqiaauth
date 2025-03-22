@@ -1,0 +1,44 @@
+<alb-body>
+  <h1 alb-drawer-title>{{ "titulo.gerarDados" | t }}</h1>
+  <app-drawer-content>
+    <form [formGroup]="form">
+      <div class="alb-divisor">
+        <div class="width-50">
+          <ng-select
+            [placeholder]="'campo.mes' | t"
+            class="alb-ng-select"
+            formControlName="mes"
+          >
+            <ng-option *ngFor="let el of mesesList" [value]="el">{{
+              el | mesesDoAno
+            }}</ng-option>
+          </ng-select>
+        </div>
+        <div class="width-50">
+          <alb-input
+            [placeholder]="'campo.ano' | t"
+            [maxLength]="4"
+            [mask]="{ mask: '0000' }"
+            formControlName="ano"
+          >
+          </alb-input>
+        </div>
+      </div>
+    </form>
+
+    <div class="alb-divisor">
+      <div class="width-40">
+        <button alb-button [disabled]="!download_liberado" (click)="download()">
+          {{ "botao.downloadxml" | t }}
+        </button>
+      </div>
+      <div class="width-35"></div>
+      <div class="width-25" style="text-align: end">
+        <button alb-button [disabled]="form.invalid" (click)="onGerar()">
+          {{ "botao.gerar" | t }}
+        </button>
+      </div>
+    </div>
+    <aside class="acoes"></aside>
+  </app-drawer-content>
+</alb-body>

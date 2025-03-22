@@ -1,0 +1,58 @@
+.boleto-arrow {
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--accent);
+  border-bottom: 0;
+  border-right: 0;
+  margin-right: 1rem;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.boleto-arrow.open {
+  transform: rotate(45deg);
+}
+
+.boleto-arrow.close {
+  transform: rotate(225deg);
+}
+
+.boleto-header {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--accent);
+  transition: 0.2s background, 0.2s color;
+  cursor: pointer;
+
+  .title {
+    margin: 0;
+    color: var(--accent);
+  }
+
+  &:hover {
+    background-color: var(--accent);
+
+    .boleto-arrow {
+      border-color: var(--contrast);
+    }
+
+    .title,
+    .arrow {
+      color: var(--contrast);
+      border-color: var(--contrast);
+    }
+  }
+}
+
+.boleto-content {
+  border-left: 1px solid var(--accent);
+  margin: 0 0 0 20px;
+  padding: 5px 0 5px 15px;
+}
+
+.boleto-content--hide {
+  display: none;
+}

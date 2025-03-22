@@ -1,0 +1,69 @@
+<alb-body *segFuncao="seg.ASS_MENU">
+  <h1>
+    {{ "titulo.associacaoAlcadaGrpUsuarios" | t }}
+  </h1>
+
+  <alb-tab-group class="white" (selectedTabChange)="onTrocarTab($event)">
+    <alb-tab
+      [label]="'tabs.inclusao' | t"
+      [id]="tab_inclusao"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-associacao-inclusao
+          [composicao]="composicao"
+          [eventUpdate]="eventEmitterCadastroUpdate"
+        ></app-associacao-inclusao>
+      </ng-template>
+    </alb-tab>
+    <alb-tab
+      [label]="'tabs.liberacao' | t"
+      [id]="tab_liberacao"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-associacao-liberacao
+        [composicao]="composicao"
+        [eventUpdate]="eventEmitterCadastroUpdate"
+        ></app-associacao-liberacao>
+      </ng-template>
+    </alb-tab>
+    <alb-tab
+      [label]="'tabs.consulta' | t"
+      [id]="tab_consulta"
+    >
+      <ng-template albTabBodyWrapper>
+        <app-associacao-consulta
+          [composicao]="composicao"
+          [eventUpdate]="eventEmitterCadastroUpdate"
+          ></app-associacao-consulta>
+      </ng-template>
+    </alb-tab>
+
+
+    <div aside class="acoes">
+        <div class="info-composicao">
+          <p>Código: <span>{{ composicao?.idTipoMensagem || '-' }}</span></p>
+          <p>Descrição: <span>{{ composicao?.descricaoResumida || '-' }}</span></p>
+        </div>
+        <div class="action-btns" style="gap: 15px; margin-top: -2px">
+          <button
+            alb-button-icon
+            icon="add"
+            type="button"
+            (click)="onAdicionar()"
+            [disabled]="!composicao"
+            *segFuncao="seg.ASS_BTN_ADICIONAR"
+            [track]="seg.ASS_BTN_ADICIONAR"
+          ></button>
+          <button
+            alb-button
+            type="primary"
+            class="divisor-button"
+            (click)="onSelecaoComposicaoOperacao()"
+            *segFuncao="seg.ASS_BTN_EDITAR"
+            [track]="seg.ASS_BTN_EDITAR"
+          >
+            {{ "botao.pesquisar" | t }}
+          </button>
+        </div>
+      </div>
+  </alb-tab-group>

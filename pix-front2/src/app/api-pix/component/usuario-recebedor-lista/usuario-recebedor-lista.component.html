@@ -1,0 +1,92 @@
+<p-table scrollHeight="calc(100vh - 360px)"
+[value]="values" class="alb-table" rowHover="true"
+[scrollable]="true"
+[paginator]="true"
+[rows]="numeroLinhas"
+[rowsPerPageOptions]="listaQuantidadeLinhas">
+
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-md">
+    <col class="sq-col-md">
+    <col class="sq-col-lg">
+    <col class="sq-col-xs">
+  </ng-template>
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th id="nome">{{ 'campo.nome' | t}}</th>
+      <th id="cliente_secret">{{ 'campo.credenciais' | t}}</th>
+      <th id="certificado">{{ 'campo.certificado' | t}}</th>
+      <th id="editar"></th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-usuario>
+    <tr>
+      <td>{{usuario.nome}}</td>
+      <td>
+        <div class="alb-divisor --two">
+          <div style="margin-top:10px">
+            <div *segFuncao="seg.ONB_GERAR_CREDENCIAIS">
+              <button [track]="seg.ONB_GERAR_CREDENCIAIS"
+                *ngIf="usuario.situacaoClienteSecret != null && !usuario.situacaoClienteSecret" alb-button
+                type="secondary" class="divisor-button" style="min-height:24px" (click)="gerarCredenciais(usuario)">
+                {{'botao.gerar_credenciais' | t}}
+              </button>
+            </div>
+            <button *ngIf="usuario.situacaoClienteSecret == null" alb-button-icon icon="autorenew"
+              [class.dashboard-refresh-control__refresh]="usuario.situacaoClienteSecret == null" type="button"
+              pure></button>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="alb-divisor --two">
+          <div style="width:fit-content">
+            <div class="{{usuario.situacaoCertificado | situcaoCertificadoPin}}" style="width: 32px; height: 32px;"
+              albertTooltip="{{usuario.situacaoCertificado | situcaoCertificadoDescricao}}"></div>
+          </div>
+          <div style="margin-top:10px">
+            <div class="alb-divisor --two">
+              <div *segFuncao="seg.ONB_GERAR_CERTIFICADO">
+                <button [track]="seg.ONB_GERAR_CERTIFICADO" alb-button
+                  type="secondary" class="divisor-button" (click)="gerar_certificado(usuario)" style="min-height:24px">
+                  {{(usuario.situacaoCertificado == SemCertificado ? 'botao.gerar_certificado' : 'botao.regerar_certificado') | t}}
+                </button>
+              </div>
+              <div *segFuncao="seg.ONB_REENVIAR_CERTIFICADO">
+                <button [track]="seg.ONB_REENVIAR_CERTIFICADO" alb-button [disabled]="usuario.situacaoCertificado == SemCertificado"
+                  type="secondary" class="divisor-button" (click)="reenviar_certificado(usuario)" style="min-height:24px">
+                  {{'botao.reenviar_certificado' | t}}
+                </button>
+              </div>
+            </div>            
+            <button *ngIf="usuario.situacaoCertificado == null" alb-button-icon icon="autorenew"
+              [class.dashboard-refresh-control__refresh]="usuario.situacaoCertificado == null" type="button"
+              pure></button>
+          </div>
+        </div>
+
+
+      </td>
+      <td>
+        <div class="alb-divisor --two">
+          <button *segFuncao="seg.ONB_EDITAR_USUARIO" alb-button-icon icon="edit" type="button" style="border: none;  background:transparent"
+          (click)="editar(usuario)"></button>
+
+          <button *segFuncao="seg.ONB_EDITAR_USUARIO" alb-button-icon icon="delete" type="button" style="border: none;  background:transparent"
+          (click)="excluir(usuario)"></button>
+        </div>
+        
+        </td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="25" class="text-center">
+        {{ "validacoes.nenhumaInformacao" | t }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

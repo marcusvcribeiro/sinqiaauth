@@ -1,0 +1,67 @@
+.label {
+  margin-top: .5em;
+
+  span {
+    display: block;
+
+    margin-top: .2em;
+
+    &:first-child {
+      font-size: 0.7em;
+      color: var(--text)
+    }
+
+    &:last-child {
+      font-size: 0.9em;
+      color: var(--text);
+      font-weight: bold;
+    }
+  }
+}
+
+.descricao-conteudo {
+  white-space: pre-wrap;
+  max-width: 750px;
+  overflow-wrap: break-word;
+  max-height: 250px;
+  overflow: auto;
+
+  >*:first-child {
+    margin-bottom: 3em;
+  }
+
+  p {
+    line-height: 2;
+    font-size: 0.9em;
+    color: var(--background);
+    line-height: .5;
+  }
+}
+
+.title {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.dados-gerais { grid-area: dados-gerais; }
+.transacao { grid-area: transacao; }
+.mensagem { grid-area: mensagem; }
+.repositorio-entrada { grid-area: repositorio-entrada; }
+.repositorio-saida { grid-area: repositorio-saida; }
+.descricao { grid-area: descricao; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'dados-gerais dados-gerais transacao transacao mensagem mensagem'
+    'repositorio-entrada repositorio-entrada repositorio-entrada repositorio-saida repositorio-saida repositorio-saida'
+    'descricao descricao descricao descricao descricao descricao';
+  grid-gap: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px;
+}

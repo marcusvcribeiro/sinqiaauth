@@ -1,0 +1,449 @@
+<p-table
+  class="alb-table"
+  rowHover="true"
+  [scrollable]="true"
+  [paginator]="true"
+  [sq-data-source]="ds"
+>
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-xs" />
+    <!-- menu de tres pontos -->
+    <col class="sq-col-xs" />
+    <!-- botão lupa -->
+    <col class="sq-col-xs" />
+    <!-- check box -->
+    <col *ngIf="isModelo" class="sq-col-sm" />
+    <!-- nome modelo mensagem -->
+    <col class="sq-col-sm" />
+    <!-- sequencia -->
+    <col class="sq-col-md" />
+    <!-- canal mensagem -->
+    <col class="sq-col-md" />
+    <!-- estado transação -->
+    <col class="sq-col-md" />
+    <!-- situação mensagem -->
+    <col class="sq-col-agencia" />
+    <!-- agência -->
+    <col class="sq-col-conta" />
+    <!-- conta -->
+    <col class="sq-col-sm" />
+    <!-- código -->
+    <col class="sq-col-sm" />
+    <!-- valor financeiro -->
+    <col class="sq-col-xs" />
+    <!-- débito crédito -->
+    <col class="sq-col-md" />
+    <!-- composição operação -->
+    <col class="sq-col-md" />
+    <!-- inclusão -->
+    <col class="sq-col-dt" />
+    <!-- data agendamento -->
+    <col class="sq-col-md" />
+    <!-- operação bancária -->
+    <col class="sq-col-md" />
+    <!-- sistema -->
+    <col class="sq-col-md" />
+    <!-- usuario ultima manutenção -->
+    <col class="sq-col-md" />
+    <!-- data última manutenção -->
+    <col class="sq-col-md" />
+    <!-- usuario inclusão -->
+    <col class="sq-col-sm" />
+    <!-- quantidade autorização -->
+    <col class="sq-col-md" />
+    <!-- data referência -->
+    <col class="sq-col-sm" />
+    <!-- data ultimo processamento emissor -->
+    <col class="sq-col-md" />
+    <!-- numero unico operação -->
+    <col class="sq-col-md" />
+    <!-- numero controle mensagem original -->
+    <col class="sq-col-sm" />
+    <!-- tipo entrada mensagem -->
+    <col class="sq-col-md" />
+    <!-- data último processamento emissor -->
+    <col class="sq-col-md" />
+    <!-- número controle if -->
+    <col class="sq-col-md" />
+    <!-- id Controle Cob -->
+  </ng-template>
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th></th>
+      <th>
+        <ng-container *ngIf="ds?.data$ | async as boletos">
+          <alb-checkbox
+            (change)="onCheckAll(boletos)"
+            [value]="ds.selection.hasValue() && ds.isAllSelected(boletos)"
+            [indeterminate]="
+              ds.selection.hasValue() && !ds.isAllSelected(boletos)
+            "
+          >
+          </alb-checkbox>
+        </ng-container>
+      </th>
+      <th></th>
+
+      <th *ngIf="isModelo" [pSortableColumn]="'MODELO'">
+        {{ "campo.nomeDoModeloDaMensagem" | t }}
+      </th>
+
+      <th [pSortableColumn]="'SEQUENCIAL'">
+        {{ "campo.numeroSequencialDaTransacao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'CANAL_MENSAGEM'">
+        {{ "campo.canalMensagem" | t }}
+      </th>
+
+      <th [pSortableColumn]="'ESTADO_TRAN'">
+        {{ "campo.estadoDaTransacao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'ID_SITUACAO_MSG'">
+        {{ "campo.situacaoMensagem" | t }}
+      </th>
+
+      <th [pSortableColumn]="'AGENCIA'">
+        {{ "campo.agencia" | t }}
+      </th>
+
+      <th [pSortableColumn]="'CONTA'">
+        {{ "campo.conta" | t }}
+      </th>
+
+      <th [pSortableColumn]="'COD_MENSAGEM'">
+        {{ "campo.codigo" | t }}
+      </th>
+
+      <th class="text-end" [pSortableColumn]="'VALOR'">
+        {{ "campo.valorFinanceiro" | t }}
+      </th>
+
+      <th [pSortableColumn]="'ID_DEB_CRE'">
+        {{ "campo.dc" | t }}
+      </th>
+
+      <th [pSortableColumn]="'COMPOSICAO'">
+        {{ "campo.composicaoOperacao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'DT_INCLUSAO'">
+        {{ "campo.inclusao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'DT_MOVIMENO'">
+        {{ "campo.dataAgendamento" | t }}
+      </th>
+
+      <th [pSortableColumn]="'OPE_BANCARIA'">
+        {{ "campo.operacaoBancaria" | t }}
+      </th>
+
+      <th [pSortableColumn]="'SISTEMA'">
+        {{ "campo.sistema" | t }}
+      </th>
+
+      <th [pSortableColumn]="'USUARIO'">
+        {{ "campo.usuarioUltimaManutencao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'DT_ULTIMA_MANUTENCAO'">
+        {{ "campo.dataUltimaManutencao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'USUARIO_INC'">
+        {{ "campo.usuarioInclusao" | t }}
+      </th>
+
+      <th class="text-end" [pSortableColumn]="'QTD_AUTORIZACAO'">
+        {{ "campo.qtdAutorizacao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'DT_REFERENCIA'">
+        {{ "campo.dataReferencia" | t }}
+      </th>
+
+      <th [pSortableColumn]="'PRIORIDADE'">
+        {{ "campo.prioridade" | t }}
+      </th>
+
+      <th [pSortableColumn]="'NUM_OPERACAO'">
+        {{ "campo.identificadorUnicoOperacao" | t }}
+      </th>
+
+      <th [pSortableColumn]="'NUM_CR_MSG_ORI'">
+        {{ "campo.identificadorUnicoOperacaoOriginal" | t }}
+      </th>
+
+      <th [pSortableColumn]="'ENTRADA_MSG'">
+        {{ "campo.tipoEntradaMensagem" | t }}
+      </th>
+
+      <th [pSortableColumn]="'DT_ULTIMO_PRO'">
+        {{ "campo.dataUltimoProcessamentoEmissor" | t }}
+      </th>
+
+      <th [pSortableColumn]="'NUM_CONTROLE_IF'">
+        {{ "campo.numeroControleIf" | t }}
+      </th>
+
+	  <th [pSortableColumn]="'ID_TRN_COB'">
+        {{ "campo.idTransacaoCob" | t }}
+      </th>
+
+    </tr>
+
+    <tr class="filter-row" [formGroup]="filtroForm">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th *ngIf="isModelo">
+        <alb-input formControlName="nomeModeloMensagem" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-input formControlName="sequencia" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <app-canal-mensagem-dropdown
+          formControlName="idCanalMensagem"
+          [clearable]="true"
+          [idSelecionado]= -1
+          (keydown)="onKeyDown($event)"
+        ></app-canal-mensagem-dropdown>
+      </th>
+      <th>
+        <app-estado-transacao-dropdown
+          formControlName="estadoTransacao"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-estado-transacao-dropdown>
+      </th>
+      <th>
+        <app-situacao-mensagem-dropdown
+          formControlName="situacaoMensagem"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-situacao-mensagem-dropdown>
+      </th>
+      <th>
+        <alb-input formControlName="agencia" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-input formControlName="conta" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-input formControlName="codigo" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-number
+          formControlName="valorFinanceiro"
+          [decimalLength]="2"
+          [length]="9"
+          [decimal]="true"
+          [allowNegative]="true"
+          (keydown)="onKeyDown($event)"
+        ></alb-number>
+      </th>
+      <th>
+        <app-debito-credito-dropdown
+          formControlName="debitoCredito"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-debito-credito-dropdown>
+      </th>
+      <th>
+        <app-composicao-operacao-dropdown
+          formControlName="composicaoOperacao"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-composicao-operacao-dropdown>
+      </th>
+      <th>
+        <alb-datetimepicker formControlName="dataInclusao" (keydown)="onKeyDown($event)"></alb-datetimepicker>
+      </th>
+      <th>
+        <alb-datepicker formControlName="dataMovimento" (keydown)="onKeyDown($event)"></alb-datepicker>
+      </th>
+      <th>
+        <app-operacao-bancaria-dropdown
+          formControlName="operacaoBancaria"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-operacao-bancaria-dropdown>
+      </th>
+      <th>
+        <app-sistema-dropdown
+          formControlName="sistema"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        ></app-sistema-dropdown>
+      </th>
+      <th>
+        <alb-input formControlName="usuarioUltimaManutencao" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-datetimepicker formControlName="dataUltimaManutencao" (keydown)="onKeyDown($event)">
+        </alb-datetimepicker>
+      </th>
+      <th>
+        <alb-input formControlName="usuarioInclusao" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-number
+          formControlName="quantidadeAutorizacao"
+          [decimalLength]="0"
+          [length]="9"
+          (keydown)="onKeyDown($event)"
+        ></alb-number>
+      </th>
+      <th>
+        <alb-datepicker formControlName="dataReferencia" (keydown)="onKeyDown($event)"></alb-datepicker>
+      </th>
+      <th>
+        <alb-input formControlName="prioridade" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-input formControlName="numeroUnicoOperacao" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <alb-input formControlName="numeroUnicoOperacaoOriginal" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+      <th>
+        <app-tipo-entrada-mensagem-dropdown
+          formControlName="tipoEntradaMensagem"
+          [clearable]="true"
+          (keydown)="onKeyDown($event)"
+        >
+        </app-tipo-entrada-mensagem-dropdown>
+      </th>
+      <th>
+        <alb-datepicker formControlName="dataUltimoProcessamentoEmissor" (keydown)="onKeyDown($event)">
+        </alb-datepicker>
+      </th>
+      <th>
+        <alb-input formControlName="numeroControleIF" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+	  <th>
+        <alb-input formControlName="idTransacaoCob" (keydown)="onKeyDown($event)"></alb-input>
+      </th>
+
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-boleto>
+    <tr [pSelectableRow]="boleto" (click)="onMensagemSelecionada(boleto)">
+      <td (click)="$event.stopPropagation()">
+        <alb-menu
+          *segFuncoes="[
+            seg.BOL_LIS_VISUALIZAR,
+            seg.BOL_LIS_EXCLUIR,
+            seg.BOL_LIS_CANCELAR,
+            seg.BOL_LIS_EDITAR,
+            seg.BOL_LIS_CLONAR
+          ]"
+        >
+          <alb-menu-item
+            (click)="onClonar(boleto)"
+            *segFuncao="seg.BOL_LIS_CLONAR"
+            [track]="seg.BOL_LIS_CLONAR"
+          >
+            <ng-template albMenuTemplate>{{ "botao.clonar" | t }}</ng-template>
+          </alb-menu-item>
+          <alb-menu-item
+            [hidden]="tipoBoletagem !== TipoBoletagem.PRE_BOLETO"
+            (click)="onEditarBoleto(boleto)"
+            *segFuncao="seg.BOL_LIS_EDITAR"
+            [track]="seg.BOL_LIS_EDITAR"
+          >
+            <ng-template albMenuTemplate>{{ "botao.editar" | t }}</ng-template>
+          </alb-menu-item>
+          <alb-menu-item
+            *segFuncao="seg.BOL_LIS_CANCELAR"
+            [track]="seg.BOL_LIS_CANCELAR"
+            [hidden]="
+              !(
+                (tipoBoletagem === TipoBoletagem.LIBERADA ||
+                  tipoBoletagem === TipoBoletagem.BLOQUEADO) &&
+                (boleto.estadoTransacao === TipoEstadoTransacao.AGENDADA ||
+                  boleto.estadoTransacao === TipoEstadoTransacao.BLOQUEADA ||
+                  boleto.estadoTransacao ===
+                    TipoEstadoTransacao.ENVIO_BLOQUEADO ||
+                  boleto.estadoTransacao ===
+                    TipoEstadoTransacao.ERRO_FORMATACAO_MENSAGEM)
+              )
+            "
+            (click)="onCancelar(boleto)"
+          >
+            <ng-template albMenuTemplate>{{
+              "botao.cancelar" | t
+            }}</ng-template>
+          </alb-menu-item>
+          <alb-menu-item
+            [hidden]="tipoBoletagem !== TipoBoletagem.PRE_BOLETO"
+            (click)="onDeletar(boleto)"
+            *segFuncao="seg.BOL_LIS_EXCLUIR"
+            [track]="seg.BOL_LIS_EXCLUIR"
+          >
+            <ng-template albMenuTemplate>{{ "botao.excluir" | t }}</ng-template>
+          </alb-menu-item>
+        </alb-menu>
+      </td>
+      <td (click)="$event.stopPropagation()">
+        <alb-checkbox
+          (change)="onCheck($event, boleto)"
+          [value]="ds.selection.isSelected(boleto)"
+        >
+        </alb-checkbox>
+      </td>
+      <td (click)="$event.stopPropagation()">
+        <button
+          class="alb-icon-size"
+          alb-button-icon
+          icon="remove_red_eye"
+          (click)="onVisualizarTransacao(boleto)"
+          pure
+          *segFuncao="seg.BOL_LIS_VISUALIZAR"
+          [track]="seg.BOL_LIS_VISUALIZAR"
+        ></button>
+      </td>
+      <td *ngIf="isModelo">{{ boleto.nomeModeloMensagem }}</td>
+      <td>{{ boleto.numeroSequenciaTransacao }}</td>
+      <td>{{ boleto.idCanalMensagem | canalMensagem }}</td>
+      <td>{{ boleto.estadoTransacao }}</td>
+      <td>{{ boleto.situacaoMensagem }}</td>
+      <td>{{ boleto.agencia }}</td>
+      <td>{{ boleto.conta }}</td>
+      <td>{{ boleto.codigoMensagem }}</td>
+      <td class="text-end">{{ boleto.valorFinanceiro | valorFinanceiro }}</td>
+      <td>{{ boleto.debitoCredito }}</td>
+      <td>{{ boleto.composicaoOperacao }}</td>
+      <td>{{ boleto.dataInclusao | dateTime }}</td>
+      <td>{{ boleto.dataMovimento | date: "shortDate" | nullable }}</td>
+      <td>{{ boleto.operacaoBancaria }}</td>
+      <td>{{ boleto.sistema }}</td>
+      <td>{{ boleto.usuarioUltimaManutencao }}</td>
+      <td>{{ boleto.dataUltimaManutencao | dateTime }}</td>
+      <td>{{ boleto.usuarioInclusao }}</td>
+      <td class="text-end">{{ boleto.qtdAutorizacao }}</td>
+      <td>{{ boleto.dataReferencia | date: "shortDate" | nullable }}</td>
+      <td>{{ boleto.prioridade }}</td>
+      <td>{{ boleto.numeroUnicoOperacao }}</td>
+      <td>{{ boleto.numeroUnicoOperacaoOriginal }}</td>
+      <td>{{ boleto.tipoEntradaMensagem }}</td>
+      <td>{{ boleto.dataUltimoProcessamentoEmissor | dateTime }}</td>
+      <td>{{ boleto.numeroControleIF }}</td>
+      <td>{{ boleto.idTransacaoCob }}</td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="25" class="text-center">
+        {{ "validacoes.nenhumaInformacao" | t }}
+      </td>
+    </tr>
+  </ng-template>
+  <ng-keyboard-shortcuts [shortcuts]="shortcuts"></ng-keyboard-shortcuts>
+</p-table>

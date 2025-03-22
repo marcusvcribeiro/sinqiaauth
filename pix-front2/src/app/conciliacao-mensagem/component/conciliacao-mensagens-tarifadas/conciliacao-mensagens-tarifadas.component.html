@@ -1,0 +1,44 @@
+<p-treeTable [value]="dadosTreeNode" class="alb-table" rowHover="true" [scrollable]="true" [loading]="treeTableLoading"
+  [lazy]="true" (onNodeExpand)="expandir($event)">
+  <ng-template pTemplate="colgroup">
+    <col class="sq-col-sm"> <!--Toggler-->
+    <col class="sq-col-sm"> <!--Lupa-->
+    <col class="sq-col-sm"> <!--Data do sistema-->
+    <col class="sq-col-sm"> <!--Num Seq.-->
+    <col class="sq-col-sm"> <!--Mensagem-->
+    <col class="sq-col-md"> <!--Situação da Mensagem-->
+    <col class="sq-col-sm"> <!--Tamanho-->
+  </ng-template>
+
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>{{'campo.dataReferencia' | t}}</th>
+      <th>{{'campoAbreviado.numeroSequencia' | t}}</th>
+      <th>{{'campo.mensagem' | t}}</th>
+      <th>{{'campo.situacaoMensagem' | t}}</th>
+      <th>{{'campo.tamanho' | t}}</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+    <tr [class.tree-node-grupo]="rowData.titulo">
+      <td [colSpan]="rowData.titulo ? 7 : 1">
+        <p-treeTableToggler [rowNode]="rowNode"></p-treeTableToggler>
+        {{ rowData.titulo }}
+      </td>
+      <ng-container *ngIf="!rowData.titulo">
+        <td (click)="$event.stopPropagation()">
+          <button class="alb-icon-size" alb-button-icon icon="remove_red_eye" (click)="onVisualizarTransacao(rowData)" pure *segFuncao="seg.CMT_BTN_VISUALIZAR"  [track]="seg.CMT_BTN_VISUALIZAR">
+          </button>
+        </td>
+        <td>{{ rowData.dataReferencia | date:'shortDate' }}</td>
+        <td>{{ rowData.sequenciaTransacao }}</td>
+        <td>{{ rowData.idEventoMensagem }}</td>
+        <td>{{ rowData.descricaoSituacaoMensagem }}</td>
+        <td>{{ rowData.tamanhoMensagemBytes }}</td>
+      </ng-container>
+    </tr>
+  </ng-template>
+</p-treeTable>

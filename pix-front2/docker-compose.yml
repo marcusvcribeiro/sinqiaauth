@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  apache-48:
+    build:
+      context: ./docs/docker
+      dockerfile: Dockerfile
+    network_mode: bridge
+    restart: unless-stopped
+    ports:
+      - '8080:80'
+
+    container_name: apache-alpine

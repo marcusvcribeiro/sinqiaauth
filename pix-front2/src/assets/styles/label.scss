@@ -1,0 +1,35 @@
+// Label
+.label {
+  span {
+    display: block;
+
+    &:first-child {
+      font-size: 0.7em;
+      color: var(--placeholder);
+    }
+
+    &:last-child {
+      font-size: 0.9em;
+      color: var(--text);
+    }
+  }
+
+  &.--numeric {
+    span {
+      text-align: right;
+      margin-top: 5px;
+
+      &:last-child {
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  &.--positive span:last-child {
+    color: var(--success);
+  }
+
+  &.--negative span:last-child {
+    color: var(--warn);
+  }
+}

@@ -1,0 +1,65 @@
+<p-table
+  class="alb-table"
+  [sq-data-source]="ds"
+  rowHover="true"
+  [scrollable]="true"
+  [paginator]="true"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>{{ "campo.pixSistemaOrigem" | t }}</th>
+      <th>{{ "campo.pixDataTransacao" | t }}</th>
+      <th>{{ "campo.pixStatusTransacao" | t }}</th>
+      <th>{{ "campo.pixEnvolvidoTransacao" | t }}</th>
+      <th>{{ "campo.pixDetalheTransacao" | t }}</th>
+      <th>{{ "campo.pixValorTransacao" | t }}</th>
+      <th>{{ "campo.pixValorTarifaTransacao" | t }}</th>
+      <th>{{ "campo.pixFonteReceita" | t }}</th>
+      <th>{{ "campo.pixHoraInicioTransacao" | t }}</th>
+      <th>{{ "campo.pixHoraFimTransacao" | t }}</th>
+
+      <th>{{ "campo.pixMotivoRejeicao" | t }}</th>
+      <th>{{ "campo.pixProcessoIniciacao" | t }}</th>
+      <th>{{ "campo.pixMecanismoIniciacao" | t }}</th>
+      <th>{{ "campo.pixNaturezaUsuarioPagador" | t }}</th>
+      <th>{{ "campo.pixNaturezaUsuarioRecebedor" | t }}</th>
+      <th>{{ "campo.pixCanalIniciacao" | t }}</th>
+      <th>{{ "campo.finalidadeTransacao" | t }}</th>
+      <th>{{ "campo.valorEspecie" | t }}</th>
+      <th>{{ "campo.pixEndToEndID" | t }}</th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-item>
+    <tr>
+      <td>{{ item.dsc_sis_par }} </td>
+      <td>{{ item.dat_inf_spi | date:'dd/MM/yyyy':'UTC' }} </td>
+      <td>{{ item.id_sta_spi | pixStatusTransacao }} </td>
+      <td>{{ item.id_evl_spi | pixEnvolvidoTransacao }} </td>
+      <td>{{ item.id_det_spi | pixDetalheTransacao }} </td>
+      <td>{{ item.vr_spi | number }} </td>
+      <td>{{ item.vr_tar_spi | number }} </td>
+      <td>{{ item.id_fon_rta_spi | pixFonteReceita }} </td>
+      <td>{{ item.hor_ini_spi | somenteTempo }} </td>
+      <td>{{ item.hor_fim_spi | somenteTempo }} </td>
+
+      <td>{{ item.id_mot_rej | pixMotivoRejeicao }} </td>
+      <td>{{ item.id_pcs_ini | pixProcessoIniciacao }} </td>
+      <td>{{ item.id_mcn_ini | pixMecanismoIniciacao }} </td>
+      <td>{{ item.id_nat_usu_pag | pixNaturezaUsuario }} </td>
+      <td>{{ item.id_nat_usu_rec | pixNaturezaUsuario }} </td>
+      <td>{{ item.id_cnl_ini | pixCanalIniciacao }} </td>
+      <td>{{ item.id_fna_spi | pixFinalidadeTransacao }} </td>
+      <td>{{ item.vr_esc | number }} </td>            
+      <td>{{ item.id_uni_ope }} </td>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="6" class="text-center">
+        {{ "validacoes.nenhumaInformacao" | t }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

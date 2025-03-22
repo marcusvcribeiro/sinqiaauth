@@ -1,0 +1,19 @@
+.acoes {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+
+  .divisor-button {
+    margin-left: 10px;
+  }
+}
+
+.aside-accordion {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.sq-col-dt {
+  width: 200px;
+}

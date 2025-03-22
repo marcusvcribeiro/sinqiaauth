@@ -1,0 +1,25 @@
+.boleto {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: calc(100vh - 130px);
+
+  form {
+    overflow-y: scroll;
+    background-color: var(--contrast);
+    padding: 16px;
+  }
+
+  .sidenav {
+    overflow-y: scroll;
+    background-color: var(--contrast);
+    padding: 16px;
+  }
+
+  header {
+    border-bottom: 1px solid var(--background);
+  }
+
+  .content {
+    margin-right: 10px;
+  }
+}

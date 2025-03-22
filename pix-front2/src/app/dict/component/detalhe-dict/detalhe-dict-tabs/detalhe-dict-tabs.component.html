@@ -1,0 +1,15 @@
+<alb-tab-group>
+
+  <alb-tab [label]="'tabs.historico' | t">
+    <ng-template albTabBodyWrapper>
+      <app-historico-dict [filtro]="filtro"></app-historico-dict>
+    </ng-template>
+  </alb-tab>
+
+  <alb-tab [label]="'tabs.trilhaReivindicacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-situacao-registro-chave-dict [filtro]="filtro"></app-trilha-situacao-registro-chave-dict>
+    </ng-template>
+  </alb-tab>
+
+</alb-tab-group>

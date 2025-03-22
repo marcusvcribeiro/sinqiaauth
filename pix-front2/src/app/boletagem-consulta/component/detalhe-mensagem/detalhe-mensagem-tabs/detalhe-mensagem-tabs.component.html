@@ -1,0 +1,53 @@
+<alb-tab-group>
+  <alb-tab [label]="'tabs.mensagemTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-mensagem-transacao [filtro]="filtro"></app-mensagem-transacao>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-transacao [filtro]="filtro"></app-trilha-transacao>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaMensagem' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-mensagem [filtro]="filtro"></app-trilha-mensagem>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.logOcorrencias' | t">
+    <ng-template albTabBodyWrapper>
+      <app-log-ocorrencia [filtro]="filtro"></app-log-ocorrencia>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaMensagemTransacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-mensagem-transacao [filtro]="filtro"></app-trilha-mensagem-transacao>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.mensagensRelacionadas' | t">
+    <ng-template albTabBodyWrapper>
+      <app-mensagem-relacionada [filtro]="filtro"></app-mensagem-relacionada>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaAlcadaLiberacao' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-alcada-liberacao [filtro]="filtro"></app-trilha-alcada-liberacao>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.trilhaAlcadaReserva' | t">
+    <ng-template albTabBodyWrapper>
+      <app-trilha-alcada-reserva [filtro]="filtro"></app-trilha-alcada-reserva>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.alcadaGestaoReserva' | t">
+    <ng-template albTabBodyWrapper>
+      <app-alcada-gestao-reserva [filtro]="filtro"></app-alcada-gestao-reserva>
+    </ng-template>
+  </alb-tab>
+  <alb-tab [label]="'tabs.logWebhook' | t ">
+    <ng-template albTabBodyWrapper>
+      <app-detalhe-log-webhook [filtro]="filtro"></app-detalhe-log-webhook>
+    </ng-template>
+  </alb-tab>
+
+</alb-tab-group>

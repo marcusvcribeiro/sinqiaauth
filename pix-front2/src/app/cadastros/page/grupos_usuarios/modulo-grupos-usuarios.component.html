@@ -1,0 +1,35 @@
+<alb-body *segFuncao="seg.GRP_MENU">
+  <h1>{{ 'gruposUsuarios.titulo.gruposUsuarios' | t }}</h1>
+  <aside>
+    <div class="actions">
+      <div>
+        <alb-input
+          type="text"
+          [(ngModel)]="filtroGrupo"
+          placeholder="Filtro"
+        >
+        </alb-input>
+      </div>
+      <div>
+        <button
+        alb-button
+        type="primary"
+        class="divisor-button"
+        (click)="onNovoGrupo()"
+        *segFuncao="seg.GRP_BTN_ADICIONAR"
+        [track]="seg.GRP_BTN_ADICIONAR"
+        >
+        {{ "gruposUsuarios.botao.novogrupo" | t }}
+      </button>
+      </div>
+    </div>
+  </aside>
+
+  <alb-card title="{{'gruposUsuarios.titulo.listaGrupoUsuario' | t}}">
+    <app-lista-grupos-usuarios
+        [eventUpdate]="eventEmitterGrupoUpdate"
+        [filtro]="filtroGrupo"
+      >
+      </app-lista-grupos-usuarios>
+  </alb-card>
+</alb-body>

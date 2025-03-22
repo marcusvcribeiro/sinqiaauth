@@ -1,0 +1,17 @@
+<div class="dashboard-solicita-saque">
+  <div class="content">
+    <form [formGroup]="form">
+      <div>
+        <alb-number [placeholder]="'campo.valor' | t" formControlName="Valor">
+        </alb-number>
+      </div>
+      <div>
+        <button alb-button color="primary" (click)="onClick()"
+          [disabled]="form.invalid || form.controls.Valor.value == 0" (click)="onClick()">
+          {{'botao.solicitaSaque' | t }}
+        </button>
+      </div>
+    </form>
+
+  </div>
+</div>

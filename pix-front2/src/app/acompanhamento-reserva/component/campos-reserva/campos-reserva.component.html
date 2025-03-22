@@ -1,0 +1,52 @@
+<alb-body class="campos-posicao-reserva">
+  <div class="content">
+    <div>
+      <alb-input type="text" [placeholder]="'campo.tituloWidget' | t" [formControl]="nome" autocomplete="off">
+      </alb-input>
+    </div>
+    <div>
+      <div class="label">{{ 'campo.camposSelecionados' | t }} :</div>
+      <div class="alb-divisor posicao-reserva-item" *ngFor="let posicao of camposSelecionadosLocais;  let i = index">
+        <div class="width-10 text-center">
+          <button alb-button-icon icon="keyboard_arrow_up" type="button" *ngIf="i !== 0" (click)="moverCima(i)">
+          </button>
+          <button alb-button-icon icon="keyboard_arrow_down" *ngIf="i !== camposSelecionadosLocais.length - 1"
+            (click)="moverBaixo(i)">
+          </button>
+        </div>
+        <div class="width-60 descricao">
+          <span>{{posicao.label}} : {{posicao.descricao}}</span>
+        </div>
+        <div class="width-10">
+          <alb-checkbox [label]="'campo.destaque' | t" [value]="posicao?.destaque" (change)="destacar(i)"></alb-checkbox>
+        </div>
+        <div class="width-20">
+          <button alb-button-icon icon="remove" type="button" (click)="remover(posicao)">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="label">{{ 'campo.camposDisponiveis' | t }} :</div>
+      <div class="alb-divisor posicao-reserva-item" *ngFor="let posicao of posicaoReserva">
+        <div class="width-10 text-center">
+          <!-- colocar setas pra cima e pra baixo aqui -->
+        </div>
+        <div class="width-70 descricao">
+          <span>{{posicao.label}} : {{posicao.descricao}}</span>
+        </div>
+        <div class="width-20">
+          <button alb-button-icon icon="add" type="button" (click)="selecionar(posicao)">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="action-button">
+      <button alb-button color="primary" (click)="emitirValor()" color="accent">
+        {{'botao.salvar' | t }}
+      </button>
+    </div>
+  </div>
+</alb-body>

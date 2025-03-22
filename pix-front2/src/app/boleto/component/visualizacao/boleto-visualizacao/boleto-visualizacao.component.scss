@@ -1,0 +1,27 @@
+.boleto-visualizacao {
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: var(--contrast);
+}
+
+.visualizacao-sidenav {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: calc(100vh - 80px);
+}
+
+app-grupo-visualizacao {
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+aside {
+  padding: .8rem;
+  overflow-y: auto;
+}
+
+.subtitle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

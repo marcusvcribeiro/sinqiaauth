@@ -1,0 +1,15 @@
+<ul class="tree">
+
+  <li class="item" *ngFor="let item of items" [class.nivel]="!firstItem">
+    <div [class.active]="selectedItemId === item?.id" [class.strong]="item?.type === 'strong'"
+      [class.weak]="item?.type === 'weak'" (click)="onClick(item)" [id]="item.hash">
+      <i *ngIf="item?.icon" [class]="item?.icon"></i>
+      <span [class.content]="!firstItem">{{ item?.label }}</span>
+    </div>
+
+    <ng-container>
+      <app-sidenav [items]="item?.items" [selectedItemId]="selectedItemId" (navigate)="onChildNavigate($event)" [firstItem]=false>
+      </app-sidenav>
+    </ng-container>
+  </li>
+</ul>

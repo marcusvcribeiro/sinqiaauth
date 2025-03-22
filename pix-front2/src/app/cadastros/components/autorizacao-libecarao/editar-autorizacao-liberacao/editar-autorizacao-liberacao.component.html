@@ -1,0 +1,48 @@
+<alb-body *segFuncao="seg.AUT_MENU">
+  <h1 alb-drawer-title>{{ 'autorizacaoLiberacao.titulo.edicaoAutorizacaoLiberacao' | t }}</h1>
+  <app-drawer-content>
+    <form [formGroup]="formData">
+      <div class="alb-divisor --three">
+        <div>
+          <alb-input
+            type="number"
+            [placeholder]="'autorizacaoLiberacao.campo.valorIgualMaiorQue' | t"
+            formControlName="valor"
+          >
+          </alb-input>
+        </div>
+        <div>
+          <alb-input
+            type="number"
+            [placeholder]="'autorizacaoLiberacao.campo.numeroAutorizacoes' | t"
+            formControlName="autorizacoes"
+          >
+          </alb-input>
+        </div>
+        <div>
+          <ng-select
+            class="alb-ng-select"
+            [items]="listaNivelHierarquico"
+            [placeholder]="'campo.nivelHierarquico' | t"
+            formControlName="nivelHierarquico"
+            bindValue="codNivHie"
+            bindLabel="vrNivHie"
+            clearable="true"
+          >
+          </ng-select>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: end; padding-top: 24px">
+        <button
+          alb-button
+          type="primary"
+          (click)="onEditar()"
+          *segFuncao="seg.AUT_BTN_EDITAR"
+          [track]="seg.AUT_BTN_EDITAR"
+          >
+          {{ "botao.salvar" | t }}
+        </button>
+      </div>
+    </form>
+  </app-drawer-content>
+</alb-body>

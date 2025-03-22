@@ -1,0 +1,55 @@
+<alb-body *segFuncao="seg.CLO_MENU">
+  <h1>{{'titulo.consultaLogOcorrencia' | t}}</h1>
+
+  <form [formGroup]="filtroForm">
+    <alb-accordion icon="filter_list" [open]="true" [title]="'titulo.pesquisar' | t">
+      <albAccordionHeader>
+        <div *ngIf="ctrl?.data?.value">
+          <span class="sq-input-view-header --text-captalize">
+            {{'titulo.dataReferencia' | t}}
+          </span>
+          <span class="sq-input-view-info --text-captalize">
+            {{ctrl?.data?.value | date: 'shortDate'}}
+          </span>
+        </div>
+      </albAccordionHeader>
+      <div class="alb-divisor">
+        <alb-datepicker placeholder="{{ 'campo.dataReferencia' | t }}" formControlName='dataReferencia'>
+        </alb-datepicker>
+        <div class="action-button">
+          <button alb-button (click)="filtrarLogs()">{{'botao.pesquisar' | t }}</button>
+        </div>
+      </div>
+    </alb-accordion>
+  </form>
+
+  <alb-tab-group class="white" (selectedTabChange)="selectedTabChange($event)">
+    <alb-tab label="{{ 'tabs.erros' | t }}" [id]="tipoAlerta.Erro">
+      <ng-template albTabBodyWrapper>
+        <app-consulta-log-ocorrencia-list [filtro]="filtro$ | async" [tipoAlertaExportar$]="tipoAlertaExportar$.asObservable()" [tipoAlerta]="tipoAlerta.Erro">
+        </app-consulta-log-ocorrencia-list>
+      </ng-template>
+    </alb-tab>
+    <alb-tab label="{{ 'tabs.avisos' | t }}" [id]="tipoAlerta.Aviso">
+      <ng-template albTabBodyWrapper>
+        <app-consulta-log-ocorrencia-list [filtro]="filtro$ | async" [tipoAlertaExportar$]="tipoAlertaExportar$.asObservable()" [tipoAlerta]="tipoAlerta.Aviso">
+        </app-consulta-log-ocorrencia-list>
+      </ng-template>
+    </alb-tab>
+    <alb-tab label="{{ 'tabs.informacao' | t }}" [id]="tipoAlerta.Informacao">
+      <ng-template albTabBodyWrapper>
+        <app-consulta-log-ocorrencia-list [filtro]="filtro$ | async" [tipoAlertaExportar$]="tipoAlertaExportar$.asObservable()" [tipoAlerta]="tipoAlerta.Informacao">
+        </app-consulta-log-ocorrencia-list>
+      </ng-template>
+    </alb-tab>
+
+    <div aside class="aside-tabs">
+      <button alb-button type="secondary" (click)="onExportarExcel()" [track]="seg.CLO_BTN_EXPORTAR" *segFuncao="seg.CLO_BTN_EXPORTAR">
+        {{'botao.exportar' | t}}
+      </button>
+      <button alb-button (click)="filtrarLogs()" class="divisor-button" [track]="seg.CLO_BTN_EXE_FILTRO" *segFuncao="seg.CLO_BTN_EXE_FILTRO">
+        {{'botao.executarFiltro' | t}}
+      </button>
+    </div>
+  </alb-tab-group>
+</alb-body>

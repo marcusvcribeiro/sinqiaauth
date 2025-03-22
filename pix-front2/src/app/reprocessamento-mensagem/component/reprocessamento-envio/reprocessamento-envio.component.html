@@ -1,0 +1,63 @@
+<div class="alb-divisor --two button">
+  <div class="titulo-lista">{{'titulo.erroEnvio' | t}}</div>
+  <div class="reprocessar">
+    <button alb-button [disabled]="ds.selection.isEmpty()" (click)="onReprocessar()" color="accent" *segFuncao="seg.REP_BTN_ENVIO" [track]="seg.REP_BTN_ENVIO">
+      {{'botao.reprocessar' | t }}
+    </button>
+  </div>
+</div>
+
+<div class="reprocessamento-list">
+  <p-table class="alb-table" rowHover="true" [scrollable]="true" [sq-data-source]="ds">
+    <ng-template pTemplate="colgroup">
+      <col class="sq-col-xs">
+      <col class="sq-col-md">
+      <col class="sq-col-sm">
+      <col class="sq-col-sm">
+      <col class="sq-col-sm">
+      <col class="sq-col-sm">
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th>
+          <ng-container *ngIf="ds?.data$ | async as mensagens">
+            <alb-checkbox
+              (change)="ds.selectAllToggle(mensagens)"
+              [value]="ds.selection.hasValue() && ds.isAllSelected(mensagens)"
+              [indeterminate]="ds.selection.hasValue() && !ds.isAllSelected(mensagens)">
+            </alb-checkbox>
+          </ng-container>
+        </th>
+        <th>{{'campo.composicaoOperacao' | t}}</th>
+        <th>{{'campo.codigo' | t}}</th>
+        <th class="text-end">{{'campo.valor' | t}}</th>
+        <th class="text-center">{{'campo.agendamento' | t}}</th>
+        <th>{{'campo.sequencial' | t}}</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-reprocessamento>
+      <tr>
+        <td>
+          <alb-checkbox (change)="ds.selection.toggle(reprocessamento)"
+            [value]="ds.selection.isSelected(reprocessamento)">
+          </alb-checkbox>
+        </td>
+        <td>{{reprocessamento.composicaoOperacao}}</td>
+        <td>{{reprocessamento.evento}}</td>
+        <td class="text-end">{{reprocessamento.valorFinanceiro | valorFinanceiro}}</td>
+        <td class="text-center">{{reprocessamento.dataMovimento | date:'shortDate'}}</td>
+        <td>{{reprocessamento.numSequenciaTransacaoMensagem}}</td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage" let-columns>
+      <tr>
+        <td colspan="6" class="text-center">
+          {{'validacoes.nenhumaInformacao' | t}}
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

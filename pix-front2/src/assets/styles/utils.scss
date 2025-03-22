@@ -1,0 +1,70 @@
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  row-gap: 20px;
+}
+
+// Action Buttons
+.action-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  &.--bottom {
+    margin-top: 10px;
+  }
+
+  &.--drawer {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+  }
+
+  .action-button-title {
+    flex: auto;
+    h5 {
+      margin: 10px;
+    }
+  }
+
+  .mat-accent,
+  .mat-stroked,
+  .mat-icon-button {
+    margin-left: 10px;
+  }
+}
+
+.box {
+  padding: 10px;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.link {
+  color: #1f7fec;
+}
+
+.--click { cursor: pointer; }
+
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+// Classe para padronizar margem inferior do accordion nas páginas
+.alb-accordion {
+  margin-bottom: 15px;
+}
+
+// Classe para alinhar padding de elementos que estão dentro do alb-accordion e que estão dentro do alb-box,
+// considerando que o alb-accordion é elemento irmão do alb-box.
+alb-accordion + alb-box > div.alb-box-body {
+  padding: 8px 10px 8px 10px;
+}

@@ -1,0 +1,64 @@
+<div *ngIf="boleto">
+  <section class="grupo-lista" [class.open]="isExpandido" [class.close]="!isExpandido" [id]="boleto.hash">
+
+    <!-- Grupo Header -->
+    <div *ngIf="boleto.tags && boleto.tags.length || stopAppend">
+      <ng-container *ngIf="boleto.label">
+        <header class="header" (click)="onToggle()">
+          <div class="arrow"></div>
+          <h3 class="title">{{labelGrupo}}</h3>
+        </header>
+      </ng-container>
+    </div>
+
+    <!-- Loop Tags -->
+    <div [ngClass]="{'content': (boleto.tags && boleto.tags.length && !firstGroup) || stopAppend}" *ngIf="isExpandido" [class.active]="idSelecionado === boleto.hash">
+      <div *ngIf="boleto.tags && boleto.tags.length || stopAppend">
+
+        <ul class="list" *ngFor="let list of boleto.tags; let i = index" [class.active]="idSelecionado === boleto.hash">
+          <li class="list" [id]="boleto.hash">
+            <div class="label" [id]="list.hash">{{list.labelCampo}}</div>            
+            <div class="description">
+              <ng-container *ngIf="list.tipoCampo === boletoTipoCampo.STRING">
+                <ng-container *ngIf="list.dominioTags.length > 0; else valorTag">
+                  {{ exibirValorTag(list.dominioTags, list.valorTag ) }}
+                </ng-container>
+                <ng-template #valorTag>
+                  {{ list.valorTag }}
+                </ng-template>               
+              </ng-container>
+              <ng-container *ngIf="list.tipoCampo === boletoTipoCampo.DATE">
+                {{ list.valorTag | date:"shortDate" }}
+              </ng-container>
+              <ng-container *ngIf="list.tipoCampo === boletoTipoCampo.DATETIME">
+                {{ list.valorTag | dateTime }}
+              </ng-container>
+              <ng-container *ngIf="list.tipoCampo === boletoTipoCampo.INTEGER">
+                {{ list.valorTag | number }}
+              </ng-container>
+
+              <ng-container *ngIf="list.tipoCampo === boletoTipoCampo.REAL">
+                {{ list.valorTag | valorFinanceiro }}
+              </ng-container>
+
+              <ng-container *ngIf="
+              list.tipoCampo !== boletoTipoCampo.INTEGER &&
+              list.tipoCampo !== boletoTipoCampo.REAL &&
+              list.tipoCampo !== boletoTipoCampo.DATE &&
+              list.tipoCampo !== boletoTipoCampo.STRING &&
+              list.tipoCampo !== boletoTipoCampo.DATETIME">
+                {{ list.valorTag }}
+              </ng-container>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+
+      <!-- Grupo Recursivo -->
+      <app-grupo-visualizacao *ngFor="let subgroup of boleto.grupos; let level = index" [boleto]="subgroup"
+        [idSelecionado]="idSelecionado" [label]="label" [firstGroup]=false [stopAppendParent]="stopAppend">
+      </app-grupo-visualizacao>
+    </div>
+  </section>
+</div>
