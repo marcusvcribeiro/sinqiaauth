@@ -1,0 +1,26 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Checkbox
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-between">
+      <alb-checkbox label="Apenas um checkbox"></alb-checkbox>
+      <alb-checkbox label="Apenas um checkbox" [value]="true"></alb-checkbox>
+      <alb-checkbox label="Apenas um checkbox" indeterminate></alb-checkbox>
+      <alb-checkbox label="Apenas um checkbox" disabled></alb-checkbox>
+      <alb-checkbox label="Apenas um checkbox" indeterminate disabled></alb-checkbox>
+      <alb-checkbox label="Apenas um checkbox" [value]="true" disabled></alb-checkbox>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/checkbox/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

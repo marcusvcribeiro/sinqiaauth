@@ -1,0 +1,19 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "alb"
+    ],
+    "component-selector": [
+      true,
+      "alb"
+    ],
+    // Regras customizadas
+    "component-class-suffix": false,
+    "no-host-metadata-property": false,
+    "object-literal-key-quotes": false,
+    "no-use-before-declare": false,
+    "ban-types": false
+  }
+}

@@ -1,0 +1,27 @@
+<div class="alb-accordion" [class.--open]="!!open" [class.--closed]="!open">
+  <header class="alb-accordion-header">
+    <div class="alb-container-title" (click)="toggle()">
+
+      <div class="alb-grid-icon" [class.alb-grid-without-icon]="!icon">
+        <span *ngIf="icon">
+          <button class="alb-accordion-icon" alb-button-icon [icon]="icon" pure></button>
+        </span>
+        <span class="alb-accordion-title" >
+          {{ title }}
+        </span>
+      </div>
+
+      <div class="alb-grid-header" *ngIf="!open">
+        <ng-content select="albAccordionHeader"></ng-content>
+      </div>
+
+
+      <button class="alb-accordion-toggle" type="button"></button>
+
+    </div>
+  </header>
+
+  <div class="alb-accordion-content" [class.max-height-max]="!!open" [class.max-height-zero]="!open">
+    <ng-content></ng-content>
+  </div>
+</div>

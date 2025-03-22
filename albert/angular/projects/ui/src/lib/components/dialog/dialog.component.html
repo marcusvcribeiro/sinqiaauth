@@ -1,0 +1,29 @@
+<div class="alb-dialog">
+  <div class="alb-dialog-container">
+    <ng-container *ngIf="dialog?.type !== 'custom'">
+      <aside class="alb-dialog-aside">
+        <i class="alb-icon" [ngClass]="getIconColor()">{{ icon[dialog?.type] }}</i>
+      </aside>
+
+      <section class="alb-dialog-content">
+        <div class="alb-dialog-message">
+          <h1>{{ dialog?.title }}</h1>
+          <p>{{ dialog?.message }}</p>
+        </div>
+
+        <footer class="alb-dialog-footer">
+          <button alb-button (click)="onClose()"
+            *ngIf="dialog?.type !== 'confirm'">{{ dialog?.btnPrimaryText }}</button>
+
+          <div *ngIf="dialog?.type === 'confirm'">
+            <button alb-button type="secondary" (click)="onClose()">{{ dialog?.btnSecondaryText }}</button>
+            <button alb-button color="{{ dialog?.btnColor }}"
+              (click)="verifyCallback()">{{ dialog?.btnPrimaryText }}</button>
+          </div>
+
+        </footer>
+      </section>
+    </ng-container>
+    <ng-container #body></ng-container>
+  </div>
+</div>

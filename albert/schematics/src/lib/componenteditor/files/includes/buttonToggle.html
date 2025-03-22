@@ -1,0 +1,11 @@
+<%
+     for (var obj of properties){
+        if(obj.type === 'button-toggle-group'){
+        %><alb-button-toggle-group direction="<% if (obj.direction) {%><%= obj.direction %> <%}else {%>horizontal<% } %>"> <% 
+        } else if(obj.type === 'button-toggle'){
+        %><alb-button-toggle  <% if ( obj.checked ) { %> checked <% } %> <% if (obj.disabled) { %> disabled <% } %> >
+           <%= obj.text %></alb-button-toggle>
+           <% 
+        }
+     }
+%></alb-button-toggle-group>

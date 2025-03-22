@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "AlbertSchematicsNgAdd",
+    "title": "Albert NgAdd Options Schema",
+    "type": "object",
+    "properties": {
+        "skipInstall": {
+            "type": "boolean",
+            "description": "The flag to skip packages installing.",
+            "default": false
+        },
+        "schematicsdefault": {
+          "type": "boolean",
+          "description": "Add @albert/schematics como Default.",
+          "default": true,
+          "x-prompt": "Quer definir o schematics do Albert com default da dua aplicação?"
+        },
+        "promptask": {
+          "type": "boolean",
+          "default": false,
+          "description": ""
+        },
+        "lib_primeng": {
+          "type": "boolean",
+          "default": false,
+          "description": "",
+          "x-prompt": "Desea instalar o Prine NG que disponibiliza alguns componentes complementares ao Albert?"
+        },
+        "lib_ngselect": {
+          "type": "boolean",
+          "default": false,
+          "description": "",
+          "x-prompt": "Desea instalar o NG Select que é o componente de select personalizado pelo Albert?"
+        },
+        "lib_editor": {
+          "type": "boolean",
+          "default": false,
+          "description": ""
+        }
+    },
+    "required": []
+}

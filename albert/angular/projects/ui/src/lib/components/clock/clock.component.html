@@ -1,0 +1,81 @@
+<ng-template *ngIf="!onlyIcon; else onlyIcon">
+  <button
+    class="alb-clock-button"
+    alb-button-icon
+    [disabled]="_disabled"
+    (click)="onOpenClock(button)"
+    #button>
+    <i class="alb-icon">schedule</i>
+  </button>
+</ng-template>
+
+<ng-template #onlyIcon>
+  <i class="alb-clock-button alb-icon"
+    (click)="onOpenClock(icon)"
+    [class.alb-icon-disabled]="_disabled"
+    #icon>
+    schedule
+  </i>
+</ng-template>
+
+<ng-template #clockTemplate>
+  <div class="alb-clock">
+    <!-- Header do relógio -->
+    <div class="alb-clock-header">
+      <span
+        class="alb-clock-header-hour"
+        [class.alb-clock-active-time]="timeTypeActive === TypeTime.HOUR"
+        (click)="setTimeType(TypeTime.HOUR)"
+      >{{ hourDisplay }}</span
+      >:<span
+        class="alb-clock-header-minute"
+        [class.alb-clock-active-time]="timeTypeActive === TypeTime.MINUTE"
+        (click)="setTimeType(TypeTime.MINUTE)"
+      >{{ minuteDisplay }}</span
+      >:<span
+        class="alb-clock-header-second"
+        [class.alb-clock-active-time]="timeTypeActive === TypeTime.SECOND"
+        (click)="setTimeType(TypeTime.SECOND)"
+      >{{ secondDisplay }}</span>
+    </div>
+    <!-- Relógio exibindo horas em AM/PM -->
+    <div class="alb-clock-circle" *ngIf="timeTypeActive === TypeTime.HOUR">
+      <div
+        *ngFor="let hour of clockHours"
+        [class]="'alb-clock-hour-am alb-clock-hour-am-' + hour"
+        (click)="updateHour(hour)">
+        {{ hour }}
+      </div>
+      <div
+        *ngFor="let hour of clockHours"
+        [class]="'alb-clock-hour-pm alb-clock-hour-pm-' + hour"
+        (click)="updateHour(hour + 12)">
+        {{ hour + 12 }}
+      </div>
+
+      <div class="alb-clock-circle-mid"></div>
+    </div>
+    <!-- Relógio exibindo minutos -->
+    <div class="alb-clock-circle" *ngIf="timeTypeActive === TypeTime.MINUTE">
+      <div
+        *ngFor="let minute of clockMinutesSeconds"
+        [class]="'alb-clock-minute alb-clock-minute-' + minute"
+        (click)="updateMinute(minute)">
+        {{ minute % 5 === 0 ? minute : '.' }}
+      </div>
+
+      <div class="alb-clock-circle-mid"></div>
+    </div>
+    <!-- Relógio exibindo segundos -->
+    <div class="alb-clock-circle" *ngIf="timeTypeActive === TypeTime.SECOND">
+      <div
+        *ngFor="let second of clockMinutesSeconds"
+        [class]="'alb-clock-minute alb-clock-second-' + second"
+        (click)="updateSecond(second)">
+        {{ second % 5 === 0 ? second : '.' }}
+      </div>
+      <div class="alb-clock-circle-mid"></div>
+    </div>
+  </div>
+
+</ng-template>

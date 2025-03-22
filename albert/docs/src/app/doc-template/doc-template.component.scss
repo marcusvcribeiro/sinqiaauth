@@ -1,0 +1,55 @@
+.doc-template {
+
+  .doc-template-title {
+    margin: 8px 24px 24px 24px;
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--font-color-title);
+  }
+
+  .doc-template-example {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--font-color-body);
+    background-color: var(--background-example);
+    margin: 24px;
+
+    &.hide-background {
+      background-color: transparent;
+    }
+  }
+
+  .doc-template-body {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--font-color-body);
+    margin: 24px;
+    padding: 8px 16px 16px 16px;
+  }
+
+  .doc-template-example {
+    padding-top: 16px;
+
+    & h1{
+      font-size: 16px;
+      color: var(--sinqia);
+      border-bottom: solid 1px var(--sinqia);
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+      padding-left: 16px;
+    }
+    .doc-template-example-content {
+      padding: 0 16px 16px 16px;
+    }
+  }
+
+  .doc-template-body {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--font-color-body);
+    margin: 24px;
+    padding: 8px 16px 16px 16px;
+  }
+
+}

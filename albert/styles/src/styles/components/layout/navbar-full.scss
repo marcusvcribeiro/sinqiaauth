@@ -1,0 +1,248 @@
+/**
+* O alb-navbar-simple é responsável por gerar o estilo de Navbar no seu formato 'completo'
+*/
+
+$alb-navbar-full-simple-left: 69px;
+
+@mixin alb-navbar-full() {
+  .alb-navbarfull {
+    display: grid;
+    grid-template-rows: 85px 1fr;
+    position: fixed;
+    left: $alb-navbar-full-simple-left;
+    top: 0;
+    width: calc(100% - #{$alb-navbar-full-simple-left});
+    height: 100%;
+    background-color: var(--white);
+    overflow: auto;
+    z-index: var(--layer-navbar);
+  }
+
+  /* Header */
+  .alb-navbarfull-header {
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: var(--french);
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  /* Search */
+  .alb-navbarfull-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 450px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    background-color: var(--white);
+
+    .alb-icon {
+      display: flex;
+      align-items: center;
+      padding-left: 8px;
+      width: 25px;
+      height: 100%;
+    }
+
+    input {
+      flex: 1;
+      padding: 0 10px;
+      border: 0;
+      font-size: 15px;
+    }
+
+    .alb-navbarfull-ngselect {
+      width: 100%;
+      flex-direction: column;
+      align-self: center;
+      margin: 8px;
+      .ng-select-container {
+        background-color: var(--white);
+        &:hover{
+          box-shadow:none!important;
+        }
+      }
+      .alb-navbarfull-indice{
+        font-size: 11px;
+        color: var(--placeholder);
+      }
+    }
+  }
+
+  /* Close */
+  .alb-navbarfull-close {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .alb-navbarfull-container {
+    display: grid;
+    overflow: auto;
+    padding-top: 16px;
+
+    .--has-module & {
+      grid-template-columns: 250px 1fr;
+
+      > *:first-child {
+        border-right: 5px solid var(--background);
+      }
+    }
+  }
+
+  /* List */
+  $alb-grid-breakpoints: (
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5
+  );
+  @each $key, $value in $alb-grid-breakpoints {
+    .alb-navbarfull-grid-#{$key} {
+      display: grid;
+      grid-template-columns: repeat(#{$value}, 1fr);
+
+      > * {
+        padding: 20px;
+      }
+    }
+  }
+  .alb-navbarfull-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    > * {
+      padding: 20px;
+    }
+  }
+
+  .alb-navbarfull-item {
+    position: relative;
+    color: #707070;
+    font-weight: 300;
+    padding: 6px 12px;
+
+    .alb-icon {
+      font-size: var(--icon-size-md);
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.1s opacity, 0.1s visibility;
+    }
+
+    &.--link {
+      color: var(--link);
+      cursor: pointer;
+    }
+
+    &.--selected {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .alb-navbarfull-text {
+      display: flex;
+      place-items: flex-end;
+      .alb-icon {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .alb-navbarfull-item-title {
+    font-weight: 700;
+
+    .alb-navbarfull-aside & {
+      cursor: pointer;
+    }
+
+    &.--selected {
+      color: inherit;
+
+      .alb-navbarfull-aside & {
+        position: relative;
+        color: var(--primary);
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: -5px;
+          top: 0;
+          width: 5px;
+          height: 100%;
+          background-color: var(--sinqia);
+        }
+      }
+    }
+  }
+
+  .alb-navbarfull-item-list {
+    &::before{
+      content: '';
+      position: relative;
+      width: 8px;
+      height: 30px;
+      border-width: 0 0 2px 2px;
+      border-style: dotted;
+      border-color: var(--french);
+      margin-top: -20px;
+    }
+  }
+
+  .alb-navbarfull-item-margin {
+    margin-left: 16px;
+  }
+
+  .alb-navbarfull-first-item {
+    &::before{
+      margin-top: 4px;
+      height: 10px;
+    }
+  }
+
+  .alb-navbarfull-item-parent {
+    margin-bottom: 12px;
+  }
+
+  .alb-navbarfull-border-parent-item {
+    position: relative;
+      height: 100%;
+      border-width: 0 0 0 2px;
+      border-style: dotted;
+      border-color: var(--french);
+  }
+
+  .alb-navbarfull-icon {
+    color: var(--french);
+    margin-bottom: -8px;
+    padding: 0 2px;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+
+  .alb-navbarfull-star-icon {
+    color: var(--buttercup);
+  }
+
+  .alb-navbarfull-star-icon {
+    color: var(--buttercup);
+  }
+
+  .alb-navbarfull-name {
+    width: 100%;
+    margin-bottom:-6px;
+    margin-left: 4px;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}

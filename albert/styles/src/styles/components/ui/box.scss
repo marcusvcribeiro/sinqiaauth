@@ -1,0 +1,62 @@
+@mixin alb-box() {
+  .alb-box {
+    display: block;
+    background-color: var(--contrast);
+    border-radius: 4px;
+    border: 1px solid var(--athens);
+  }
+
+  .alb-box-body {
+    padding: 8px 16px 8px 16px;
+  }
+
+  .alb-box-header {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: var(--font-size-body);
+    color: var(--font-color-body);
+    padding-left: 16px;
+  }
+
+  .alb-box-title {
+    color: var(--black);
+    font-family: var(--font-family-body);
+    font-size: var(--font-color-header-subtitle);
+  }
+
+  .alb-box[formview] {
+    
+    & .alb-box-header {
+      border-top: transparent;
+      display: flex;
+      top: -8px;
+      position: relative;
+      height: auto;
+      padding-left: 0;
+
+      &::before, &::after {
+        content: "";
+        display: block;
+        margin-top: 6px;
+        border-top: solid 1px;
+        min-width: 12px;
+        height: 8px;
+        pointer-events: none;
+        border-top-color: transparent;
+      }
+    }
+
+    .alb-box-title {
+      display: flex;
+      font-size: 11px;
+      color: var(--santas);
+      padding: 0 4px;
+      background-color: var(--contrast);
+    }
+
+     .alb-box-body {
+       padding-top: 0px;
+     }
+  }
+}

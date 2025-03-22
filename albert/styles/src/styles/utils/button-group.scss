@@ -1,0 +1,23 @@
+/**
+* A classe alb-button-group é responsável por agrupar um conjuntos de botões
+*/
+
+@mixin alb-button-group() {
+  $space: 16px;
+
+  .alb-button-group {
+    display: flex;
+
+    > button {
+      margin: 0 $space / 2;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

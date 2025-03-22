@@ -1,0 +1,22 @@
+/**
+* Mixen responsável por configurar os textos da página
+*/
+
+@mixin alb-text() {
+  p {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}

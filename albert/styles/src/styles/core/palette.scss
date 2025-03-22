@@ -1,0 +1,37 @@
+/**
+* Paleta de cores da Sinqia de acordo com o Design System
+*/
+
+@mixin alb-palette() {
+  :root {
+    --sinqia: #FA4616;
+
+    --mantis: #6AC259;
+    --zanah: #DBEBCF;
+
+    --alizarin-crimson: #e21b1b;
+    --we-peep: #f5d5d3;
+
+    --buttercup: #f2a916;
+    --citrine-white: #f9ecd2;
+
+    --royal-blue: #1f7fec;
+
+    --heliotrope: #b33dff;
+    --mauve: #ebc3ff;
+
+    /**
+    * Tons de Cinza, do mais escuro para o mais claro.
+    */
+    --black: #000011;
+    --trout: #484853;
+    --jumbo: #74747e;
+    --gary: #7f7f88;
+    --santas: #a4a4ac;
+    --french: #c9c9cc;
+    --athens: #e9e9ef;
+    --iron: #f0f0f4;
+    --aluminium: #f4f6f8;
+    --white: #fff;
+  }
+}

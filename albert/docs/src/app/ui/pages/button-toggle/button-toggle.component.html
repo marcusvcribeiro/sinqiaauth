@@ -1,0 +1,46 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Button Toggle
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-around">
+
+      <alb-button-toggle-group>
+        <alb-button-toggle>Botão 1</alb-button-toggle>
+        <alb-button-toggle>Botão 2</alb-button-toggle>
+        <alb-button-toggle>Botão 3</alb-button-toggle>
+      </alb-button-toggle-group>
+
+      <alb-button-toggle-group>
+        <alb-button-toggle [checked]="true">Botão 1</alb-button-toggle>
+        <alb-button-toggle>Botão 2</alb-button-toggle>
+        <alb-button-toggle>Botão 3</alb-button-toggle>
+      </alb-button-toggle-group>
+
+      <alb-button-toggle-group>
+        <alb-button-toggle [checked]="true">Botão 1</alb-button-toggle>
+        <alb-button-toggle>Botão 2</alb-button-toggle>
+        <alb-button-toggle disabled>Botão 3</alb-button-toggle>
+      </alb-button-toggle-group>
+
+      <alb-button-toggle-group direction="vertical">
+        <alb-button-toggle>Botão 1</alb-button-toggle>
+        <alb-button-toggle>Botão 2</alb-button-toggle>
+        <alb-button-toggle>Botão 3</alb-button-toggle>
+      </alb-button-toggle-group>
+
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/button-toggle/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+
+

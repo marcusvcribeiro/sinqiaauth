@@ -1,0 +1,19 @@
+@mixin alb-upload-badge() {
+  .alb-upload-badge {
+
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 50%;
+  background: #F0F0F4;
+  color: #74747E;
+  cursor: pointer;
+
+  .alb-icon{
+   font-size: 20px;
+  }
+
+  }
+
+}

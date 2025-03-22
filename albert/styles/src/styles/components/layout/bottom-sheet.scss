@@ -1,0 +1,64 @@
+
+/**
+* O alb-bottom-sheet é responsável por gerar o estilo do Bottom Sheet
+*/
+
+
+$alb-bottom-sheet-height: 35vh;
+
+@mixin alb-bottom-sheet() {
+
+  .alb-bottom-sheet {
+    height: $alb-bottom-sheet-height;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: var(--white);
+    border-top: 1px solid var(--french);
+  }
+
+  .alb-bottom-sheet-header {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 60px;
+    background-color: var(--white);
+  }
+
+  .alb-bottom-sheet-title {
+    font-size: var(--font-size-title);
+    font-weight: 700;
+  }
+
+  .alb-bottom-sheet-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+
+    > * {
+      margin: 0 5px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .alb-bottom-sheet-close {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .alb-bottom-sheet-body {
+    width: 100%;
+    height: 75%;
+    background-color: var(--background);
+    overflow: auto;
+  }
+}

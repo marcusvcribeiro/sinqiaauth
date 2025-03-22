@@ -1,0 +1,40 @@
+<doc-template>
+  <docTemplateTitle> Tabela </docTemplateTitle>
+
+  <docTemplateExample class="alb-flex-space-between">
+    <p-table
+      class="alb-table"
+      [value]="dataSource"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Mostrando {first} ao {last} de {totalRecords} registros"
+      [rows]="2"
+      [rowsPerPageOptions]="[2, 10, 20]"
+      [totalRecords]="totalRecords"
+      [paginator]="true"
+      [lazy]="true"
+      (onLazyLoad)="loadData($event)"
+      [loading]="loading">
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of cols">
+            {{ col.field }}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dataSource>
+        <tr>
+          <td *ngFor="let col of cols">
+            {{ dataSource[col.field] }}
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template let-item pTemplate="paginatordropdownitem">
+        {{ item.value }} - por página
+      </ng-template>
+    </p-table>
+  </docTemplateExample>
+
+  <docTemplateCode>
+    <markdown [src]="'./assets/markdown/table/README.md'"></markdown>
+  </docTemplateCode>
+</doc-template>

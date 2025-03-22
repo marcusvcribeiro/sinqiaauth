@@ -1,0 +1,10 @@
+[
+  {
+    "name": "primeng",
+    "value": "primeng"
+  },
+  {
+    "name": "ng-select",
+    "value": "@ng-select/ng-select"
+  }
+]

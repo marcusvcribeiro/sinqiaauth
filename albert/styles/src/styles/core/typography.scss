@@ -1,0 +1,147 @@
+/**
+* Tipografia de acordo com Design System
+* Nesse mixin deve ser declarado as fontes, váriaveis de fontes e suas classes
+* Caso for adicionado uma fonte não se esqueça de adicionar suas váriaveis
+* - font-family
+* - font-syze
+* - font-doc
+*/
+
+@mixin alb-typography() {
+  @font-face {
+    font-family: 'Dosis Regular';
+    src: url('../assets/fonts/dosis-regular.woff'), url('../assets/fonts/dosis-regular.woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Rubik Regular';
+    src: url('../assets/fonts/rubik-regular.woff'), url('../assets/fonts/rubik-regular.woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Rubik Medium';
+    src: url('../assets/fonts/rubik-medium.woff'), url('../assets/fonts/rubik-medium.woff2');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Roboto Regular';
+    src: url('../assets/fonts/roboto-regular.woff'), url('../assets/fonts/roboto-regular.woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Roboto Medium';
+    src: url('../assets/fonts/roboto-medium.woff'), url('../assets/fonts/roboto-medium.woff2');
+    font-weight: 500;
+  }
+
+  :root {
+    @import './design-tokens/color.scss';
+
+    // Titulo
+    --font-family-title: 'Rubik Medium';
+    --font-size-title: 24px;
+    --font-color-title: var(--accent);
+
+    // Subtitulo Header
+    --font-family--header-subtitle: 'Rubik Medium';
+    --font-size-header-subtitle: 16px;
+    --font-color-header-subtitle: var(--accent);
+
+    // Subtitulo
+    --font-family-subtitle: 'Rubik Regular';
+    --font-size-subtitle: 16px;
+    --font-color-subtitle: var(--primary);
+  
+    // Texto comum
+    --font-family-body: 'Roboto Regular';
+    --font-size-body: 14px;
+    --font-color-body: var(--accent);
+
+    // Link
+    --font-color-link: var(--link);
+    --font-color-link-hover: #{$color-system-link-dark};
+    --font-color-link-pressed: #{$color-system-link-darker};
+
+    // Button
+    --font-family-button: 'Roboto Regular';
+    --font-size-button: 11px;
+    --font-color-button-disabled: var(--aluminium);
+
+    // Input
+    --font-family-input: 'Roboto Regular';
+    --font-size-input: 14px;
+    --font-color-input: var(--text);
+
+    // Tabela
+    --font-family-table: 'Roboto Regular';
+    --font-size-table: 11px;
+    --font-color-table: var(--aluminium);
+
+    // Nome Aplicação
+    --font-family-aplication-name: 'Dosis Regular';
+    --font-size-aplication-name: 15px;
+    --font-color-aplication-name: var(--santas);
+  }
+
+  [theme="dark"]:root {
+    @import './design-tokens/color-dark.scss';
+
+    // Link
+    --font-color-link: var(--link);
+    --font-color-link-hover: #{$color-system-link-light};
+    --font-color-link-pressed: #{$color-system-link-lighter};
+  }
+
+  h1, .alb-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-title);
+    color: var(--font-color-title);
+    margin-bottom: 16px;
+  }
+
+  h2, .alb-subtitle-header {
+    font-family: var(--font-family-header-subtitle);
+    font-size: var(--font-size-header-subtitle);
+    color: var(--font-color-header-subtitle);
+  }
+
+  h3, .alb-subtitle {
+    font-family: var(--font-family-subtitle);
+    font-size: var(--font-size-subtitle);
+    color: var(--font-color-subtitle);
+  }
+
+  body {
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    color: var(--font-color-body);
+  }
+
+  form, input, select, textarea, label {
+    font-family: var(--font-family-input);
+    font-size: var(--font-size-input);
+    color: var(--font-color-input);
+  }
+
+  table {
+    font-family: var(--font-family-table);
+    font-size: var(--font-size-table);
+    color: var(--font-color-table);
+  }
+
+  a {
+    color: var(--font-color-link);
+
+    :hover {
+      color: var(--font-color-link-hover);
+    }
+
+    :active {
+      color: var(--font-color-link-pressed);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import './input';
+@import './inputs-commons';
+
+@mixin alb-timepicker() {
+  .alb-timepicker {
+    @extend .alb-input-picker;
+
+    .alb-clock-button {
+      @extend .alb-input-picker-button;
+    }
+  }
+
+  .alb-timepicker.ng-invalid.ng-touched .alb-clock-button {
+    color: var(--warn);
+  }
+
+  @include alb-input-error-angular('.alb-timepicker');
+}

@@ -1,0 +1,7 @@
+<alb-timepicker placeholder="<%= placeholder %>" 
+    <% if (value) { %>  [value]="time<%= id %>" <% } %> 
+    <% if (required) { %>required<% } %> 
+    <% if (changeValue) { %>(changeValue)="changeValueTimepicker<%= id %>($event)"<% } %> 
+    <% if (disabled) { %>disabled<% } %> <% if (mask) { %> <%= mask %> <% } %> >
+
+</alb-timepicker>

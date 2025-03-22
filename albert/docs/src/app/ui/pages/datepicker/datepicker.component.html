@@ -1,0 +1,44 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Datepicker
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample>
+
+      <form [formGroup]="datepickerDoc" class="alb-flex-space-between">
+        <alb-datepicker placeholder="Apenas uma data">
+        </alb-datepicker>
+        <alb-datepicker placeholder="Apenas uma data" value="2020-09-03">
+        </alb-datepicker>
+        <alb-datepicker placeholder="Apenas uma data" [value]="date">
+        </alb-datepicker>
+        <alb-datepicker placeholder="Apenas uma data" required formControlName="required">
+        </alb-datepicker>
+        <alb-datepicker
+          placeholder="Apenas uma data"
+          value="2020-09-03"
+          required>
+        </alb-datepicker>
+        <alb-datepicker
+          placeholder="Apenas uma data"
+          value="2020-09-03"
+          formControlName="errorInput"
+          error="Campo inválido" hint="Label adicional"
+          required>
+        </alb-datepicker>
+      </form>
+
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/datepicker/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

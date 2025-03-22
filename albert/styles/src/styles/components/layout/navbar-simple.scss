@@ -1,0 +1,97 @@
+/**
+* O alb-navbar-simple é responsável por gerar o estilo de Navbar no seu formato 'simples'
+*/
+
+@import './header';
+@import './sidenav';
+
+$alb-navbar-simple-width: 350px;
+
+@mixin alb-navbar-simple() {
+  .alb-navbarsimple-overlay {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - #{$alb-header-height});
+    left: $alb-sidenav-width;
+    top: $alb-header-height;
+    background-color: transparent;
+    padding: 3px;
+    z-index: var(--layer-navbar);
+  }
+
+  .alb-navbarsimple {
+    width: $alb-navbar-simple-width;
+    height: 100%;
+    background-color: var(--contrast);
+  }
+
+  .alb-navbarsimple-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .alb-navbarsimple-item {
+    position: relative;
+    color: var(--gary);
+    font-weight: 300;
+    padding: 10px 15px;
+
+    .alb-icon {
+      cursor: pointer;
+      align-self: center;
+      font-size: var(--icon-size-md);
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s visibility, 0.3s opacity;
+    }
+
+    &.--link {
+      display: flex;
+      color: var(--link);
+      padding: 8px 5px;
+      font-weight: 500;
+      cursor: pointer;
+      .alb-icon {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .alb-navbarsimple-icon {
+      color: var(--border);
+      padding: 0 2px;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    .alb-navbarsimple-star-icon {
+      color: var(--buttercup);
+    }
+
+    .alb-navbarsimple-name {
+      width: 100%;
+      align-self: center;
+      margin-left: 4px;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    .alb-navbarsimple-icons {
+      width: 50px;
+    }
+
+    .alb-navbarsimple-icon {
+      padding: 0 2px;
+    }
+
+    .alb-navbarsimple-star-icon {
+      color: var(--buttercup);
+    }
+  }
+
+  .alb-navbarsimple-title {
+    font-weight: 700;
+  }
+}

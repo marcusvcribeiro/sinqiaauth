@@ -1,0 +1,104 @@
+#!groovy
+
+def vertical = "<%= vertical %>"
+def productName = "<%= productName %>"
+def projectName = "<%= projectName %>"
+
+def dockerFilePath = "docs/docker/."
+def environment = getEnvironmentFromBranch()
+def dockerTag = getDockerTagFromBranch()
+def projectPrefix = getProjectPrefix(vertical, productName)
+def registryPushCredentials = getRegistryToken( vertical, productName )
+def registryZone = getRegistryZone()
+def dockerPrefix = getDockerPrefix( registryZone, projectPrefix)
+def dockerImage = projectName
+def imageVersion
+
+//HELM
+def namespace = getEnvironmentFromBranch()
+def helmParameters = ""
+
+//JENKINS
+def scmVars
+def label = getJenkinsSlaveLabel(vertical, productName, projectName)
+def sonarLogin = getSonarLogin( vertical, productName, projectName )
+def additionalProperties = []
+
+
+//PROPERTIES
+propertiesGlobalSetup(vertical, productName, projectName, additionalProperties)
+
+try {
+
+  podTemplate(
+    label: label,
+    containers: [
+      containerTemplate(name: 'nodejs', image: 'sinqia.azurecr.io/infra/container/nodejs-nexus:node13', command: 'cat', ttyEnabled: true, privileged: true),
+      containerTemplateDocker('docker'),
+      containerTemplateHelm('helm')
+    ],
+    imagePullSecrets: getPodTemplateImagePullSecrets(),
+    volumes: getPodTemplateVolumes()
+  ){
+
+    timeout(time: 20, unit: 'MINUTES') {
+      node(label) {
+
+        container('nodejs') {
+          stage('Instalando Dependencias') {
+            echo 'Baixando fontes e instalando dependências'
+            scmVars = checkout scm
+            sh 'npm cache verify'
+            sh 'npm install --loglevel verbose'
+          }
+
+          stage('Obtendo versão do projeto') {
+            def packageJson = readJSON file: 'package.json'
+            imageVersion = packageJson['version']
+            echo "VERSION: ${imageVersion}"
+          }
+
+          stage('Executa lint') {
+            sh "npm run lint"
+          }
+
+          stage('Build PROD') {
+            echo "Gerando versao"
+            sh "npm run build"
+
+            echo 'Versão Gerada'
+            echo 'Preparando dist... '
+            sh "npm run docker-prepare"
+          }
+
+        }
+
+        container('docker') {
+          stage('Gerando Docker...') {
+            echo 'Gerando imagem docker... '
+            dockerBuild( dockerFilePath, dockerPrefix, dockerImage, dockerTag )
+            echo 'Docker gerado =)'
+          }
+
+          stage('Package') {
+          echo 'Publicando Docker....'
+            dockerRegistryLogin(registryZone, registryPushCredentials) {
+              dockerPushWithBuildTagsV2(scmVars, dockerPrefix, dockerImage, dockerTag, imageVersion)
+            }
+          }
+        }
+
+        //Deploy Kubernetes
+        container('helm') {
+           stagesHelm( environment, projectName, namespace, dockerTag, helmParameters )
+        }
+
+      }
+    }
+  }
+} catch (e) {
+  currentBuild.result = 'FAILURE'
+  throw e
+} finally {
+  onFinally(vertical, productName, projectName )
+}

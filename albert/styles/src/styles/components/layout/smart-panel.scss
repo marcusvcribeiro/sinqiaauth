@@ -1,0 +1,24 @@
+
+$alb-smartPanel-width: 25vw;
+
+@mixin alb-smart-panel() {
+    .alb-smart-panel{
+        border: 1px solid var(--border);
+        display: grid;
+        grid-template-rows: 30px 1fr;
+        position: fixed;
+        width: $alb-smartPanel-width;
+        right: 0;
+        top: $alb-header-height;
+        height: 100%;
+        background-color: var(--white);
+        overflow: auto;
+        z-index: var(--layer-navbar);
+        padding: 8px;
+        .alb-panel-title{
+            color: var(--primary);
+            font-family: var(--font-family--header-subtitle);
+            font-size: var(--font-size-body);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/**
+* Mixen responsável por configurar os links da página
+*/
+
+@mixin alb-links() {
+  a {
+    :hover {
+      cursor: pointer;
+    }
+  }
+}

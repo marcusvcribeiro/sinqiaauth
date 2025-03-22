@@ -1,0 +1,48 @@
+/**
+* Arquivo para armazenar variáveis de temas.
+*/
+
+@mixin alb-themes() {
+
+  :root {
+
+    @import './design-tokens/color.scss';
+    /**
+    * Utilizações gerais de cores.
+    */
+    --primary: #{$color-brand-regular};
+    --success: #{$color-system-success};
+    --warn: #{$color-system-warn};
+    --alert: #{$color-system-alert};
+    --link: #{$color-system-link};
+    --accent: black;
+
+    /**
+    * Padrão de algumas utilizações do modo light. Pode ser que a tela utilize de maneira diferente, caso isso aconteça
+    * deve-se referir aos design tokens.
+    */
+    --background: #{$color-background};
+    --border: #{$color-border-regular};
+    --icon: #{$color-info-soft};
+    --text: #{$color-info-hard};
+  }
+
+  [theme='dark']:root {
+
+    @import './design-tokens/color-dark.scss';
+
+    /**
+    * Utilizações gerais de cores do modo dark.
+    */
+    --accent: white;
+
+    /**
+    * Padrão de algumas utilizações do modo dark. Pode ser que a tela utilize de maneira diferente, caso isso aconteça
+    * deve-se referir aos design tokens.
+    */
+    --background: #{$color-background-hard};
+    --border: #{$color-border-regular};
+    --icon: #{$color-info-soft};
+    --text: #{$color-border-regular};
+  }
+}

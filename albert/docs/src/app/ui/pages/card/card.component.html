@@ -1,0 +1,33 @@
+<alb-body>
+
+  <doc-template [hideExampleBackground]=true>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Card
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-card-doc-example">
+      <alb-card title="Título">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo saepe quidem illum earum, veniam esse quibusdam reiciendis assumenda temporibus sit fugit ipsa minus iure, vitae qui nisi cupiditate necessitatibus soluta?
+        </p>
+      </alb-card>
+      <alb-card title="Título">
+        <alb-card-aside>
+          <alb-menu></alb-menu>
+        </alb-card-aside>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo saepe quidem illum earum, veniam esse quibusdam reiciendis assumenda temporibus sit fugit ipsa minus iure, vitae qui nisi cupiditate necessitatibus soluta?
+        </p>
+      </alb-card>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/card/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

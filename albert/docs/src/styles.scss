@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+// Classes para Markdown
+@import './assets/styles/markdown';
+@import '~@ng-select/ng-select/themes/default.theme.css';
+
+:root {
+  --background-example: #ffffff;
+}
+
+[theme="dark"]:root {
+  --background-example: #1c1d2b;
+}
+
+// Classes de utilização na documentação
+.alb-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alb-flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.alb-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.alb-doc-img {
+  display: flex;
+  justify-content: center;
+  img {
+    max-width: 100%;
+    border: solid 1px var(--disabled);
+  }
+}

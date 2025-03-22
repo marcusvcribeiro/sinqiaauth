@@ -1,0 +1,18 @@
+<label class="alb-radio-label">
+  <div class="alb-radio-container">
+    <div class="alb-radio-outer">
+      <div class="alb-radio-inner"></div>
+    </div>
+    <input
+      type="radio"
+      class="alb-radio-input"
+      [value]="value"
+      [name]="name"
+      [checked]="checked"
+      (change)="onChange($event.target)">
+    <div class="alb-radio-ripple"></div>
+  </div>
+  <span class="alb-radio-content">
+    <ng-content></ng-content>
+  </span>
+</label>

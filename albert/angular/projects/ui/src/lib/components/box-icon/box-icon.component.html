@@ -1,0 +1,18 @@
+<div class="alb-box-icon">
+    <div class="alb-box-icon-header">
+        <div class="alb-grid-icon">
+            <span>
+                <i class="alb-icon">{{icon}}</i>
+            </span>
+        </div>
+        <div class="alb-box-icon-content" [class]="albClass">
+            <ng-content></ng-content>
+        </div>
+        <div class="alb-filter" *ngIf="filter">
+            <span (click)="onChange()">
+                <i class="alb-icon" *ngIf="isOpen">arrow_drop_up</i>
+                <i class="alb-icon" *ngIf="!isOpen">arrow_drop_down</i>
+            </span>
+        </div>
+    </div>
+</div>

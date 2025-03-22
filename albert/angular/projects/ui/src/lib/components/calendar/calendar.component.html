@@ -1,0 +1,55 @@
+<ng-template [ngIf]="!onlyIcon">
+  <button
+    class="alb-calendar-button"
+    alb-button-icon
+    [disabled]="_disabled"
+    (click)="onOpenSchedule(button)"
+    #button>
+    <i class="alb-icon">calendar_today</i>
+  </button>
+</ng-template>
+
+<ng-template [ngIf]="onlyIcon">
+  <i class="alb-calendar-button alb-icon"
+    (click)="onOpenSchedule(icon)"
+    [class.alb-icon-disabled]="_disabled"
+    #icon>
+    calendar_today
+  </i>
+</ng-template>
+
+<ng-template #scheduleTemplate>
+  <div
+    class="alb-calendar"
+    [@openClose]="isCalendarOpen ? 'open' : 'close'"
+    (@openClose.done)="onAnimationDone($event)">
+    <header class="alb-calendar-header">
+      <div class="alb-calendar-month">
+        {{ (date ? date : defaultDate) | date:'MMMM' }} - {{ date ? date.getFullYear() : defaultDate.getFullYear() }}
+      </div>
+      <div class="alb-calendar-prev" (click)="onPrevMonth()">
+        <i class="alb-icon">keyboard_arrow_left</i>
+      </div>
+      <div class="alb-calendar-next" (click)="onNextMonth()">
+        <i class="alb-icon">keyboard_arrow_right</i>
+      </div>
+    </header>
+
+    <div class="alb-calendar-week">
+      <span *ngFor="let day of weekDays">
+        {{ formatWeek(day) }}
+      </span>
+    </div>
+    <div class="alb-calendar-schedule">
+      <div
+        class="alb-calendar-day"
+        *ngFor="let day of schedule"
+        [class.--disabled]="day.getMonth() !== (date ? date.getMonth() : defaultDate.getMonth())"
+        [class.--today]="day.getTime() === today.getTime()"
+        [class.--selected]="day.getTime() === (date ? date.getTime() : defaultDate.getTime())"
+        (click)="onDateSelected(day)">
+        {{ day.getDate() }}
+      </div>
+    </div>
+  </div>
+</ng-template>

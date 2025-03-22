@@ -1,0 +1,19 @@
+<div class="alb-header--background">
+  <nav class="alb-header">
+
+    <div class="alb-header-logo">
+      <i class="alb-icon-logo alb-header-logo-icon" [style.color]="logoColor"> sinqia-play</i>
+      <i class="alb-icon-logo alb-icon-logo-name">sinqia-name</i>
+      <span class="alb-icon-pipe"></span>
+      <span class="alb-header-name"> {{ name }} </span>
+      <span class="alb-header-subtitle"> {{ description }} </span>
+    </div>
+
+    <div class="alb-header-content">
+      <div #albGroup>
+        <ng-content >
+        </ng-content>
+      </div>
+    </div>
+  </nav>
+</div>

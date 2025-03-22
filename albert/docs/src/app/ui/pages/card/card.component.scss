@@ -1,0 +1,13 @@
+.alb-card-doc-example {
+  display: flex;
+  flex-direction: row;
+}
+
+alb-card {
+  width: auto;
+  flex:1;
+
+  &:nth-child(1) {
+    margin-right: 16px;
+  }
+}

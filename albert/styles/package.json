@@ -1,0 +1,34 @@
+{
+  "name": "@albert/styles",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "pub": "npm run build && cd dist && npm pack",
+    "generate-tokens": "cd src/style-dictionary && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/cdk": "^9.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sass-loader": "^8.0.0",
+    "style-dictionary": "^3.0.1",
+    "style-loader": "^1.1.1",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "gitHead": "73ff28b4b2a5bd3ce3f3c1c3120afedcc1c50e93"
+}

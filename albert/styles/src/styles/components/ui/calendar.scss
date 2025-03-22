@@ -1,0 +1,95 @@
+@mixin alb-calendar() {
+  $boxSpacing: 8px;
+
+  .alb-calendar {
+    width: 300px;
+    overflow: hidden;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .alb-calendar-button {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    &.alb-icon-disabled {
+      color: var(--disabled-font);
+    }
+  }
+
+  .alb-calendar-overlay {
+    position: absolute;
+  }
+
+  .alb-calendar-header {
+    display: flex;
+    align-items: center;
+    padding: $boxSpacing;
+    padding-top: #{$boxSpacing * 2};
+    background-color: var(--white);
+  }
+
+  .alb-calendar-month {
+    padding: $boxSpacing;
+    flex: 1;
+    font-weight: 700;
+  }
+
+  .alb-calendar-prev,
+  .alb-calendar-next {
+    cursor: pointer;
+  }
+
+  .alb-calendar-week {
+    display: grid;
+    padding: $boxSpacing;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 5px;
+    border-bottom: 1px solid var(--border);
+
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+    }
+  }
+
+  .alb-calendar-schedule {
+    display: grid;
+    padding: $boxSpacing;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+
+  .alb-calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    &.--disabled {
+      pointer-events: none;
+      color: var(--disabled);
+    }
+
+    &.--today {
+      border: 1px solid var(--border);
+    }
+
+    &.--selected {
+      background-color: var(--sinqia);
+      color: var(--contrast);
+    }
+  }
+}

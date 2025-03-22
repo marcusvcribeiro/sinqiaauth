@@ -1,0 +1,37 @@
+.principal {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 64px;
+  align-items: center;
+  height: 200px;
+  justify-content: space-between;
+  margin: 1px 4px 4px 4px;
+
+  .quote {
+    width: 261px;
+
+    q {
+      color: var(--jumbo);
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--gary);
+      margin: 4px 0 0 0;
+    }
+  }
+
+  h1 {
+    color: var(--sinqia);
+    font-size: 64px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: var(--sinqia)
+  }
+
+}
+

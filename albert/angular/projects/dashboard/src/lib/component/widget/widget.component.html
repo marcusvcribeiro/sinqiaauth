@@ -1,0 +1,17 @@
+<gridster-item class="alb-widget" [item]="item">
+
+  <div class="alb-widget-header">
+    <span class="alb-widget-title"> {{ titleWidget }}</span>
+    <alb-menu class="dashboard-template-tab-header-options">
+      <alb-menu-item label="Fechar" (click)="onRemoveWidget()">
+      </alb-menu-item>
+      <alb-menu-item *ngIf="hasConfigButton" label="Configurações" (click)="onConfigClick()">
+      </alb-menu-item>
+    </alb-menu>
+  </div>
+
+  <div class="alb-widget-content">
+    <ng-container #anchor></ng-container>
+  </div>
+
+</gridster-item>

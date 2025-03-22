@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsDevOPS",
+    "title": "DevOPS Options Schema",
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "format": "path",
+        "description": "The path to create the DevOPS.",
+        "default": "/"
+      },
+      "vertical": {
+        "type": "string",
+        "description": "Name of the Project.",
+        "x-prompt": "Qual o nome da Vertical?"
+      },
+      "productName": {
+        "type": "string",
+        "description": "The domain.",
+        "x-prompt": "Qual o nome do Produto?"
+      },
+      "projectName": {
+        "type": "string",
+        "description": "Azure Team.",
+        "x-prompt": "Qual o nome do Projeto?"
+      }
+    }
+  }

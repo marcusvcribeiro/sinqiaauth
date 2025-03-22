@@ -1,0 +1,24 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Datetime-picker
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-around">
+      <form [formGroup]="datetimepickerDoc" class="alb-flex-space-between">
+        <alb-datetimepicker placeholder="Apenas uma data" value="2020-09-03 00:00:00"></alb-datetimepicker>
+        <alb-datetimepicker placeholder="Apenas uma data" value="2020-09-03 00:00:00"
+        formControlName="errorInput" error="Campo inválido" hint="Label adicional" required></alb-datetimepicker>
+      </form>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/datetimepicker/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+
+</alb-body>

@@ -1,0 +1,91 @@
+@mixin alb-chips() {
+  alb-chips {
+    width: 100%;
+    display: block;
+
+
+    .alb-chips-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      &.alb-chips-container-noWrap {
+        flex-wrap: nowrap;
+        overflow: auto;
+      }
+
+      &.alb-chips-container-list {
+        flex-direction: column;
+      }
+
+      .alb-chips {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        align-items: center;
+
+        .alb-chips-order {
+          color: var(--santas);
+        }
+
+        .alb-chips-item {
+          height: 32px;
+          padding: 8px;
+          background-color: var(--iron);
+          flex-direction: row;
+          display: flex;
+          align-items: center;
+          border-radius: 50px;
+
+          .alb-chips-placeholder {
+            font-size: 11px;
+            color: var(--santas);
+            margin-right: 8px;
+            white-space: nowrap;
+          }
+
+          .alb-chips-value {
+            font-size: 11px;
+            color: var(--trout);
+            white-space: nowrap;
+          }
+
+          .alb-chips-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--jumbo);
+            margin-left: 8px;
+            cursor: pointer;
+            outline: none;
+          }
+
+          &.alb-chip-selectable {
+            background-color: var(--trout) !important;
+            cursor: pointer;
+            outline: none;
+
+            .alb-chips-value {
+              color: var(--iron) !important;
+            }
+          }
+
+          &.cursorPointer {
+            cursor: pointer;
+            outline: none;
+          }
+
+          &.alb-chip-item-list {
+            width: 100%;
+            margin: 8px !important;
+
+            .alb-chips-icon {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

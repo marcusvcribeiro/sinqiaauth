@@ -1,0 +1,18 @@
+@import './input';
+@import './inputs-commons';
+
+@mixin alb-datepicker() {
+  .alb-datepicker {
+    @extend .alb-input-picker;
+
+    .alb-calendar-button {
+      @extend .alb-input-picker-button;
+    }
+  }
+
+  .alb-datepicker.ng-invalid.ng-touched .alb-calendar-button {
+    color: var(--warn);
+  }
+
+  @include alb-input-error-angular('.alb-datepicker');
+}

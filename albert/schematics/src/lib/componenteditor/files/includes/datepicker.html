@@ -1,0 +1,6 @@
+<alb-datepicker placeholder="<%= placeholder %>" 
+    <% if (value) { %>  value="date<%= id %>" <% } %> 
+    <% if (required) { %>required<% } %> 
+    <% if (changeValue) { %>(changeValue)="changeValueDatepicker<%= id %>($event)"<% } %> 
+    <% if (disabled) { %>disabled<% } %> <% if (mask) { %> <%= mask %> <% } %>>
+</alb-datepicker>

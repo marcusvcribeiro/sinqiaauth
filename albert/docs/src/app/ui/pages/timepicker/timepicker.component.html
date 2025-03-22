@@ -1,0 +1,20 @@
+<alb-body>
+  <doc-template>
+    <docTemplateTitle class="alb-flex-space-between">
+      Time-picker
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-around">
+      <form [formGroup]="timepickerDoc" class="alb-flex-space-between">
+        <alb-timepicker placeholder="Apenas um horário"></alb-timepicker>
+        <alb-timepicker placeholder="Apenas um horário" 
+        formControlName="errorInput" error="Campo inválido" hint="Label adicional" required></alb-timepicker>
+      </form>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/timepicker/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+</alb-body>

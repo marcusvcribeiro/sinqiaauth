@@ -1,0 +1,14 @@
+/**
+* Arquivo que define o z-index dos componentes.
+*/
+
+@mixin alb-layers() {
+  :root {
+    --layer-base: 500;
+    --layer-loader: 750;
+    --layer-navbar: 1000;
+    --layer-drawer: 1500;
+    --layer-toast: 2000;
+    --layer-dialog: 2500;
+  }
+}

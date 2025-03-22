@@ -1,0 +1,94 @@
+/**
+* O componente alb-slide-toggle possui a seguinte estrutura:
+*
+* ```
+* <div class="alb-slide-toggle">
+*   <label class="alb-slide-toggle-switch" [for]="id">
+*     <input class="alb-slide-toggle-input" type="checkbox"/>
+*     <div class="alb-slide-toggle-slider alb-slide-toggle-round"></div>
+*     <span class="alb-slide-toggle-label"></span>
+*   </label>
+* </div>
+* ```
+*/
+@mixin alb-slide-toggle() {
+  $transition: all 0.2s linear;
+
+  .alb-slide-toggle-container {
+    align-self: center;
+  }
+
+  .alb-slide-toggle-switch {
+    height: 14px;
+    position: relative;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .alb-slide-toggle-switch input {
+    display: none;
+    bottom: 0;
+    left: 10px;
+  }
+
+  .alb-slide-toggle-slider {
+    background-color: var(--french);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: $transition;
+    width: 36px;
+  }
+
+  .alb-slide-toggle-slider:before {
+    background-color: var(--white);
+    bottom: -2.8px;
+    content: "";
+    height: 20px;
+    position: absolute;
+    transition: $transition;
+    width: 20px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .alb-slide-toggle-input:checked + .alb-slide-toggle-slider {
+    background-color: var(--sinqia);
+  }
+
+  .alb-slide-toggle-input:checked + .alb-slide-toggle-slider:before {
+    transform: translateX(26px);
+    left: -8px;
+  }
+
+  .alb-slide-toggle-slider.alb-slide-toggle-round {
+    border-radius: 34px;
+  }
+
+  .alb-slide-toggle-slider.alb-slide-toggle-round:before {
+    border-radius: 50%;
+  }
+
+  .alb-slide-toggle-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 43px;
+    font-size: 14px;
+  }
+
+  // Estilo desabilitado
+  .alb-slide-toggle[disabled],
+  .alb-slide-toggle.--disabled {
+    .alb-slide-toggle-label {
+      color: var(--disabled-font);
+    }
+
+    .alb-slide-toggle-slider {
+      background-color: var(--disabled);
+      pointer-events: none;
+    }
+  }
+
+}

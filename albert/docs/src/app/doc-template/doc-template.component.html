@@ -1,0 +1,13 @@
+<div class="doc-template">
+  <div class="doc-template-title">
+    <ng-content select="docTemplateTitle"></ng-content>
+  </div>
+  <div class="doc-template-example" [class.hide-background]="hideExampleBackground" *ngIf="showExample">
+      <div class="doc-template-example-content">
+        <ng-content select="docTemplateExample"></ng-content>
+      </div>
+  </div>
+  <div class="doc-template-body">
+    <ng-content select="docTemplateCode"></ng-content>
+  </div>
+</div>

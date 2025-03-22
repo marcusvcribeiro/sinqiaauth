@@ -1,0 +1,6 @@
+<!-- lista de widgets -->
+<gridster class="gridster" [options]="options">
+  <alb-widget *ngFor="let widget of dashboard.widgets" [widget]="widget" (widgetRemoved)="removeWidget($event)"
+    (widgetConfigChanged)="onWidgetChanged()">
+  </alb-widget>
+</gridster>

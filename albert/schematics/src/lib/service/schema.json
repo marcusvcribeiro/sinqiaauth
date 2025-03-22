@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsComponent",
+    "title": "Component Options Schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the Service Endpoint.",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        },
+        "x-prompt": "What name would you like to use for the Component Service?"
+      },
+      "spec": {
+        "default": true,
+        "description": "Specifies if a spec file is generated."
+      },
+      "metadata": {
+        "type": "string",
+        "description": ""
+      },
+      "type": {
+        "type": "string",
+        "description": ""
+      },
+      "servicecreate": {
+        "description": ""
+      },
+      "path": {
+        "type": "string",
+        "format": "path",
+        "description": "The path to create the Component."
+      },
+      "endpoint": {
+        "type": "string",
+        "format": "path",
+        "description": "The path to create the Component."
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        },
+        "description": "Data for component creation."
+      }
+    }
+  }

@@ -1,0 +1,21 @@
+<div class="alb-chips-container" [ngClass]="{'alb-chips-container-noWrap': noWrap, 'alb-chips-container-list': isList}">
+    <div class="alb-chips" *ngFor="let chip of chips; let i = index">
+        <div class="alb-chips-order" *ngIf="isList">
+            <span>{{ i + 1 }}º</span>
+        </div>
+        <div class="alb-chips-item {{ chip.key ? 'alb-chips-key-' + chip.key : '' }}" (click)="selecionarChip(chip)"
+            [ngClass]="{'alb-chip-selectable': isChipSelecionado(chip), 'cursorPointer': isSelectable, 'alb-chip-item-list': isList}">
+            <div class="alb-chips-placeholder" *ngIf="placeholder">
+                {{ chip.placeholder }}
+            </div>
+            <div class="alb-chips-value">
+                {{ chip.value }}
+            </div>
+            <div class="alb-chips-icon" (click)="removeChip(chip)" *ngIf="remove">
+                <span>
+                    <i class="alb-icon">close</i>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

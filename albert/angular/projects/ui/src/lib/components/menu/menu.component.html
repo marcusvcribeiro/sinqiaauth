@@ -1,0 +1,17 @@
+<span class="alb-menu-span" [class.disabled]="disabled" (click)="!disabled && onOpenMenu(span)" #span>
+  <i class="alb-icon">{{ icon }}</i>
+</span>
+
+<ng-template #menuTemplate>
+  <ul class="alb-menu-list" [@openClose]="isMenuOpen ? 'open' : 'close'" (@openClose.done)="onAnimationDone($event)">
+    <li class="alb-menu-list-item" [class.disabled]="item.disabled" *ngFor="let item of items ; index as i;"
+      (click)="!item.disabled  && onItemSelected(item)">
+      <ng-container *ngIf="item.label ; else menuTemplateBlock">
+        <span>{{item.label}}</span>
+      </ng-container>
+      <ng-template #menuTemplateBlock>
+        <ng-template [cdkPortalOutlet]="item.content"></ng-template>
+      </ng-template>
+    </li>
+  </ul>
+</ng-template>

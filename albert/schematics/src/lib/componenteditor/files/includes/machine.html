@@ -1,0 +1,49 @@
+<%
+function machine(data) {
+    for (var obj of data) {
+        if (obj) {
+
+            if(obj.type === 'button-toggle'){
+                %><%= include( obj.type + '.html', obj ) %><%
+            } else {
+                %><%= include( obj.type + '.html', obj.properties ) %><%
+            }
+            
+            if (obj.hasOwnProperty('children')) {
+                if (obj.type !== 'card-component') {
+                    machine(obj.children);
+                }
+            }
+
+            if(obj.type === 'card') {
+                %></alb-card><%
+            }
+            
+            if(obj.type === 'row') {
+                %></div><%
+            }
+
+            if(obj.type === 'box') {
+                %></alb-box><%
+            }
+
+            if(obj.type === 'col') {
+                %></div><%
+            }
+            
+            if(obj.type === 'radioGroup') {
+                %></alb-radio-group><%
+            }
+
+            if(obj.type === 'tabGroup') {
+                %></alb-tab-group><%
+            }
+            if(obj.type === 'tab') {
+                %></ng-template></alb-tab><%
+            }
+        }
+    };
+};
+
+machine(data);
+%>

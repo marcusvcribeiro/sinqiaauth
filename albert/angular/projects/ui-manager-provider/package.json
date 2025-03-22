@@ -1,0 +1,15 @@
+{
+  "name": "@albert/ui-manager-provider",
+  "version": "2.0.0",
+  "scripts": {},
+  "peerDependencies": {
+    "@angular/common": "^9.1.2",
+    "@angular/core": "^9.1.2"
+  },
+  "dependencies": {
+    "@albert/authentication": "2.0.0",
+    "@albert/layout": "2.0.0",
+    "tslib": "^2.0.0"
+  },
+  "gitHead": "73ff28b4b2a5bd3ce3f3c1c3120afedcc1c50e93"
+}

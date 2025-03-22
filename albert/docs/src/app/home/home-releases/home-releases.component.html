@@ -1,0 +1,86 @@
+<div class="principal">
+  <div class="general">
+    <div class="links-block">
+      <div class="right">
+        <h2>Como Começar?</h2>
+        <p>O passo a passo que você precisa para utilizar o Albert Angular.</p>
+        <div class="tfs">
+          <div class="li">
+            <a class="link"
+            href="https://dev.sinqia.io/albert/docs/utils/get-started">
+            Get Started
+          </a>
+          </div>
+        </div>
+        <h2>Projetos que já usam</h2>
+        <p>Nossos clientes precisam sentir que podem concluir qualquer tarefa.</p>
+        <div class="tfs">
+          <img src="./assets/img/home/tfs-logo.svg" alt="tfs">
+          <div class="li">
+            <span>SQ-Pix</span>
+            <a class="link"
+            href=" https://tfs.seniorsolution.com.br/PD/Bancos/_git/pix-front">
+            tfs.seniorsolution.com.br/PD/Bancos/_git/pix-front
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <h2>Como Contribuir?</h2>
+        <p>O Albert é um trabalho colaborativo de uma comunidade.</p>
+        <div class="tfs">
+          <div class="li">
+            <a class="link"
+            href="https://dev.sinqia.io/albert/docs/utils/contributing">
+            Como contribuir com Albert
+          </a>
+          </div>
+        </div>
+        <h2>Jornada Core Committer</h2>
+        <p>Torne-se um Core Committer reconhecido pela comunidade.</p>
+        <div class="tfs">
+          <div class="li">
+            <a class="link"
+            href="https://dev.sinqia.io/albert/docs/utils/core-committer">
+            Jornada Core Committer
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="releases">
+      <h2>Releases</h2>
+      <markdown [src]="'./assets/markdown/releases/README.md'"></markdown>
+    </div>
+  </div>
+  <div class="menu">
+    <div class="menu-int">
+      <h3>Componentes Albert Angular</h3>
+      <div class="components">
+        <div class="layout">
+          <h4>Layout</h4>
+          <ul class="list">
+            <li *ngFor="let component of layout">
+              <a class="link" (click)="gotoPage(component)">{{ component.name }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="ui">
+          <h4>UI</h4>
+          <ul class="list">
+            <li *ngFor="let component of ui">
+              <a class="link" (click)="gotoPage(component)">{{ component.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="design-system">
+        <h3>Albert Design System</h3>
+        <p>
+          É a expressão da comunidade Sinqia de como se deve desenvolver um software: Produtivo, Simples, Familiar e Confiável.
+        </p>
+        <a href="https://dev.sinqia.io/albert/design-system/" class="link">Acessar Design System</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Button
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-button-group">
+      <button alb-button>Accent</button>
+      <button alb-button color="warn" icon="add">Warn</button>
+      <button alb-button color="success" iconRight="expand_more">Success</button>
+      <button alb-button type="secondary" icon="add" iconRight="expand_more">Secondary</button>
+      <button alb-button type="tertiary">Tertiary</button>
+      <button alb-button type="tertiary" color="link">Tertiary Link</button>
+      <button alb-button type="ghost">Ghost</button>
+      <button alb-button disabled>Disabled</button>
+      <button alb-button iconOnly icon="add"></button>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/button/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>

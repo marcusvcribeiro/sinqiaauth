@@ -1,0 +1,56 @@
+@mixin alb-button-icon() {
+  .alb-button-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border: 1px solid var(--trout);
+    border-radius: 4px;
+    background: var(--white);
+    color: var(--accent);
+    background-position: left;
+    transition: background 0.6s;
+    box-sizing: border-box;
+
+    &:hover {
+      background: var(--athens) radial-gradient(circle, transparent 1%, var(--athens) 1%) center/15000%;
+    }
+
+    &:active {
+      background-color: rgba(0, 0, 0, 0.3);
+      background-size: 100%;
+      transition: background 0s;
+    }
+
+    &[disabled] {
+      pointer-events: none;
+      border: none;
+      background-color: var(--disabled);
+
+      .alb-icon {
+        color: var(--disabled-font);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &[pure] {
+      pointer-events: auto;
+      background-color: transparent;
+      border: none;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .alb-button-icon-content {
+    position: relative;
+  }
+
+  .alb-button-content-icon {
+    margin-left: -0.1em;
+  }
+}

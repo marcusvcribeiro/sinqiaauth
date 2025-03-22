@@ -1,0 +1,5 @@
+@import './input';
+
+@mixin alb-number() {
+  @include alb-input-error-angular('.alb-number')
+}

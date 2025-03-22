@@ -1,0 +1,18 @@
+@import './input';
+@import './inputs-commons';
+
+@mixin alb-datetimepicker() {
+  .alb-datetimepicker {
+    @extend .alb-input-picker;
+
+    .alb-datetime-button {
+      @extend .alb-input-picker-button;
+    }
+  }
+
+  .alb-datetimepicker.ng-invalid.ng-touched .alb-datetime-button {
+    color: var(--warn);
+  }
+
+  @include alb-input-error-angular('.alb-datetimepicker');
+}

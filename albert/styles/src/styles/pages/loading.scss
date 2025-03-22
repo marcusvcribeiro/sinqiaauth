@@ -1,0 +1,15 @@
+/**
+* Classe resposável por estiliar a page de carregamento
+*/
+@mixin alb-loading-page() {
+  .alb-loading-page {
+    background-color: var(--primary);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color-aplication-name);
+    font-family: var(--font-family-aplication-name);
+    font-size: var(--font-size-title);
+  }
+}

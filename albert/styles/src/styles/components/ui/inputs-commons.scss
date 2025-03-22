@@ -1,0 +1,28 @@
+@mixin alb-input-commons() {
+    .alb-input-picker {
+        display: block;
+        position: relative;
+
+        .alb-input-field:focus + .alb-input-label,
+        .alb-input.has-value .alb-input-label {
+            width: 100%;
+        }
+    }
+
+    .alb-input-picker-button {
+        position: absolute;
+        top: 16px;
+        right: 0;
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .alb-input-label {
+        div {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

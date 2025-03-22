@@ -1,0 +1,90 @@
+@mixin alb-box-icon() {
+  $height-title-box-icon: 50px;
+
+  .alb-box-icon {
+    border: 1px solid var(--border);
+    background-color: var(--contrast);
+    border-radius: 5px;
+    margin: 0 16px;
+
+    .action{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .action-end{
+      display:flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .alb-box-icon-header {
+      display: flex;
+      width: 100%;
+      height: $height-title-box-icon;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .alb-grid-icon {
+      cursor: pointer;
+      text-align: center;
+      color: #7F7F88;
+      height: 100%;
+      border-right: 1px solid var(--border);
+      padding: 0 10px;
+
+      &>span {
+        top: 20%;
+        position: relative;
+      }
+    }
+
+    .alb-filter {
+      cursor: pointer;
+      text-align: center;
+      color: #7F7F88;
+      height: 100%;
+      border-left: 1px solid var(--border);
+      padding: 0 10px;
+
+      &>span {
+        top: 20%;
+        position: relative;
+      }
+    }
+  }
+
+  .alb-box-icon-icon {
+    margin-top: 8px;
+    margin-bottom: 7px;
+  }
+
+  .alb-box-icon-content {
+    display: flex;
+    width: 100%;
+    padding: 0px 16px;
+    overflow: auto;
+
+    & alb-input,
+    ng-select,
+    alb-textarea,
+    alb-radio-group {
+      // margin-left: 16px;
+    }
+
+    & alb-datepicker {
+      margin-right: 16px;
+    }
+
+    & .alb-button-icon {
+      margin: 10px 16px 0;
+    }
+  }
+
+  .alb-box-icon-btn-icon {
+    display: flex;
+    right: 0px;
+    margin: 0 16px 0 8px;
+  }
+}

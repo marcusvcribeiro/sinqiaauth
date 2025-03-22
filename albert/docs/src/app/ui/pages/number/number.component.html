@@ -1,0 +1,42 @@
+<alb-body>
+  <doc-template>
+    <docTemplateTitle> Number</docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-between">
+      <form [formGroup]="numberDoc" class="alb-flex-space-around">
+        <alb-number placeholder="Apenas um número"></alb-number>
+        <alb-number placeholder="Apenas um número" [value]="100"></alb-number>
+        <alb-number
+          placeholder="Apenas um número"
+          [allowNegative]="false"
+        ></alb-number>
+        <alb-number
+          placeholder="Apenas um número"
+          [decimal]="true"
+          decimalLength="2"
+          [value]="100"
+        >
+        </alb-number>
+        <alb-number
+          placeholder="Apenas um número"
+          formControlName="required"
+          required
+          error="Campo inválido"
+          hint="Label adicional"
+        >
+        </alb-number>
+
+        <alb-number
+          placeholder="Apenas um número"
+          [value]="10000" 
+          [decimal]="true"
+          [disableThousandsSeparator]="true">
+        </alb-number>
+      </form>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/number/README.md'"></markdown>
+    </docTemplateCode>
+  </doc-template>
+</alb-body>

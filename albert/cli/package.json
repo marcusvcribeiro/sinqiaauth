@@ -1,0 +1,36 @@
+{
+  "name": "@albert/cli",
+  "version": "1.0.0",
+  "description": "",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "alb": "./bin/albert-cli"
+  },
+  "files": [
+    "./bin",
+    "src"
+  ],
+  "keywords": [],
+  "author": "sinqia",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "commander": "^4.1.1",
+    "esm": "^3.2.25",
+    "inquirer": "^7.0.5"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.sinqia.com.br/repository/npm-repo/"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.2"
+  }
+}

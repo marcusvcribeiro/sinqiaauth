@@ -1,0 +1,42 @@
+@import '../core/breakpoints.scss';
+
+$alb-divisor: (
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7
+);
+
+@mixin alb-divisor($alb-divisor-space: 8px, $alb-divisor-height: 5px) {
+  .alb-divisor {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin-left: -#{$alb-divisor-space};
+    margin-right: -#{$alb-divisor-space};
+
+    > * {
+      width: 100%;
+      margin-top: #{$alb-divisor-height};
+      margin-bottom: #{$alb-divisor-height};
+      padding-right: #{$alb-divisor-space};
+      padding-left: #{$alb-divisor-space};
+    }
+
+    @media (min-width: map-get($alb-breakpoints, sm)) {
+      @each $key, $value in $alb-divisor {
+        &.\--#{$key} > * {
+          width: 100% / $value;
+        }
+      }
+
+      @for $i from 1 through 20 {
+        .width-#{$i * 5} {
+          width: #{$i * 5%};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import '../../design-tokens.scss';
+
+@mixin alb-button-toggle() {
+
+  :root {
+    @import "../../core/design-tokens/color.scss";
+
+    --toggle-background: #{$color-background-hard};
+    --toggle-text-color: #{$color-border-regular};
+    --toggle-border-color: var(--toggle-text-color);
+
+    --toggle-background-active: var(--primary);
+    --toggle-text-active: var(--toggle-background);
+
+    --toggle-background-disabled: #{$color-disable-hard};
+    --toggle-text-disabled: #{$color-info-mild};
+  }
+
+  [theme="dark"]:root {
+    @import "../../core/design-tokens/color-dark.scss";
+
+    --toggle-background: #{$color-background-mild};
+    --toggle-text-color: #{$color-info-lightest};
+    --toggle-border-color: var(--toggle-background);
+
+    --toggle-background-active: #{$color-brand-medium};
+    --toggle-text-active: var(--toggle-text-color);
+
+    --toggle-background-disabled: #{$color-disable-hard};
+    --toggle-text-disabled: #{$color-info-mild};
+  }
+
+  $borderRadius: 4px;
+  $minHeight: 32px;
+
+  .alb-button-toggle-group {
+    min-height: $minHeight;
+
+    &.horizontal {
+      display: inline-flex;
+    }
+
+    &.vertical {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .alb-button-toggle {
+    display: block;
+    min-height: inherit;
+
+    .horizontal & {
+      &:not(:first-child) .alb-button-toggle-button {
+        border-left: 0;
+      }
+
+      &:first-child .alb-button-toggle-button {
+        border-top-left-radius: $borderRadius;
+        border-bottom-left-radius: $borderRadius;
+      }
+
+      &:last-child .alb-button-toggle-button {
+        border-top-right-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+      }
+    }
+
+    .vertical & {
+      &:not(:first-child) .alb-button-toggle-button {
+        border-top: 0;
+      }
+
+      &:first-child .alb-button-toggle-button {
+        border-top-left-radius: $borderRadius;
+        border-top-right-radius: $borderRadius;
+      }
+
+      &:last-child .alb-button-toggle-button {
+        border-bottom-left-radius: $borderRadius;
+        border-bottom-right-radius: $borderRadius;
+      }
+    }
+  }
+
+  .alb-button-toggle-button {
+    min-height: inherit;
+    padding: 0 16px;
+    background-color: var(--toggle-background);
+    border: 1px solid var(--toggle-border-color);
+    cursor: pointer;
+    outline: none;
+    transition: .2s background-color;
+
+    .vertical & {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: var(--hover);
+    }
+
+    &[disabled] {
+      padding: 0 $padding-slim;
+
+      .alb-button-toggle-content {
+        background-color: var(--toggle-background-disabled);
+        color: var(--toggle-text-disabled);
+        padding: $padding-thin $padding-slim;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .alb-button-toggle-content {
+    text-transform: uppercase;
+    font-family: var(--font-family-button);
+    font-size: $font-size-sm;
+    font-weight: 700;
+    color: var(--toggle-text-color);
+    letter-spacing: 1px;
+  }
+
+  .alb-button-toggle-checked {
+    .alb-button-toggle-button {
+      background-color: var(--toggle-background);
+      padding: 0 $padding-slim;
+    }
+
+    .alb-button-toggle-content {
+      color: var(--toggle-background);
+      background-color: var(--toggle-background-active);
+      padding: $padding-thin $padding-slim;
+      border-radius: 4px;
+    }
+  }
+
+}

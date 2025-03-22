@@ -1,0 +1,6 @@
+<alb-tab-group <% if (selectedTabChange) { %>(selectedTabChange)="selectedTabChange($event)"<% } %>>
+    <% if (aside) { %>
+        <div <%= aside %> class="tab-aside  
+            <% if (asideAlign) { %><%= asideAlign %><% } %> ">
+        </div>
+    <% } %> 

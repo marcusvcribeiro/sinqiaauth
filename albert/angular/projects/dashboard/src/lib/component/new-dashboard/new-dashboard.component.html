@@ -1,0 +1,8 @@
+<div class="new-dashboard">
+  <form [formGroup]="form">
+    <alb-input class="input" placeholder="Nome do Dashboard" formControlName="dashboardName"></alb-input>
+    <div>
+      <button [disabled]="form.invalid" alb-button (click)="submitDashboardName()">Criar Dashboard</button>
+    </div>
+  </form>
+</div>

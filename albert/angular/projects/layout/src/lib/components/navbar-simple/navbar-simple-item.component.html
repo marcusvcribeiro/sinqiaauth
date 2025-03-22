@@ -1,0 +1,23 @@
+<ul class="alb-navbarsimple-list">
+  <li
+    *ngFor="let item of items"
+    class="alb-navbarsimple-item"
+    [class.alb-navbarsimple-title]="item?.children?.length"
+    [class.--link]="item?.path"
+    (click)="onNavbarNavigate(item)">
+    <ng-container *ngIf="item.path">
+      <i *ngIf="!item.favorite" class="alb-icon alb-navbarsimple-icon" (click)="onFavoriteClick(item, $event)">star_outline</i>
+      <i *ngIf="item.favorite" class="alb-icon alb-navbarsimple-icon alb-navbarsimple-star-icon" (click)="onFavoriteClick(item, $event)">star</i>
+      <i class="alb-icon alb-navbarsimple-icon" (click)="onNewTabNavigate(item, $event)">launch</i>
+    </ng-container>
+    <span class="alb-navbarsimple-name">
+      {{ item.name }}
+    </span>
+    <alb-navbar-simple-item
+      *ngIf="item?.children"
+      [items]="item?.children"
+      [changeTabTitle]="changeTabTitle"
+      [urlPath]="urlPath">>
+    </alb-navbar-simple-item>
+  </li>
+</ul>

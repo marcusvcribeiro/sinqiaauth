@@ -1,0 +1,19 @@
+@mixin alb-modal() {
+  .alb-modal {    
+    &.small {
+      width: 431px;
+      max-height: 277px;
+    }
+
+    &.medium {
+      width: 639px;
+      max-height: 293px;
+    }
+
+    &.large {
+      width: 445px;
+      max-height: 447px;
+    }
+  }
+}
+

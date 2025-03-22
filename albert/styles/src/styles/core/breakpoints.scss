@@ -1,0 +1,14 @@
+$alb-breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1000px,
+  lg: 1200px,
+  xl: 1400px
+);
+@mixin alb-breakpoints() {
+  @each $key, $value in $alb-breakpoints {
+    .alb-width-#{$key} {
+      width: #{$value};
+    }
+  }
+}

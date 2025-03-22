@@ -1,0 +1,12 @@
+<alb-input
+  [placeholder]="placeholder"
+  [mask]="mask"
+  [value]="stringValue"
+  [disabled]="_disabled"
+  [textAlign]="textAlign"
+  [hint]="hint"
+  [error]="error"
+  (changeValue)="onChange($event)"
+  (focusout)="onTouchControlValueAccessor()"
+  #inputRef>
+</alb-input>

@@ -1,0 +1,24 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Calendar
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-around">
+      <alb-calendar></alb-calendar>
+      <alb-calendar [date]="date" (change)="onDateChange($event)"></alb-calendar>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/calendar/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+
+</alb-body>
+
+

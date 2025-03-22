@@ -1,0 +1,37 @@
+<header class="alb-navbarfull-header">
+  <div class="alb-navbarfull-search">
+    <i class="alb-icon">search</i>
+    <ng-select
+      [items]="listItemsChildren"
+      class="alb-navbarfull-ngselect"
+      bindLabel="name"
+      bindValue="id"
+      (change)="onItemSelected($event)"
+      placeholder="Buscar no sistema"
+    >
+      <ng-template ng-option-tmp let-item="item" let-search="searchTerm">
+        <div>
+          <span>{{ item.name }}</span>
+        </div>
+        <small class="alb-navbarfull-indice"> {{ item.parentName }}</small>
+      </ng-template>
+    </ng-select>
+  </div>
+
+  <button class="alb-navbarfull-close" (click)="onItemSelected(null)">
+    <i class="alb-icon">close</i>
+  </button>
+</header>
+<div class="alb-navbarfull-container">
+  <alb-navbar-full-aside
+    *ngIf="offsetAside > 0"
+    [items]="asideItems"
+  ></alb-navbar-full-aside>
+  <alb-navbar-full-item
+    [columnsNumber]="columnsNumber"
+    [urlPath]="urlPath"
+    [items]="listItems"
+    [changeTabTitle]="changeTabTitle"
+  >
+  </alb-navbar-full-item>
+</div>

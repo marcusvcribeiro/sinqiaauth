@@ -1,0 +1,123 @@
+<ng-template [ngIf]="!onlyIcon">
+  <button
+    class="alb-datetime-button"
+    [disabled]="_disabled"
+    (click)="onOpenSchedule(button)"
+    #button>
+    <i class="alb-icon">calendar_today</i>
+  </button>
+</ng-template>
+
+<ng-template [ngIf]="onlyIcon">
+  <i class="alb-datetime-button alb-icon"
+    (click)="onOpenSchedule(icon)"
+    [class.alb-icon-disabled]="_disabled"
+    #icon>
+    calendar_today
+  </i>
+</ng-template>
+
+<ng-template #datetimeTemplate>
+  <div
+    class="alb-datetime"
+    [@openClose]="isDatetimeOpen ? 'open' : 'close'"
+    (@openClose.done)="onAnimationDone($event)"
+  >
+    <div class="alb-datetime-calendar">
+      <header class="alb-datetime-calendar-header">
+        <div class="alb-datetime-calendar-month">
+          {{ (date ? date : defaultDate) | date:'MMMM' }} - {{ date ? date.getFullYear() : defaultDate.getFullYear() }}
+        </div>
+        <div class="alb-datetime-calendar-prev" (click)="onPrevMonth()">
+          <i class="alb-icon">keyboard_arrow_left</i>
+        </div>
+        <div class="alb-datetime-calendar-next" (click)="onNextMonth()">
+          <i class="alb-icon">keyboard_arrow_right</i>
+        </div>
+      </header>
+
+      <div class="alb-datetime-calendar-week">
+        <span *ngFor="let day of weekDays">
+          {{ formatWeek(day) }}
+        </span>
+      </div>
+      <div class="alb-datetime-calendar-schedule">
+        <div
+          class="alb-datetime-calendar-day"
+          *ngFor="let day of schedule"
+          [class.--disabled]="day.getMonth() !== (date ? date.getMonth() : defaultDate.getMonth())"
+          [class.--today]="day.getTime() === today.getTime()"
+          [class.--selected]=" date ? 
+          (day.getDate() === date.getDate() && day.getMonth() === date.getMonth() && day.getFullYear() === date.getFullYear()) :
+          (day.getDate() === defaultDate.getDate() && day.getMonth() === defaultDate.getMonth() && day.getFullYear() === defaultDate.getFullYear())"
+          (click)="onDateSelected(day)">
+          {{ day.getDate()}}
+        </div>
+      </div>
+    </div>
+    <!-- Parte do relógio -->
+    <div class="alb-datetime-clock">
+      <!-- Header do relógio -->
+      <div class="alb-datetime-clock-header">
+        <span
+          class="alb-datetime-clock-header-hour"
+          [class.alb-datetime-clock-active-time]="timeTypeActive === TypeTime.HOUR"
+          (click)="setTimeType(TypeTime.HOUR)"
+        >{{ hourDisplay }}</span
+        >:<span
+          class="alb-datetime-clock-header-minute"
+          [class.alb-datetime-clock-active-time]="timeTypeActive === TypeTime.MINUTE"
+          (click)="setTimeType(TypeTime.MINUTE)"
+        >{{ minuteDisplay }}</span
+        >:<span
+          class="alb-datetime-clock-header-second"
+          [class.alb-datetime-clock-active-time]="timeTypeActive === TypeTime.SECOND"
+          (click)="setTimeType(TypeTime.SECOND)"
+        >{{ secondDisplay }}</span>
+      </div>
+      <!-- Relógio exibindo horas em AM/PM -->
+      <div class="alb-datetime-clock-circle" *ngIf="timeTypeActive === TypeTime.HOUR">
+        <div
+          *ngFor="let hour of clockHours"
+          [class]="'alb-datetime-clock-hour-am alb-datetime-clock-hour-am-' + hour"
+          (click)="updateHour(hour)">
+          {{ hour }}
+        </div>
+        <div
+          *ngFor="let hour of clockHours"
+          [class]="'alb-datetime-clock-hour-pm alb-datetime-clock-hour-pm-' + hour"
+          (click)="updateHour(hour + 12)">
+          {{ hour + 12 }}
+        </div>
+
+        <div class="alb-datetime-clock-circle-mid"></div>
+      </div>
+      <!-- Relógio exibindo minutos -->
+      <div class="alb-datetime-clock-circle" *ngIf="timeTypeActive === TypeTime.MINUTE">
+        <div
+          *ngFor="let minute of clockMinutesSeconds"
+          [class]="'alb-datetime-clock-minute alb-datetime-clock-minute-' + minute"
+          (click)="updateMinute(minute)">
+          {{ minute % 5 === 0 ? minute : '.' }}
+        </div>
+
+        <div class="alb-datetime-clock-circle-mid"></div>
+      </div>
+      <!-- Relógio exibindo segundos -->
+      <div class="alb-datetime-clock-circle" *ngIf="timeTypeActive === TypeTime.SECOND">
+        <div
+          *ngFor="let second of clockMinutesSeconds"
+          [class]="'alb-datetime-clock-minute alb-datetime-clock-second-' + second"
+          (click)="updateSecond(second)">
+          {{ second % 5 === 0 ? second : '.' }}
+        </div>
+        <div class="alb-datetime-clock-circle-mid"></div>
+      </div>
+    </div>
+    <div class="alb-datetime-confirm">
+      <button class="alb-datetime-button alb-datetime-button-confirm" (click)="confirm()">
+        <i class="alb-icon">check</i>
+      </button>
+    </div>
+  </div>
+</ng-template>

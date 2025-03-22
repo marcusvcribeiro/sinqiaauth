@@ -1,0 +1,12 @@
+<alb-card class="alb-drawer-container" title="{{ title }}" [style]="{ 'width': getSize() }"
+  [@openCloseAnimation]="{value: (isOpen ? 'open' : 'closed'), params: { size: getSize() }}"
+  [@fanAnimation]="{value: (lastPosition ? 'execute' : ''), params: { lastPosition: lastPosition }}"
+  (@openCloseAnimation.done)="onAnimationEvent($event)">
+    <alb-card-aside>
+      <button class="alb-drawer-close" alb-button type="tertiary" iconOnly icon="close" (click)="onClose()">
+      </button>
+    </alb-card-aside>
+    <ng-container #body></ng-container>
+    <alb-card-footer class="alb-drawer-footer" *ngIf="drawerFooter">
+    </alb-card-footer>
+  </alb-card>

@@ -1,0 +1,26 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle> Menu</docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-between">
+      <alb-menu>
+        <alb-menu-item>
+          <ng-template albMenuTemplate>Template 1</ng-template>
+        </alb-menu-item>
+        <alb-menu-item label="Template 2" id="2">
+        </alb-menu-item>
+        <alb-menu-item label="Template 3" id="3" [disabled]="true">
+        </alb-menu-item>
+      </alb-menu>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/menu/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

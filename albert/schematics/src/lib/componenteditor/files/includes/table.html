@@ -1,0 +1,31 @@
+<p-table
+      class="alb-table"
+      <% if (data) { %>  [value]="dataTable<%= id %>" <% } %> 
+      <% if (showCurrentPageReport) { %>  [showCurrentPageReport]="<%= showCurrentPageReport %>" <% } %> 
+      <% if (showCurrentPageReport === true) { %>  currentPageReportTemplate="Mostrando {{first<%= id %>}} ao {last} de {{totalRecords<%= id %>}} registros" <% } %> 
+      <% if (rows) { %> [rows]="<%= rows %>" <% } %> 
+      <% if (rowsPerPageOptions) { %> [rowsPerPageOptions]="<%= rowsPerPageOptions %>" <% } %> 
+      [totalRecords]="totalRecords<%= id %>"
+      [paginator]="true"
+      [lazy]="true"
+      (onLazyLoad)="loadData<%= id %>($event)"
+      [loading]="loading<%= id %>"
+      >
+      <ng-template pTemplate="header">
+        <tr>
+          <th *ngFor="let col of cols<%= id %>">
+            {{col.field}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-dataTable<%= id %>>
+        <tr>
+          <td *ngFor="let col of cols<%= id %>">
+            {{ dataTable<%= id %>[col.field] }}
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template let-item pTemplate="paginatordropdownitem">
+        {{ item.value }} - por página
+      </ng-template>
+    </p-table>

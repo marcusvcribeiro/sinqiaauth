@@ -1,0 +1,18 @@
+<alb-input placeholder="<%= placeholder %>" formControlName="<%= endpointName  %>" <% if (value) { %>value="<%= value %>"<% } %>
+    <% if (textAlign) { %>textAlign="<%= textAlign %>" <% } %> 
+    <% if (readonly) { %>readonly<% } %> 
+    <% if (required) { %>required<% } %> 
+    <% if (disabled) { %>disabled<% } %> 
+    <% if (mask) { 
+        if (mask.key === 'cnpj')%>[mask]="{mask: '00.000.000/0000-00'}"<%
+        if (mask.key === 'cpf')%>[mask]="{mask: '000.000.000-00'}"<%
+        if (mask.key === 'telephoneDDD')%>[mask]="{mask: '(00) 00000-0000'}"<%
+        if (mask.key === 'telephoneDDIPlusDDD')%>[mask]="{mask: '+00 (00) 00000-0000'}"<%
+    } %>
+    <% if (validation) { 
+        %> [error]="getError('<%= endpointName  %>')"<%
+    } %>
+    <% if (hint) { 
+        %> [hint]="<%= endpointName %>Hint"<%
+    } %>
+    ></alb-input>

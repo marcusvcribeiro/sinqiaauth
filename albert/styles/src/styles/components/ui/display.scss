@@ -1,0 +1,18 @@
+@mixin alb-display() {
+  .alb-display {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-body);
+  }
+
+  .alb-display-title {
+    padding-bottom: 4px;
+    font-size: 11px;
+    color: var(--disabled-font);
+  }
+
+  .alb-display-content {
+    color: var(--black);
+    font-size: 14px;
+  }
+}

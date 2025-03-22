@@ -1,0 +1,81 @@
+
+@mixin alb-loader() {
+  .alb-loader {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .alb-loader-description {
+    width: 100%;
+    color: var(--sinqia);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    .alb-loader.--dark & {
+      color: var(--white);
+    }
+  }
+
+  .alb-loader-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .alb-loader-line {
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    border-top: 5px solid var(--sinqia);
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid var(--sinqia);
+    border-right: 5px solid transparent;
+    animation: alb-loader-animate 2s infinite;
+
+    .alb-loader.--dark & {
+      border-top-color: var(--white);
+      border-left-color: var(--white);
+    }
+
+    &:nth-child(1) {
+      left: 75px;
+      top: 75px;
+      width: 50px;
+      height: 50px;
+    }
+
+    &:nth-child(2) {
+      left: 65px;
+      top: 65px;
+      width: 70px;
+      height: 70px;
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      left: 55px;
+      top: 55px;
+      width: 90px;
+      height: 90px;
+      animation-delay: 0.4s;
+    }
+
+    &:nth-child(4) {
+      left: 45px;
+      top: 45px;
+      width: 110px;
+      height: 110px;
+      animation-delay: 0.6s;
+    }
+  }
+
+  @keyframes alb-loader-animate {
+    50% {
+      -ms-transform: rotate(360deg) scale(0.8);
+      -webkit-transform: rotate(360deg) scale(0.8);
+      transform: rotate(360deg) scale(0.8);
+    }
+  }
+}

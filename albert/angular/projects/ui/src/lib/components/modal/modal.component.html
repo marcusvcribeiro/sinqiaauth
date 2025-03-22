@@ -1,0 +1,8 @@
+<alb-card title="{{ title }}">
+  <alb-card-aside>
+    <button class="alb-card-icon" alb-button type="tertiary" size="small" iconOnly icon="close" (click)="onClose()">
+    </button>
+  </alb-card-aside>
+  <ng-container #content></ng-container>
+  <alb-card-footer *ngIf="footerContent"></alb-card-footer>
+</alb-card>

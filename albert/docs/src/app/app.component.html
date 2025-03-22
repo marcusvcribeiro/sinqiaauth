@@ -1,0 +1,11 @@
+<alb-container>
+  <alb-header class="alb-container-header" name='Albert Angular' logoColor='#fa4616'>
+    <alb-header-group>
+      <alb-slide-toggle (change)="changeTheme()"></alb-slide-toggle>
+    </alb-header-group>
+  </alb-header>
+  <alb-navigation class="alb-container-sidenav" [items]="lista"></alb-navigation>
+  <div class="alb-container-body">
+    <router-outlet></router-outlet>
+  </div>
+</alb-container>

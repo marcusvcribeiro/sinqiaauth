@@ -1,0 +1,170 @@
+
+@import './inputs-commons';
+
+@mixin alb-text-area {
+  $timeTransition: 0.2s;
+
+  textarea {
+    overflow: auto !important;
+  }
+
+  .alb-text-area {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 11px;
+  }
+
+  .alb-text-area-field {
+    width: 100%;
+    background-color: transparent;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: border 0.2s, box-shadow 0.2s;
+    resize: vertical;
+  }
+
+  .alb-text-area-label {
+    @extend .alb-input-label;
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    transition: color $timeTransition, font-size $timeTransition, line-height 0.2s;
+    font-size: 14px;
+    line-height: 44px;
+    color: var(--placeholder);
+  }
+
+  .alb-text-area-count {
+    margin-top: 0px;
+    display: grid;
+    justify-content: end;
+    height: 8px;
+    color: var(--placeholder);
+  }
+
+  .alb-text-area-field + .alb-text-area-label::before,
+  .alb-text-area-field + .alb-text-area-label::after {
+    content: "";
+    display: block;
+    margin-top: 6px;
+    border-top: solid 1px;
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    border-top-color: transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .alb-text-area-label::before {
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+  }
+
+  .alb-text-area-label::after {
+    flex-grow: 1;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+  }
+
+  // adicionando margin em caso de ter placeholder
+  .alb-text-area.has-placeholder .alb-text-area-label::after {
+    margin-left: 4px;
+  }
+
+  .alb-text-area.has-placeholder .alb-text-area-label::before {
+    margin-right: 4px;
+  }
+
+  // Tratando o focus do field
+  .alb-text-area-field:focus {
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 var(--accent), inset -1px 0 var(--accent), inset 0 -1px var(--accent);
+  }
+
+  .alb-text-area-field:focus + .alb-text-area-label {
+    color: var(--accent);
+  }
+
+  .alb-text-area-field:focus + .alb-text-area-label,
+  .alb-text-area.has-value .alb-text-area-label {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .alb-text-area-field:focus + .alb-text-area-label::before,
+  .alb-text-area-field:focus + .alb-text-area-label::after {
+    border-top-color: var(--accent);
+    box-shadow: inset 0 1px var(--accent);
+  }
+
+  // Estilo com valores
+  .alb-text-area.has-value .alb-text-area-field {
+    border-top-color: transparent;
+  }
+
+  .alb-text-area.has-value .alb-text-area-label {
+    &::before,
+    &::after {
+      border-top-color: var(--border);
+    }
+  }
+
+  // Estilo com erro
+  .alb-text-area.ng-invalid.ng-touched .alb-text-area-field,
+  .alb-text-area.has-error .alb-text-area-field {
+    border-color: var(--warn);
+
+    &:focus {
+      border-top-color: transparent;
+      box-shadow: inset 1px 0 var(--warn), inset -1px 0 var(--warn), inset 0 -1px var(--warn);
+    }
+  }
+
+  .alb-text-area.ng-invalid.ng-touched.has-value .alb-text-area-field,
+  .alb-text-area.has-error.has-value .alb-text-area-field {
+    border-top-color: transparent;
+  }
+
+  .alb-text-area.ng-invalid.ng-touched .alb-text-area-label,
+  .alb-text-area.has-error .alb-text-area-label {
+    color: var(--warn);
+  }
+
+  .alb-text-area.ng-invalid.ng-touched.has-value .alb-text-area-label,
+  .alb-text-area.has-error.has-value .alb-text-area-label {
+    color: var(--warn);
+
+    &::before,
+    &::after {
+      border-top-color: var(--warn);
+    }
+  }
+
+  .alb-text-area.has-error .alb-text-area-field:focus + .alb-text-area-label::before,
+  .alb-text-area.ng-invalid.ng-touched .alb-text-area-field:focus + .alb-text-area-label::before,
+  .alb-text-area.has-error .alb-text-area-field:focus + .alb-text-area-label::after,
+  .alb-text-area.ng-invalid.ng-touched .alb-text-area-field:focus + .alb-text-area-label::after {
+    border-top-color: var(--warn);
+    box-shadow: inset 0 1px var(--warn);
+  }
+
+  // Estilo desabilitado
+  .alb-text-area-field[disabled],
+  .alb-text-area-field.disabled {
+    background-color: var(--disabled);
+    pointer-events: none;
+  }
+
+  .alb-text-area-field[disabled] + .alb-text-area-label,
+  .alb-text-area-field.disabled + .alb-text-area-label {
+    color: var(--disabled-font);
+  }
+}

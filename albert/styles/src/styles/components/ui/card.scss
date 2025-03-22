@@ -1,0 +1,120 @@
+@import "../../design-tokens.scss";
+@use '../../core/design-tokens/typography';
+
+@mixin alb-card() {
+  :root {
+    @import "../../core/design-tokens/color.scss";
+
+    //background
+    --card-header-background: #{$color-background-regular};
+    --card-body-background: #{$color-background-regular};
+
+    // Title
+    --card-header-font-color: #{$color-border-hard};
+
+    // Border radius e border color
+    --card-border-radius: $border-radius-thin ;
+    --card-border: #{$color-border-light};
+
+    //Margin e padding
+    --card-margin-slim: $margin-slim ;
+    --card-padding-slim: $padding-slim ;
+
+  }
+
+  [theme="dark"]:root {
+    @import "../../core/design-tokens/color-dark.scss";
+
+    //background
+    --card-header-background: #{$color-background-mild};
+    --card-body-background: #{$color-background-hard};
+
+    // Title
+    --card-header-font-color: #{$color-info-lightest};
+    
+    // Border radius e border color
+    --card-border-radius: $border-radius-thin ;
+    --card-border: transparent;
+
+    //Margin e padding
+    --card-margin-slim: $margin-slim ;
+    --card-padding-slim: $padding-slim ;
+
+  }
+
+  .alb-card {
+    display: block;
+    margin: $margin-slim;
+    border-radius: var(--card-border-radius);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    :last-child:not(button){
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+
+  .alb-card-aside {
+    .alb-menu {
+      .alb-icon {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .alb-card-body {
+    padding:  $padding-medium;
+    background-color: var(--card-body-background);
+  }
+
+  .alb-card-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > .alb-card-header-title {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .alb-card-header {
+    background-color: var(--card-header-background);
+    border-bottom: solid 1px var(--card-border);
+    border-radius: 4px 4px 0px 0px;
+    padding: $padding-slim $padding-medium;
+    .alb-card-header-content {
+      height: 24px;
+    }
+    &.borderless {
+      border-bottom: none;
+    }
+    .alb-card-title,
+    .alb-card-subtitle,
+    .alb-card-icon {
+      color: var(--card-header-font-color);
+    }
+    .alb-card-title {
+      @extend .typography-brand-medium-lg;
+    }
+    .alb-card-subtitle {
+      @extend .typography-brand-medium-xs;
+    }
+
+    .alb-card-header-subtitle {
+      padding: $padding-slim 0px;
+    }
+  }
+
+  //Footer
+  .alb-card-footer {
+    background-color: var(--card-body-background);
+    display: flex;
+    align-items: center;
+    border-top: solid 1px var(--card-border);
+    padding: $padding-slim $padding-medium;
+    justify-content: flex-end;
+    gap: $padding-slim;
+
+    &.alb-footer-start {
+      justify-content: flex-start;
+    }
+  }
+}

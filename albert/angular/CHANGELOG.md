@@ -1,0 +1,1997 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-next.1...v2.0.0) (2021-07-20)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# 1.1.0-next.1 (2021-07-20)
+
+
+### Bug Fixes
+
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# 1.1.0-next.0 (2021-07-01)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# 1.1.0-alpha.34 (2021-05-03)
+
+### Bug Fixes
+
+* **UI/ALB-NUMBER:**  Correção do reset form no input number.([99c4f979](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/99c4f979394283c251dd5b577767ba85ae60c503))
+
+* **UI:** correcao lint.([3ab58af4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/3ab58af40c7dbff16cc5e4ba7930d2cd322a0304))
+
+* **UI/PANEL:**  Adicionando Panel no entryComponents([0f038f1e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/0f038f1ec027049640b3038e520eb0e079451bce))
+
+* **UI/INPUT:**  Alteração no evento do input.([fb4fec90](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/fb4fec90c60fcb98b4406f2e47df7296ea7f6af2))
+
+
+### Features
+
+* **UI/ALB-SEARCH-PANEL:**  Acrescentando output pesquisa([272302e6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/272302e69e6bc5c34c815f3378168305e4facefe))
+
+* **UI/ALB-SEARCH-PANEL:**  Criação chips após pesquisa([4f3bf86e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/4f3bf86efed9b222c1918ae4654a357625f3d2e1))
+
+
+
+
+# 1.1.0-alpha.33 (2021-04-16)
+
+
+### Bug Fixes
+
+* **UI/PANEL:**  Adicionando Panel no entryComponents([0f038f1e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/0f038f1ec027049640b3038e520eb0e079451bce))
+
+
+
+# 1.1.0-alpha.32 (2021-04-15)
+
+### Bug Fixes
+
+* **UI/PANEL:** Exportacao search public-api([76ba491b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/76ba491b716b61e985aa9fc592b9cd78115aff12))
+
+
+# 1.1.0-alpha.31 (2021-04-12)
+
+
+### Bug Fixes
+* **Angular/drawer:** Ajustando size da drawer.([5fc62b03](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/5fc62b03106e3093feff1bb82bae6c66f76fd0f5))
+
+### Features
+
+* **Layout/SmartPanel:** Inserindo componente smart panel ao Layout. Alterações no estilo do container para inserir o smart panel.([9a0bdf1d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/9a0bdf1d0f1dccaaa7a2ee7b275c9032d250e207))
+* **UI/Panel:** Adicionando Panel no UI.([8624d26e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commit/8624d26e8363d63a642631a46b3514062361f189))
+
+# 1.1.0-alpha.30 (2021-02-23)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# 1.1.0-alpha.29 (2021-02-08)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# 1.1.0-alpha.28 (2021-02-04)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/pd/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# 1.1.0-alpha.27 (2021-01-06)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# [1.1.0-alpha.26](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.9...v1.1.0-alpha.26) (2021-01-05)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# 1.1.0-alpha.25 (2021-01-05)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# [1.1.0-alpha.24](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.9...v1.1.0-alpha.24) (2020-12-23)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/sq-input:** correção do lint ([15ed509](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/widget:** corrige referência dos widgets e dashboards ([dc0b70f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/dc0b70f73cf367bb794b5db93d509fdcc381ff19))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.23](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.13...v1.1.0-alpha.23) (2020-12-18)
+
+
+### Bug Fixes
+
+* **angular/sq-input:** correção do lint ([15ed509](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15ed509002001a2398a10d2fbc2b67e08887f049))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.22](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.20...v1.1.0-alpha.22) (2020-11-26)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# [1.1.0-alpha.21](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.20...v1.1.0-alpha.21) (2020-11-19)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# [1.1.0-alpha.20](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.16...v1.1.0-alpha.20) (2020-11-17)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# [1.1.0-alpha.19](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.9...v1.1.0-alpha.19) (2020-11-11)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/lint:** corrige erro de lint ([d15845d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d15845d109bc68c0f448678f3b3175877cdaff32))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.18](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.16...v1.1.0-alpha.18) (2020-10-29)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# [1.1.0-alpha.17](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.13...v1.1.0-alpha.17) (2020-10-28)
+
+
+### Bug Fixes
+
+* **datetime:** Ajusta erro componente datetime ([0932aa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.16](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.6...v1.1.0-alpha.16) (2020-10-27)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.15](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.9...v1.1.0-alpha.15) (2020-10-22)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **datetime:** Ajusta erro componente datetime ([0932aa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0932aa584778e035e5371dfaa1bb5b8bc835d2d3))
+
+
+
+
+
+# [1.1.0-alpha.14](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.13...v1.1.0-alpha.14) (2020-10-16)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# 1.1.0-alpha.13 (2020-10-09)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** Ajusta lógica ([96207be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/input:** Corrige teste ([199bae4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navbarfull:** Correção de conflitos no estilo do ng-select ([f976928](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f976928c70f430459ff52c2e1bb14c23d2954600))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# [1.1.0-alpha.12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.6...v1.1.0-alpha.12) (2020-10-07)
+
+
+### Bug Fixes
+
+* **angular/input:** Ajusta lógica ([96207be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/96207bedf7dc8565cad72c31299dc89f5434fd9f))
+* **angular/input:** Ajusta valor do input com value undefined ([7bc9a12](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7bc9a128f4f34bc6cfba5a3ffba09743748186b0))
+* **angular/input:** Corrige teste ([199bae4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/199bae42d92e568d4e70c2a1617acb242c829895))
+* **angular/input:** Corrige teste ([90e6686](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90e66868e5efda0dbdb4c2b81f514db2e9427b8c))
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+
+
+
+
+
+# [1.1.0-alpha.11](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.8...v1.1.0-alpha.11) (2020-10-02)
+
+
+### Bug Fixes
+
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+
+
+
+
+
+
+# [1.1.0-alpha.10](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.6...v1.1.0-alpha.10) (2020-09-30)
+
+
+### Bug Fixes
+
+* **angular/text-area:** Adiciona length default definido pelo DS ([3f76fc7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3f76fc75979c811aa732a1c87d1d89eae7113fdf))
+
+
+
+
+
+# 1.1.0-alpha.9 (2020-09-25)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# [1.1.0-alpha.8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.7...v1.1.0-alpha.8) (2020-09-24)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+
+# 1.1.0-alpha.7 (2020-09-21)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **angular/checkbox:** correção do lint ([e1bff88](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **correcao-build:** corrigindo o build ([d263bac](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](https://tfs.seniorsolution.com.br/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+
+# [1.1.0-alpha.6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.3...v1.1.0-alpha.6) (2020-09-21)
+
+
+### Bug Fixes
+
+* **angular/checkbox:** Ajusta checkbox e corrige testes ([b615024](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b615024e6e3e577a76b3489ef934893de886fc26))
+* **correcao-build:** corrigindo o build ([d263bac](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d263bac2cd63f52d1097715a4b68764a4d8039ca))
+* **correcao-build:** corrigindo o build ([4ea4873](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/4ea48736c16b1d68349647baa832ba463226241b))
+
+
+
+
+
+# [1.1.0-alpha.5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/compare/v1.1.0-alpha.4...v1.1.0-alpha.5) (2020-09-11)
+
+**Note:** Version bump only for package @albert/angular
+
+
+
+
+
+# 1.1.0-alpha.4 (2020-09-11)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# 1.1.0-alpha.3 (2020-09-10)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# 1.1.0-alpha.2 (2020-09-09)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# 1.1.0-alpha.1 (2020-09-08)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/drawer:** Ajusta criacao de drawer com instância do módulo ([5dcbbb3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5dcbbb36cf79b8178452ca7653eb3b64ca1f5759))
+* **angular/input:** Ajusta layout do input com divisor ([c9f8f5a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c9f8f5a99c9dfda58e714d82ec4fd7d91c09de90))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Ajusta alinhamento e classe disabled ([2090f09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2090f09f4fba2adb56f1df81893c4bddc6c31049))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Albert/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+
+
+
+# 1.1.0-alpha.0 (2020-08-31)
+
+
+### Bug Fixes
+
+* **angular:** adiciona @angular/cdk no package.json global ([7f89829](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/7f8982923052108c89605ddfe66bbf6dd2b4b3f7))
+* **angular:** adiciona lint no Jenksfile e realiza correções ([d084cca](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d084cca4927f4b15db72139de057e896ffb08d88))
+* **angular:** adiciona os estilos em elementos block na tag do componente ([08711a7](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/08711a70226127efe438fcd50784242aed3a494c))
+* **angular:** adiciona packages de terceiro ([063d410](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/063d410cfd21a4b864294e7ebd98a6c65967e499))
+* **angular:** atualiza karma.config.js e adiciona comando pub no package.json ([b723119](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/b7231198bf1af95873eae96fed4699c159441e57))
+* **angular:** corrige karma.conf.js para o chrome e remove PhantomJS ([906a5e5](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/906a5e56e055f7dcb7b021fd3e5bc88418336c15))
+* **angular:** corrige playground ([8452ea7](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/8452ea7430069908cac824675237e7155ce4abc5))
+* **angular:** remoção do code-coverage ([cd0d904](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/cd0d904c3fa30bb7a4dc723fbec0ace5c06fb7b2))
+* **angular/body:** adiciona documentação e corrige estilo no aside ([77558c1](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/77558c16f94e2afc569697286e4022031959213d))
+* **angular/box|display:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([68603db](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/68603dbe337412307fa9a8fc352dbae640852cdd))
+* **angular/button:** Retirando aplicação de estilo disabled no botão ([cc3921c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/cc3921c7bb7d600708a51467254d0f0aa7e32ae8))
+* **angular/calendar:** corrige exports do modulo ([3973bdd](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/3973bdd1189ad8dfdcc0c48a44335044242e4234))
+* **angular/card:** remove atributo title da tag HTML ([ab057dc](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/ab057dce9f1d6f4256dd7f14e49f91ce69dac789))
+* teste geracao versao ([c008e39](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/c008e39ce19bb4880ed031b9d963a6bfe3835837))
+* **layout/navbar-full:** alternativa para montar menu ([ba1e1a4](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/ba1e1a4fabcc13e9af5e5f9399375bb5d15b2586))
+* teste versao fix ([330bdff](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/330bdfffb3b8122f6ef4574a351539bf4d10a73c))
+* **angular/card:** remove atributo title da tag HTML, removendo assim o tooltipo do navegador ([add6af2](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/add6af27749a33048af5274736b002e6f7093e60))
+* **angular/checkbox:** correção do lint ([e1bff88](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/e1bff88b9d895ebf5cb704755f7cb5296a68d1b0))
+* **angular/container:** remove display block (já tem no estilo display grid), atualiza documentação ([15e7099](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/15e7099a40c30c0178a07b7c5853bd547e72514d))
+* **angular/container:** remove imports desnecessários e adiciona display block ([d8332fc](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d8332fceaa9b474bfb1681311a7857eea7067c31))
+* **angular/input:** corrige atributo disabled do botão ([d2ecc54](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d2ecc54d780c7a307459b9d8bfdff8e1eb49e6eb))
+* **angular/input:** corrige inicialização do input sem valor nenhum ([39cb621](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/39cb621d98bfa53a2107bb304728c9a275906445))
+* **angular/layout:** corrige layout.module ([90ac167](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/90ac167017b8ec72c4b0993cc064827637e30ee9))
+* **angular/layout:** corrige problemas de eslint gerais ([e31b3a1](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/e31b3a170bbc71cc9f0e7e156947f7de03896904))
+* **angular/loader:** adiciona nos exports do components ([b4ea5e7](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/b4ea5e733033de91516f9867c3639669737de3e4))
+* **angular/navbar:** edita css e limpa playground ([67f780d](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/67f780d649b81212cfccb276b9404acea9b2940c))
+* **angular/navbar-full:** remove case sensitive no filtro de pesquisa ([370c95c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/370c95cef53c3e1ef75c38400619610b217571b5))
+* **angular/navigation:** correçao de tipagem no teste navigation ([3564c43](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/3564c43637f175c757380b303579f4baa1ef3ad7))
+* **angular/navigation:** fecha o sidenav quando clicado nele pela segunda vez ([5601037](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/560103716d49fcbc959eea3109385a7201d7bc2c))
+* **angular/navigation:** remove o case sensetive e corrige clique do sidenav pela segunda vez ([2ac2214](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/2ac221409bd1b75250c367341ce9a28cd1f8e738))
+* **angular/playgroud:** corrige playground ([c067639](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/c06763931ec140c9d86e556a4c86c290ddd67111))
+* **angular/radio:** remove change detection ([fd0e67a](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/fd0e67ac72fc2a05fd70231afa55b9288461fef4))
+* **angular/readme:** Correção do texto nos readme ([8729362](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/872936273fb0fca5c54e9889a0b704aa2657c84a))
+* **angular/slide-toggle:** Adicionando outputs no read.me e na documentação do slide-toggle ([efafbde](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/efafbdee8420ef902b7a0893f853e5d711a9727e))
+* **angular/slide-toggle:** Correção no retorno do valor ao clicar no slide toggle ([6203dad](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/6203dad19b22367c9e9b4be9e11425d7dade7338))
+* **angular/sq-box:** Resolve bug de quebra do layout. ([d3bca82](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d3bca821effc4044f84e035cafbdd8194bdfbb8d))
+* **angular/sq-container:** corrige tipos para boolean ([474a1bd](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/474a1bd465f81c7a807de0c98a5a975120661013))
+* **angular/sq-dialog:** Correção de dialog confirm não fechar apos o click do botão primário ([9ecb970](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/9ecb970f9a962a2ed6d561fcebd53049f566dc41))
+* **angular/style:** remove estilos ([cf53503](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/cf535035204ec3c00f1f80721b169e0b54e83c2c))
+* **angular/tabs:** Correção no testes tabs ([c13db41](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/c13db41eb7d6c3f5585f521d509e7b7fe1c885a2))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([7ab762c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/7ab762c065aa03428c136735bf75769e5912ee52))
+* **angular/tabs:** Corrige erro ao iniciar tab selecionada ([005ce6f](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/005ce6f48f9953962c3b78af72a1a757625ca3fa))
+* **angular/ui:** adiciona pacote @angular/cdk ([babd272](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/babd2723368f9fa26812f3ead9ab8d5d4741debd))
+* **angular/ui:** corrige mensagens de WARNING das libs de terceiro (imaskjs e date-fns) ([2ea03fd](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/2ea03fd7d1eae0b0a87727aa6d191cc618eb285b))
+* **angular/ui:** corrige problemas de eslint gerais ([347cd45](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/347cd45469695f2e044a10fcc5d659ee47ef288f))
+* **animations:** remove BrowserAnimationModule dos componentes ([ccc2a0f](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/ccc2a0f362944dab81cca75f8df54ce38ba2fe97))
+* **bottom-sheet:** Ajusta  querySelector ([1ed30cc](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/1ed30cccad0b38f8e68774b2ceb0eb88b3a4bd5c))
+* **dashboard/build:** Adiciona import do Loarder Module ([0c644ad](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/0c644adab63c96f5c37e123226fdb5226aaad5f1))
+* **dashboard/module:** Coloca em ordem alfabética ([39eac1a](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/39eac1a39885ea5622b9b73bdf476c851ee73ab3))
+* **docs:** revisa e adiciona nova home. ([6b50e9b](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/6b50e9b556bbcd35b08ba1958f45b15e00f315f0))
+* **header|sidenav:** corrige estilos e adiciona prop data no Model ([e322176](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/e32217697c30739b522bf60e3d46ab2e02249445))
+* **layout/bottom-sheet:** Separa diretivas em outro arquivo ([2d5eebd](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/2d5eebd5e9ab1b66c857f7118b4617223f8b3cd2))
+* **layout/navbar:** corrige PR. ([33c2282](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/33c2282b1884106b9d64e2e2b6bd25c4f20f375b))
+* **layout/navbar-full:** alternativa para montar menu ([9f739b5](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/9f739b598e0896c5599929c46b672ea072e5377d))
+* **layout/navbarfull:** erros, lint e  readme ([0cdd47c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/0cdd47cd3b67787ffe94ab0cd312c105ed8530fc))
+* **Layout/navbarfull:** adiciona select para pesquisa ([34fb948](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/34fb948688779e4b7514758edb4eb996a273e9d9))
+* **layout/sq-header:** adiciona header  ([bd0086c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/bd0086c80e5ad4b7cfcdb328717269882c2fdda2))
+* **layout/sq-header:** ajusta sq-header e adiciona tests ao component ([1ab689b](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/1ab689b38993a67875c196fa3fd9eb63869fd3a9))
+* **styles/sq-header:** ajusta cores e adiciona exemplo ([de9c9b6](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/de9c9b65e868de30836784fc6bec23cf79d3234a))
+* **ui/navbarfull:** adiciona select na navbarfull ([e704034](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/e704034e2a53f6a89248db6a50e3f27ab8a50339))
+* **ui/toast:** retira static toastRef ([666eaa5](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/666eaa5d88889f4959acd0722af23b69bdbd3667))
+
+
+### Features
+
+* adiciona componente de chekcbox ([91a849b](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/91a849b33275c7400613d4b977bb9ca06bc1749d))
+* adiciona componente drawer ([e3fcfa9](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/e3fcfa96c054e0cca1e2234cd0eae3f6186da894))
+* adiciona componente NavbarFull ([74681be](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/74681beb1cbc5576c72ccfce012ffc3784b7dcf9))
+* adiciona componente slide-toggle ([2ded782](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/2ded782ebb7c5e3c79c208bc1bb77de5cfd0bec2))
+* adiciona monorepo no projeto e adiciona projeto styles ([0459d77](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/0459d7749f8c4f62bc3b22ec388c591dbe0901a4))
+* adiciona navbar ([1db99e9](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/1db99e9b68b782c41b0c19c3cc7d474a16659ab6))
+* adiciona navbar-simple ([978705a](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/978705afdaca7873c1c03ea0afb5108dc486f8e7))
+* adiciona Navigation ([53f8cd3](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/53f8cd3a6bf10c12b44bc0101795b90f6bda6fb1))
+* adiciona projeto layout ([be85b09](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/be85b09b22aa1a32c77d4d8d3f696a09f782952c))
+* adicionando teste de selecionar versao ([584ef18](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/584ef1874aad40dff31e9a3b0a1f17a621e64760))
+* button-icon ([14d4808](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/14d480877ecd4d4b45d115beb1b7df4a37041633))
+* sq-menu component ([efcad5f](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/efcad5ff26750f35302c67971136a853910fe16a))
+* teste de jenkins subindo versao ([cda01f1](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/cda01f1448583e4df787f27f6bc996b95eefd66d))
+* teste peer dependencies ([51b2e6a](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/51b2e6a688fc2d62f220bc31c0dad95d1c6c440c))
+* teste versao break change ([c150dfd](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/c150dfdeb02df654dbe9014316031f290d10eee1))
+* **angular:** atualiza para o Angular 9 release final ([d49988c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d49988c3ad7c23188230c13f10fe5ae748d8cc85))
+* **angular/menu:** adiciona animação ([a11149b](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/a11149b2a0579618facbd579ec938f4e5e84b0c1))
+* **angular/menu:** adiciona animação ([1697e85](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/1697e858a71333194a79594c3be9f9d813ef3a71))
+* **angular/navigation:** adiciona propriedade data no Model ([8edae01](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/8edae0147a45f1d8c94ee3bbf7109c4b5fbeb590))
+* **angular/sq-box:** adiciona componente de box (card-container) ([d143e4f](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/d143e4f376da989e342df7095c65eff168b3844a))
+* **angular/sq-button:** adiciona funcionalidade disabled ([9608f79](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/9608f79f0f69e53fad038150b38dab212cf3bee7))
+* **angular/sq-card:** adiciona sq-card. ([990d056](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/990d05612293152a918f5af3bb52888ff8e17326))
+* **angular/sq-container:** adiciona componente sq-container ([ef14ca9](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/ef14ca9635fcdd5bc76c220bfbc1f28dc0395220))
+* **angular/sq-dialog:** adiciona sq-dialog. ([f1ecfed](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/f1ecfedcd3ec435991dc73faf920301ee7430c15))
+* **angular/sq-modal:** adiciona sq-modal. ([805db7e](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/805db7e36cb2cac77579f8083d5b393cd3e78d88))
+* **angular/sq-radio-button:** adiciona sq-radio-button. ([1397232](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/1397232b2d2b03ef9f0f383106fd549f7827f0f9))
+* **angular/toast:** adiciona sq-toast. ([8ddaf63](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/8ddaf638dcffce8d554a05ba3184d123aba55156))
+* **angular/ui/sq-body:** adiciona componente sq-body ([8c12dd0](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/8c12dd0832fc27c23b9435cb3c913b778ff06057))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([5af04e3](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/5af04e39fe8d69381759cbfc16192bab314b0c4e))
+* **bottom-sheet:** Adiciona componente bottom-sheet ([21d3e0b](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/21d3e0bfbcb628933e6f693f044235d9fc3e00ad))
+* **bottom-sheet:** Adiciona componente bottom-sheet sem testes ([ed476b8](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/ed476b851198074bc18788c5e69cba52890755ea))
+* **docs:** Adiciona documentação. ([2a05b2f](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/2a05b2fe84673bf157db520f3d0743cd43912733))
+* **layout/bottom-sheet:** Adiciona componente bottom-sheet ([c71ec7c](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/c71ec7c7d634d058d086eaef69cebdb6de12dcfc))
+* **number:** adiciona componente sq-number ([53b8320](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/53b8320114cf05e229ca330e0e4e0721f1a99799))
+* **sq-tabs:** adiciona componente ([54f51df](http://tfs.seniorsolution.com.br:22/PD/Bancos/_git/alb-front/commits/54f51df43fb023aa30191f8d636e183d6096259b))
+
+
+### BREAKING CHANGES
+
+* nenhuma

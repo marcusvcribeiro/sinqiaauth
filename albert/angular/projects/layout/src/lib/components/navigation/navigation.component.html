@@ -1,0 +1,25 @@
+<alb-sidenav
+[items]="items"
+[selectedItem]="selectedItem"
+(sidenavClick)="onSidenavClick($event)">
+</alb-sidenav>
+<alb-navbar-simple
+  *ngIf="typeNavigation === 'simple'"
+  [@openCloseAnimation]
+  [items]="selectedItem?.children"
+  (changeItem)="onItemSelected($event)"
+  [changeTabTitle]="changeTabTitle"
+  [urlPath]="urlPath"
+  (mouseLeave)="onNavbarSimpleLeave($event)">
+</alb-navbar-simple>
+<alb-navbar-full
+  *ngIf="typeNavigation === 'full'"
+  [@openCloseAnimation]
+  [offsetAside]="offsetAside"
+  [items]="selectedItem?.children"
+  [urlPath]="urlPath"
+  [changeTabTitle]="changeTabTitle"
+  [columnsNumber]="columnsNumber"
+  (changeItem)="onItemSelected($event)">
+</alb-navbar-full>
+

@@ -1,0 +1,159 @@
+/**
+* A alb-container é responsável por adicionar o container principal de uma aplicação web. Você pode utilizar as classes auxiliares:
+* - has-header
+* - has-sidenav
+* Os filhos devem possuír as classes *alb-container-header*, *alb-container-sidenav* e *alb-container-body*
+* O layout default de uma página possuí a seguinte estrutura:
+*   "header header header"
+*   "sidenav body body"
+*/
+
+@import './header';
+@import './sidenav';
+@import './bottom-sheet';
+
+@mixin alb-container() {
+  
+:root {
+  @import "../../core/design-tokens/color.scss";
+
+  //especificações ALB-CONTAINER 
+  --alb-container-background: #{$color-background};
+  --alb-header-background-darker: #{$color-vertical-medium};
+
+}
+
+[theme="dark"]:root {
+  @import "../../core/design-tokens/color-dark.scss";
+  --alb-container-background: #{$color-background};
+  --alb-header-background-darker: #{$color-vertical-medium};
+}
+
+  .alb-container {
+    background-color: var(--alb-container-background);
+    min-height: 100%;
+
+    &.has-header {
+      display: grid;
+      grid-template-rows: $alb-header-height 1fr;
+      grid-template-areas:
+        "header"
+        "body";
+    }
+
+    &.has-sidenav {
+      display: grid;
+      grid-template-columns: $alb-sidenav-width 1fr;
+      grid-template-areas:
+        "sidenav body";
+    }
+
+    &.has-smart-panel {
+      display: grid;
+      grid-template-rows: $alb-header-height 1fr;
+      grid-template-areas:
+        "body smartPanel";
+    }
+
+    &.has-header.has-sidenav {
+      display: grid;
+      grid-template:
+        "header header header" #{$alb-header-height}
+        "sidenav body body" 1fr
+        / #{$alb-sidenav-width} 1fr;
+      
+    }
+
+    &.has-header.has-smart-panel {
+      display: grid;
+      grid-template:
+        "header header header" #{$alb-header-height}
+        "body body smartPanel";
+      grid-template-columns: 1fr 1fr #{$alb-smartPanel-width};
+      
+    }
+    
+    &.has-sidenav.has-smart-panel {
+      display: grid;
+      grid-template:
+        "sidenav body smartPanel";
+      grid-template-columns:  #{$alb-sidenav-width} 1fr #{$alb-smartPanel-width};
+      
+    }
+
+    &.has-header.has-bottom-sheet {
+      display: grid;
+      grid-template-rows: $alb-header-height 1fr $alb-bottom-sheet-height;
+      grid-template-areas:
+        "header"
+        "body"
+        "bottomSheet";
+    }
+
+    &.has-sidenav.has-bottom-sheet {
+      display: grid;
+      grid-template-rows: 1fr $alb-bottom-sheet-height;
+      grid-template-columns: $alb-sidenav-width 1fr;
+      grid-template-areas:
+        "sidenav body"
+        "sidenav bottomSheet";
+    }
+
+    &.has-smart-panel.has-bottom-sheet {
+      display: grid;
+      grid-template-rows: 1fr $alb-bottom-sheet-height;
+      grid-template-columns: $alb-smartPanel-width 1fr;
+      grid-template-areas:
+        "body smartPanel"
+        "bottomSheet smartPanel";
+    }
+
+    &.has-smart-panel.has-header.has-sidenav{
+      display: grid;
+      grid-template:
+        "header header header" #{$alb-header-height}
+        "sidenav body smartPanel" ;
+      grid-template-columns: #{$alb-sidenav-width} 1fr #{$alb-smartPanel-width};
+      
+    }
+
+    &.has-header.has-sidenav.has-bottom-sheet {
+      display: grid;
+      grid-template:
+      "header header header" #{$alb-header-height}
+      "sidenav body body" 1fr
+      "sidenav bottomSheet bottomSheet" #{$alb-bottom-sheet-height}/#{$alb-sidenav-width} 1fr;
+      
+    }
+
+    &.has-header.has-sidenav.has-smart-panel.has-bottom-sheet {
+      display: grid;
+      grid-template:
+      "header header header" #{$alb-header-height}
+      "sidenav body smartPanel" 1fr
+      "sidenav bottomSheet smartPanel" #{$alb-bottom-sheet-height}/#{$alb-sidenav-width} 1fr;
+      grid-template-columns: #{$alb-sidenav-width} 1fr #{$alb-smartPanel-width};
+      
+    }
+
+    .alb-container-header {
+      grid-area: header;
+    }
+
+    .alb-container-sidenav {
+      grid-area: sidenav;
+    }
+
+    .alb-container-body {
+      grid-area: body;
+    }
+
+    .alb-container-smart-panel{
+      grid-area: smartPanel;
+    }
+    
+    alb-bottom-sheet {
+      grid-area: bottomSheet;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+/**
+* Mixen responsável por gerar todas as cores principais da paleta do Design System
+*/
+
+@mixin alb-colors() {
+  .alb-primary-color {
+    color: var(--primary);
+  }
+
+  .alb-success-color {
+    color: var(--success);
+  }
+
+  .alb-warn-color {
+    color: var(--warn);
+  }
+
+  .alb-alert-color {
+    color: var(--alert);
+  }
+
+  .alb-link-color {
+    color: var(--link);
+  }
+
+  .alb-new-color {
+    color: var(--new);
+  }
+
+  .alb-accent-color {
+    color: var(--accent);
+  }
+}

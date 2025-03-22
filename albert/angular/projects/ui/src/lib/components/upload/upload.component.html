@@ -1,0 +1,19 @@
+<div class="upload-container">
+  <input #fileInput type="file" class="input-upload" [id]="id" name="upload" [multiple]="multiple" [accept]="accept"
+    [disabled]="disabled" (change)="_onFilesSelected($event)" [attr.aria-label]="ariaLabel"
+    [attr.aria-labelledby]="ariaLabelledby" [attr.aria-describedby]="ariaDescribedBy">
+  <i class="alb-icon" *ngIf="!_hasPreviews">cloud_upload</i>
+  <div>
+    <alb-upload-label *ngIf="!_hasPreviews">{{description}}</alb-upload-label>
+  </div>
+  <div *ngIf="description.length === 0 && !_hasPreviews">
+    <p>Arraste e solte aqui o arquivo ou</p>
+  </div>
+  <span *ngIf="!_hasPreviews"> Procure o arquivo</span>
+  <ng-content select="alb-upload-preview"></ng-content>
+  <ng-content></ng-content>
+</div>
+<div class="info">
+  <span>Somente arquivos {{accept}}</span>
+  <span *ngIf="maxFileSize"> - máximo {{maxFileSize}} mb</span>
+</div>

@@ -1,0 +1,118 @@
+@mixin alb-p-paginator() {
+  .alb-p-paginator {
+    .ui-paginator-bottom {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .ui-paginator-pages {
+      display: flex;
+    }
+
+    .ui-paginator {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 20px;
+      line-height: 11px;
+      background: var(--white);
+    }
+
+    .ui-paginator-page {
+      padding: 5px 10px;
+      color: var(--trount);
+      font-size: 11px;
+
+      &.ui-state-active {
+        background-color: var(--iron);
+      }
+    }
+
+    .ui-dropdown .ui-dropdown-label {
+      display: block;
+      border: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: normal;
+      width: 100%;
+      padding-right: 2.5em;
+      font-weight: normal;
+      font-size: 12px;
+    }
+
+    .ui-paginator-icon {
+      font-family: "Material Icons";
+    }
+
+    .ui-paginator-first,
+    .ui-paginator-last,
+    .ui-paginator-prev,
+    .ui-paginator-next {
+      display: flex;
+      align-items: center;
+
+      &.ui-state-disabled {
+        color: var(--disabled);
+        cursor: none !important;
+      }
+    }
+
+    .ui-paginator-icon {
+      font-size: 20px;
+    }
+
+    .ui-paginator-pages {
+      margin-top: 2px;
+      > .ui-paginator-page {
+        padding: 1px;
+      }
+    }
+
+    .ui-dropdown-panel {
+      background-color: var(--white);
+    }
+
+    .ui-paginator p-dropdown {
+      order: 1;
+      margin-right: 15px;
+      margin-top: 3px;
+    }
+
+    .ui-paginator .ui-paginator-first {
+      order: 2;
+    }
+
+    .ui-paginator .ui-paginator-prev {
+      order: 3;
+    }
+
+    .ui-paginator .ui-paginator-pages {
+      line-height: 1.5em;
+      order: 4;
+    }
+
+    .ui-paginator .ui-paginator-next {
+      order: 5;
+    }
+
+    .ui-paginator .ui-paginator-last {
+      order: 6;
+    }
+
+    .ui-paginator-first .ui-paginator-icon::before {
+      content: "arrow_left";
+    }
+
+    .ui-paginator-last .ui-paginator-icon::before {
+      content: "arrow_right";
+    }
+
+    .ui-paginator-prev .ui-paginator-icon::before {
+      content: "chevron_left";
+    }
+
+    .ui-paginator-next .ui-paginator-icon::before {
+      content: "chevron_right";
+    }
+  }
+}

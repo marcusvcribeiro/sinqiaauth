@@ -1,0 +1,23 @@
+<alb-input
+  class="alb-timepicker-input"
+  [placeholder]="placeholder"
+  [disabled]="_disabled"
+  [mask]="{ mask: mask }"
+  [value]="textValue"
+  [hint]="hint"
+  [error]="error"
+  (changeValue)="onInputChange($event)"
+  (focusout)="focusOut()"
+  #inputRef>
+</alb-input>
+<alb-clock
+  class="alb-timepicker-clock"
+  [date]="date"
+  [hour]="hour"
+  [minute]="minute"
+  [second]="second"
+  [disabled]="_disabled"
+  [append]="elementAppend"
+  (change)="onTimeChange($event)"
+  onlyIcon>
+</alb-clock>

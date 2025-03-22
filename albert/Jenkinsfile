@@ -1,0 +1,141 @@
+#!groovy
+
+def vertical = "ui-ux"
+def productName = "albert"
+def projectName = "alb-front" 
+
+def environment = getEnvironmentFromBranch() 
+def imageVersion
+
+//JENKINS
+def scmVars
+def label = getJenkinsSlaveLabel(vertical, productName, projectName)
+def sonarLogin = getSonarLogin( vertical, productName, projectName )
+def additionalProperties = [parameters([
+        booleanParam(defaultValue: false, description: 'Publicar no Nexus?', name: 'runNexusPublish')
+      ]) ]
+
+//PROPERTIES
+propertiesGlobalSetup(vertical, productName, projectName, additionalProperties)
+
+try {
+    podTemplate(
+   label: label,
+    containers: [
+      containerTemplate(name: 'nodejs', image: 'sinqia.azurecr.io/infra/container/nodejs-nexus:node13', command: 'cat', ttyEnabled: true, privileged: true),
+      containerTemplateJavascriptSonarqubeScanner('sonar-scanner'),
+      containerTemplateDocker('docker'),
+      containerTemplateHelm('helm')
+    ],
+    imagePullSecrets: getPodTemplateImagePullSecrets(),
+    volumes: getPodTemplateVolumes()
+    ){
+  timeout(time: 30, unit: 'MINUTES') {
+    node(label) {
+      container('nodejs') {
+
+          stage('Instalando Dependencias') {
+            echo 'Baixando fontes'
+            scmVars = checkout scm
+            sh "npm install"
+            dir("angular") {
+              echo 'Instalando dependências Angular'
+              sh "npm install"
+            }
+
+            dir("styles") {
+              echo 'Instalando dependências Styles'
+              sh "npm install"
+            }
+
+            dir("schematics") {
+              echo 'Instalando dependências Schematics'
+              sh "npm install"
+            }
+
+            echo 'Dependências instaladas com sucesso'
+          }
+
+          // TODO criar lint para projeto styles
+          stage('Run Lint') {
+            echo "Rodando lint do projeto... "
+            dir("angular") {
+              echo 'Lint Angular'
+              sh "npm run lint"
+            }
+
+            echo 'Lint OK'
+          }
+
+          stage('Build PROD') {
+            echo "Gerando versoes... "
+            sh "npx lerna run build"
+
+            echo 'Versões geradas'
+          }
+
+          // TODO teste necessita de chrome e por isso da pal na maquina do jenkins
+          // stage('Executando Testes') {
+          //   dir("angular") {
+          //     echo "Executando os testes da aplicação.... "
+          //     sh "npm run test-all"
+          //     echo 'Testes excutados com sucesso'
+          //   }
+          // }
+
+          // TODO verificar se existe forma simplificada de publicar retirando loops
+          stage('Publicando TGZ no Nexus') {
+            if (params.runNexusPublish) {
+              
+              sh "npm config set registry https://nexus.sinqia.io/js/repository/npm-repo/"
+              dir("angular") {
+                echo 'Publicando Angular TGZs no Nexus... '
+
+                sh '''
+                if [ -d "dist" ]; then
+                  for d in ./dist/*/
+                  do
+                    cd $d
+                    npm publish
+                    cd ../../
+                  done
+                fi
+                '''
+              }
+
+              dir("styles") {
+                echo 'Publicando Style TGZ no Nexus... '
+
+                sh '''
+                if [ -d "dist" ]; then
+                  cd dist
+                  npm publish
+                fi
+                '''
+              }
+
+              dir("schematics") {
+                echo 'Publicando Schematics TGZ no Nexus... '
+
+                sh '''
+                if [ -d "dist" ]; then
+                  cd dist
+                  npm publish
+                fi
+                '''
+              }
+
+              echo 'Publicado TGZs no Nexus =)'
+            }
+          }
+        }
+
+      }
+    }
+  }
+} catch (e) {
+  currentBuild.result = 'FAILURE'
+  throw e
+} finally {
+  onFinally(vertical, productName, projectName )
+}

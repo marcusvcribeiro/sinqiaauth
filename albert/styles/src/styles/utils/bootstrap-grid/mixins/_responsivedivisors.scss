@@ -1,0 +1,59 @@
+
+$res-sizes: (
+    div-6: (
+      lg: 6,
+      md: 3,
+      sm: 2,
+      xs: 1
+    ),
+    div-5: (
+      lg: 5,
+      md: 3,
+      sm: 2,
+      xs: 1
+    ),
+    div-4: (
+      lg: 4,
+      md: 3,
+      sm: 2,
+      xs: 1
+    ),
+    div-3: (
+      lg: 3,
+      md: 2,
+      sm: 1,
+      xs: 1
+    ),
+    div-2: (
+      lg: 2,
+      md: 2,
+      sm: 1,
+      xs: 1
+    )
+  );
+  
+  @each $size, $brkp in $res-sizes {
+    
+    .res-#{$size} {
+      @extend .row;
+      @include row-cols(map-get($brkp, xs));
+  
+      @include media-breakpoint-up(xs) {
+        @include row-cols(map-get($brkp, xs));
+      }
+  
+      @include media-breakpoint-up(sm) {
+        @include row-cols(map-get($brkp, sm));
+      }
+  
+      @include media-breakpoint-up(md) {
+        @include row-cols(map-get($brkp, md));
+      }
+  
+      @include media-breakpoint-up(lg) {
+        @include row-cols(map-get($brkp, lg));
+      }
+  
+    }
+  }
+  

@@ -1,0 +1,16 @@
+<label class="alb-slide-toggle-switch">
+    <input
+      class="alb-slide-toggle-input"
+      type="checkbox"
+      [name]="name"
+      [checked]="checked"
+      [disabled]="disabled"
+      [attr.aria-label]="ariaLabel"
+      [attr.aria-labelledby]="ariaLabelledBy"
+      (change)="onChangeValue($event.target.checked)"
+    />
+    <div class="alb-slide-toggle-slider alb-slide-toggle-round"></div>
+    <span class="alb-slide-toggle-label">
+      {{ label }}
+    </span>
+</label>

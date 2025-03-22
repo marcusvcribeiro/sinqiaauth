@@ -1,0 +1,168 @@
+{
+    "color": {
+        "brand": {
+            "darker": {
+                "value": "#fa4616"
+            },
+            "dark": {
+                "value": "#fb6037"
+            },
+            "regular": {
+                "value": "#e2471d"
+            },
+            "light": {
+                "value": "#b42305"
+            },
+            "lighter": {
+                "value": "#fdc4b4"
+            },
+            "lightest": {
+                "value": "#3c3e5d"
+            },
+            "clear": {
+                "value": "#545782"
+            },
+            "soft": {
+                "value": "b42305"
+            },
+            "mild": {
+                "value": "5e1203"
+            },
+            "medium": {
+                "value": "#ffffff"
+            }            
+        },
+        "vertical": {
+            "medium": {
+                "value": "#2F324B"
+            },
+            "light": {
+                "value": "#2f324b"
+            }
+        },
+        "system": {
+            "success-dark": {
+                "value": "#4fa83e"
+            },
+            "success": {
+                "value": "#4fa83e"
+            },
+            "success-light": {
+                "value": "#9bd68f"
+            },
+            "warn-dark": {
+                "value": "#b61616"
+            },
+            "warn": {
+                "value": "#b61616"
+            },
+            "warn-light": {
+                "value": "#ec6060"
+            },
+            "alert-dark": {
+                "value": "#cb8b0b"
+            },
+            "alert": {
+                "value": "#f2a916"
+            },
+            "alert-light": {
+                "value": "#f7ca6e"
+            },
+            "link-darker": {
+                "value": "#4394ef"
+            },
+            "link-dark": {
+                "value": "#72aef3"
+            },
+            "link": {
+                "value": "#1f7fec"
+            },
+            "link-light": {
+                "value": "#1061bc"
+            },
+            "link-lighter": {
+                "value": "#0c488d"
+            }
+        },
+        "background": {
+            "hard": {
+                "value": "#1c1d2b"
+            },
+            "mild": {
+                "value": "#2c2e44"
+            },
+            "regular": {
+                "value": "#343651"
+            },
+            "soft": {
+                "value": "#3c3e5d"
+            },
+            "light": {
+                "value": "#545782"
+            }
+        },
+        "disable": {
+            "hard": {
+                "value": "#1c1d2b"
+            },
+            "mild": {
+                "value": "#242638"
+            },
+            "regular": {
+                "value": "#2c2e44"
+            },
+            "soft": {
+                "value": "#343651"
+            },
+            "light": {
+                "value": "#3c3e5d"
+            }
+        },
+        "border": {
+            "dark": {
+                "value": "#444669"
+            },
+            "hard": {
+                "value": "#ffffff"
+            },
+            "mild": {
+                "value": "#dedede"
+            },
+            "regular": {
+                "value": "#a4a4ac"
+            },
+            "soft": {
+                "value": "#444669"
+            },
+            "light": {
+                "value": "#444669"
+            }
+        },
+        "info": {
+            "hard": {
+                "value": "#ffffff"
+            },
+            "medium": {
+                "value": "#ffffff"
+            },
+            "regular": {
+                "value": "#dedede"
+            },
+            "mild": {
+                "value": "#55555d"
+            },
+            "soft": {
+                "value": "#999999"
+            },
+            "light": {
+                "value": "#dedede"
+            },
+            "lighter": {
+                "value": "#55555d"
+            },
+            "lightest": {
+                "value": "#ffffff"
+            }
+        }
+    }
+}

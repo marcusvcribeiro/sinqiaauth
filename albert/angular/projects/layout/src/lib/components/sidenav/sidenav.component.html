@@ -1,0 +1,11 @@
+<nav class="alb-sidenav">
+  <ul class="alb-sidenav-list">
+    <li class="alb-sidenav-item"
+      *ngFor="let item of items;"
+      [class.--selected]="selectedItem === item"
+      (click)="onClickSidenavItem(item)">
+      <i class="alb-icon">{{ item.icon }}</i>
+      <span class="alb-sidenav-text">{{ item.name }}</span>
+    </li>
+  </ul>
+</nav>

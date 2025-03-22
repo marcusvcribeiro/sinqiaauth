@@ -1,0 +1,42 @@
+@mixin alb-upload-preview() {
+
+  .alb-upload-preview{
+
+      display: flex;
+      flex: 1;
+			height: 42px;
+			min-height: 42px;
+      justify-content:center;
+			align-items: center;
+		  border-radius: 4px;
+      padding: 0 20px;
+      border: 1px dashed #A4A4AC;
+      box-sizing: border-box;
+			position: relative;
+      background: #F0F0F4;
+
+      .alb-icon{
+        font-size: 20px;
+        color:  #74747E;
+       }
+
+    &:hover,
+    &:focus {
+
+      outline: 0;
+
+       alb-upload-badge {
+        opacity: 1;
+      }
+    }
+     alb-upload-badge {
+      opacity: 0;
+    }
+
+     alb-upload-label {
+      color:#1F7FEC ;
+      overflow-wrap: break-word;
+    }
+  }
+
+}

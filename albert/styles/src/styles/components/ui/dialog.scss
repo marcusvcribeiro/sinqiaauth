@@ -1,0 +1,58 @@
+@mixin alb-dialog() {
+  .alb-dialog-container {
+    position: relative;
+    min-width: 450px;
+    min-height: 160px;
+    border: solid 1px var(--border);
+    border-radius: 4px;
+    display: flex;
+    background-color: var(--contrast);
+  }
+
+  .alb-dialog-content {
+    padding: 16px 16px 16px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .alb-dialog-aside {
+    padding: 16px 8px 16px 16px;
+
+    & i {
+      padding: 0;
+    }
+
+    .alb-dialog-info {
+      color: var(--link);
+    }
+
+    .alb-dialog-error {
+      color: var(--warn);
+    }
+
+  }
+
+  .alb-dialog-message {
+    padding-bottom: 8px;
+
+    & h1 {
+      margin: 0 0 8px 0;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  .alb-dialog-footer {
+    display: flex;
+    justify-content:flex-end;
+
+    & button {
+      margin-left: 16px;
+    }
+  }
+
+}

@@ -1,0 +1,171 @@
+@mixin alb-table() {
+  $tamanhos: (
+    xxs: 35px,
+    xs: 50px,
+    sm: 120px,
+    md: 220px,
+    lg: 300px,
+    xl: 320px,
+  );
+  $heightHeader: 40px;
+  $heightLineBody: 32px;
+
+  @each $tamanhoEscolhido, $tamanho in $tamanhos {
+    .sq-col-#{$tamanhoEscolhido} {
+      width: $tamanho;
+    }
+  }
+
+  table.alb-table,
+  .alb-table table {
+    th.text-end {
+      text-align: end !important;
+    }
+
+    th.text-center {
+      text-align: center !important;
+    }
+
+    th.text-start {
+      text-align: start !important;
+    }
+  }
+
+  .alb-table {
+    thead {
+      background-color: var(--white);
+      tr > th {
+        outline: 0;
+        height: $heightHeader;
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
+    > div {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      tbody > tr > td {
+        height: $heightLineBody;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        vertical-align: middle;
+      }
+    }
+
+    //Sort
+    .p-datatable {
+      .p-sortable-column.p-highlight,
+      .p-sortable-column.p-highlight:hover,
+      .p-sortable-column:focus {
+        background-color: var(--white);
+        color: #495057 !important;
+      }
+      .p-sortable-column .p-sortable-column-icon,
+      .p-sortable-column:not(:focus) .p-sortable-column-icon {
+        color: #495057;
+      }
+      .p-sortable-column:focus .p-sortable-column-icon,
+      .p-sortable-column.p-highlight:hover .p-sortable-column-icon {
+        color: var(--black);
+      }
+
+      .p-sortable-column:focus {
+        box-shadow: none;
+        outline: 0 none;
+      }
+    }
+    //checkbox
+
+    .alb-checkbox-span {
+      &:before {
+        border: 3px solid;
+      }
+    }
+
+    //Scroll
+    .p-datatable-scrollable-view,
+    .p-datatable-scrollable-header,
+    .p-datatable-scrollable-body {
+      &::-webkit-scrollbar {
+        height: 1em;
+        background: var(--white);
+        border: 1px solid var(--border);
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--border);
+        border-radius: 1em;
+      }
+    }
+
+    .p-datatable {
+      background: var(--white);
+      color: #495057;
+      border:none;
+      padding:0;
+      font-weight: 600;
+      .p-datatable-thead > tr > th {
+        padding: 0.5rem 1rem;
+        background: var(--white);
+      }
+    }
+
+    //Paginação
+    p-paginator {
+      > div.p-paginator {
+        justify-content: flex-end !important;
+        padding: 0px 20px 0px 0px;
+        line-height: 11px;
+        background: var(--white);
+        border: none;
+        height: 40px;
+        a {
+          border-radius: 50%;
+        }
+        .p-paginator-pages .p-paginator-page.p-highlight,
+        .p-paginator-pages .p-paginator-page:not(.p-highlight):hover {
+          background: var(--white) !important;
+          border-color: var(--border) !important;
+          height: 1.275rem;
+          color: #495057;
+        }
+        .p-link:focus {
+          box-shadow: none;
+        }
+        .p-paginator-first,
+        .p-paginator-prev,
+        .p-paginator-next,
+        .p-paginator-last {
+          height: 1rem;
+          color: var(--font-color-body);
+        }
+      }
+    }
+
+    //Dropdown linhas por página
+    p-dropdown {
+      .p-dropdown {
+        margin-right: 20px;
+        height: 1.75rem;
+        border: 2px solid var(--font-color-body);
+      }
+      span,
+      .ui-dropdown-label {
+        font-size: 11px;
+      }
+
+      p-dropdown-trigger span,
+      .ui-dropdown-trigger-icon {
+        font-family: "materialicons";
+        font-style: normal;
+        font-weight: 400;
+        color: var(--font-color-body);
+        &:before {
+          content: "\e90e";
+        }
+      }
+    }
+  }
+}

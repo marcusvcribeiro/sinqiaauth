@@ -1,0 +1,32 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Input
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample>
+      <form [formGroup]="inputDoc" class="alb-flex-space-around">
+
+        <alb-input placeholder="Apenas um input"></alb-input>
+        <alb-input placeholder="Apenas um input" value="Hello world"></alb-input>
+        <alb-input placeholder="Apenas um input" required formControlName="required"></alb-input>
+        <alb-input placeholder="Apenas um input" required formControlName="errorInput" 
+        error="Campo inválido" hint="Label adicional"></alb-input>
+        <alb-input placeholder="Apenas um input" disabled></alb-input>
+        <alb-input placeholder="Apenas um input" [mask]="{mask: '+{7}(000)000-00-00'}"></alb-input>
+        <alb-input placeholder="Apenas um input" maxLength="5"></alb-input>
+
+      </form>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/input/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

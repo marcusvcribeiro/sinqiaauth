@@ -1,0 +1,21 @@
+// Core
+@import './core/reset';
+@import './core/typography';
+@import './core/palette';
+@import './core/icons.scss';
+@import './core/text';
+@import './core/icons';
+@import './core/links';
+@import './core/themes';
+@import './core/layers';
+@import './core/breakpoints.scss';
+
+@include alb-reset();
+@include alb-typography();
+@include alb-palette();
+@include alb-icons();
+@include alb-links();
+@include alb-text();
+@include alb-themes();
+@include alb-layers();
+@include alb-breakpoints();

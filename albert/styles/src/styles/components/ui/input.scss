@@ -1,0 +1,313 @@
+/**
+* O componente alb-input são campos string que deve ser composto na seguinte estrutura:
+* ```
+*  <div class="alb-input">
+*    <input class="alb-input-field" type="text">
+*    <label class="alb-input-label">Apenas um test</label>
+*  </div>
+* ```
+*/
+@mixin alb-input() {
+
+  :root {
+    @import '../../core/design-tokens/color.scss';
+
+    --input-label: #{$color-border-soft};
+    --input-content: #{$color-info-hard};
+    --input-border: #{$color-border-soft};
+    --input-background: #{$color-background-regular};
+
+    --input-text-disable: var(--input-label);
+    --input-background-disable: #{$color-disable-regular};
+
+    --input-border-focus: #{$color-info-hard};
+    --input-label-focus: #{$color-info-hard};
+
+    --input-error: #{$color-system-warn};
+  }
+
+  [theme="dark"]:root {
+    @import '../../core/design-tokens/color-dark.scss';
+
+    --input-content: #{$color-info-hard};
+    --input-background: #{$color-background-mild};
+
+    --input-text-disable:#{$color-info-mild};
+    --input-background-disable: #{$color-disable-mild};
+
+    --input-border-focus: #{$color-info-hard};
+    --input-label-focus: #{$color-info-hard};
+
+    --input-error: #{$color-system-warn};
+  }
+
+  $timeTransition: 0.2s;
+
+  .alb-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding:8px 0px;
+    &.alb-input-hint-error{
+      padding-bottom: 16px;
+    }
+  }
+
+  .alb-input-field {
+    width: 100%;
+    background-color: var(--input-background);
+    padding: 8px 14px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+
+  .alb-input-label {
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    max-height: 100%;
+    top: 2px;
+    transition: color $timeTransition, font-size $timeTransition, line-height 0.2s;
+    line-height: 44px;
+    color: var(--input-label);
+    border-top-color: var(--input-border);
+  }
+
+  .alb-input-field + .alb-input-label::before,
+  .alb-input-field + .alb-input-label::after {
+    content: "";
+    display: block;
+    margin-top: 6px;
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    border-top-color: transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .alb-input-label::before {
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+  }
+
+  .alb-input-label::after {
+    flex-grow: 1;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+  }
+
+  .alb-input.has-value {
+    &.alb-input.has-placeholder .alb-input-field {
+      border-top-color: transparent;
+    }    
+  }
+
+  .alb-input.has-placeholder .alb-input-label::after {
+    margin-left: 4px;
+  }
+
+  .alb-input.has-placeholder .alb-input-label::before {
+    margin-right: 4px;
+  }
+
+  // Estilos de Focus
+  .alb-input-field:focus {
+    border-top-color: transparent;
+    border-right: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
+    border-left: 1px solid var(--accent);
+  }
+
+  .alb-input-field:focus .alb-input-label {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--accent);
+  }
+
+  .alb-input.has-value .alb-input-label {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--input-label);
+  }
+
+  .alb-input .alb-input-container .alb-input-field:focus + .alb-input-label::before,
+  .alb-input .alb-input-container .alb-input-field:focus + .alb-input-label::after {
+    border-top-color: var(--accent);
+    box-shadow: inset 0 1px var(--accent);
+  }
+
+  .alb-input.has-value .alb-input-field + .alb-input-label::before,
+  .alb-input.has-value .alb-input-field + .alb-input-label::after {
+    border-top-color: var(--border);
+    box-shadow: inset 0 1px var(--border);
+  }
+
+  // Estilo com valores no input
+  .alb-input.has-value + .alb-input-field:not(.disabled),
+  .alb-input.has-value + .alb-input-field:not([disabled]) {
+    border-top-color: transparent;
+    color: var(--text);
+  }
+
+  .alb-input.has-value .alb-input-label {
+    &::before,
+    &::after {
+      border-top-color: var(--border);
+    }
+  }
+
+  // Estilo com erro
+  .alb-input.ng-invalid.ng-touched .alb-input-field,
+  .alb-input.has-error .alb-input-field {
+    border-color: var(--warn);
+
+    &:focus {
+      border-top-color: transparent;
+    }
+  }
+
+  .alb-input.ng-invalid.ng-touched.has-value .alb-input-field,
+  .alb-input.has-error.has-value .alb-input-field {
+    border-top-color: transparent;
+  }
+
+  .alb-input.ng-invalid.ng-touched .alb-input-label,
+  .alb-input.has-error .alb-input-label {
+    color: var(--warn);
+  }
+
+  .alb-input.ng-invalid.ng-touched.has-value .alb-input-label,
+  .alb-input.has-error.has-value .alb-input-label {
+    color: var(--warn);
+
+    &::before,
+    &::after {
+      border-top-color: var(--warn);
+      box-shadow: inset 0 1px var(--warn);
+    }
+  }
+
+  .alb-input.has-error .alb-input-field:focus + .alb-input-label::before,
+  .alb-input.ng-invalid.ng-touched .alb-input-field:focus + .alb-input-label::before,
+  .alb-input.has-error .alb-input-field:focus + .alb-input-label::after,
+  .alb-input.ng-invalid.ng-touched .alb-input-field:focus + .alb-input-label::after {
+    border-top-color: var(--warn);
+    box-shadow: inset 0 1px var(--warn);
+  }
+
+  //Estilo alb-input-error
+  //Estilo alb-input-hint
+  .alb-input-hint,
+  .ng-pristine:not(form) .alb-input-hint,
+  .ng-valid:not(form) .alb-input-hint,
+  .ng-invalid.ng-touched:not(form) .alb-input-error {
+    display: block;
+    padding: 4px 14px;
+    position: absolute;
+    font-size: 11px;
+  }
+  .alb-input-hint{
+    color: var(--placeholder);
+  }
+  .alb-input-error{
+    color: var(--warn);
+  }
+  .alb-input-error,
+  .ng-pristine:not(form) .alb-input-error,
+  .ng-valid:not(form)  .alb-input-error,
+  .ng-invalid.ng-touched:not(form) .alb-input-hint {
+    display: none;
+  }
+
+  
+  
+
+  // Estilo desabilitado
+  .alb-input-field[disabled],
+  .alb-input-field.disabled {
+    background-color: var(--input-background-disable);
+    pointer-events: none;
+    color: var(--input-disable);
+  }
+
+  .alb-input-field[disabled] + .alb-input-label,
+  .alb-input-field.disabled + .alb-input-label {
+    color: var(--input-disable);
+  }
+
+  // Input file
+
+  input[type="file"]::-webkit-file-upload-button {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: var(--iron);
+    cursor: pointer;
+  }
+
+  input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: var(--hover);
+    border: 1px solid var(--accent);
+  }
+
+  //Input view
+
+  input[type="view"] {
+    border: none;
+    color: var(--font-color-input);
+    background-color: transparent;
+
+    .alb-input-label {
+      color: var(--input-label);
+    }
+
+    .alb-input-label::before, .alb-input-label::after {
+      border-top-color: transparent;
+    }
+  }
+}
+
+/**
+* Mixin utilizado para adicionar as classes de error do Reactive Forms do Angular, quando há um componente
+* encapsulando o alb-input (Ex: alb-number, alb-datepicker)
+* ```
+*/
+@mixin alb-input-error-angular($parent: "") {
+  // Estilos com erro
+  #{$parent}.ng-invalid.ng-touched .alb-input-field {
+    border-color: var(--warn);
+
+    &:focus {
+      border-top-color: transparent;
+      box-shadow: inset 1px 0 var(--warn), inset -1px 0 var(--warn), inset 0 -1px var(--warn);
+    }
+  }
+
+  #{$parent}.ng-invalid.ng-touched .alb-input.has-value .alb-input-field {
+    border-top-color: transparent;
+  }
+
+  #{$parent}.ng-invalid.ng-touched .alb-input-label {
+    color: var(--warn);
+  }
+
+  #{$parent}.ng-invalid.ng-touched .alb-input.has-value .alb-input-label {
+    color: var(--warn);
+
+    &::before,
+    &::after {
+      border-top-color: var(--warn);
+    }
+  }
+
+  #{$parent}.ng-invalid.ng-touched .alb-input-field:focus + .alb-input-label::before,
+  #{$parent}.ng-invalid.ng-touched .alb-input-field:focus + .alb-input-label::after {
+    border-top-color: var(--warn);
+    box-shadow: inset 0 1px var(--warn);
+  }
+}

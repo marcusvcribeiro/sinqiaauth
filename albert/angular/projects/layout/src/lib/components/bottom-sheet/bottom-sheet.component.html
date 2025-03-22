@@ -1,0 +1,16 @@
+<nav #bottomSheet class="alb-bottom-sheet" [@openCloseAnimation]="{value: (isOpen ? 'open' : 'closed') }"
+  (@openCloseAnimation.done)="onAnimationEvent($event)">
+  <header class="alb-bottom-sheet-header">
+    <button class="alb-bottom-sheet-close" (click)="onClose()">
+      <i class="alb-icon">close</i>
+    </button>
+
+    <h2 class="alb-bottom-sheet-title"> {{ title }} </h2>
+
+    <div class="alb-bottom-sheet-actions"></div>
+  </header>
+
+  <div class="alb-bottom-sheet-body">
+    <ng-container #bottomSheetContent></ng-container>
+  </div>
+</nav>

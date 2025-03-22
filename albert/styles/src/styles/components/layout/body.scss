@@ -1,0 +1,22 @@
+@mixin alb-body() {
+  .alb-body {
+    padding: 1rem;
+  }
+
+  .alb-body-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .alb-body-header aside > * {
+    margin: 0 5px;
+
+    &:first-child {
+      margin-left:  0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

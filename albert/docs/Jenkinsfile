@@ -1,0 +1,152 @@
+#!groovy
+
+// Fixos
+def environment = getEnvironmentFromBranch()
+def dockerTag = getDockerTagFromBranch()
+
+// Customizados
+def projectPrefix = dhpOrPrd("dhp-infra", "prd-infra")
+def registryPushCredentials = dhpOrPrd("dhp-infra-container", "prd-infra-container")
+def registryZone = "us.gcr.io"
+def appServerLabel = "${projectPrefix}-${environment}-app";
+
+def dockerPrefix = "${registryZone}/${projectPrefix}"
+
+def dockerImage = "albert-docs"
+def containerId = "albert.docs"
+//def slackChannel = "#ui"
+// msteams
+def teamsWebhookUrl = "https://outlook.office.com/webhook/81338908-82ca-469c-a7cc-1b52acaafd2f@6c323b1c-4f63-4552-a20f-6d0da0bbf032/JenkinsCI/1929f2f2453f43dca7d9ae165f3d81b4/e3d3659c-a038-4722-b82e-5ebeeb627d78"
+def notifyBackToNormal
+def notifyRepeatedFailure
+def notifyUnstable
+def notifySuccess
+def notifyFailure
+// fim msteams
+
+def scmVars
+def label = "jenkins-slave-${UUID.randomUUID().toString()}"
+
+def appValuesPath = "docs/_aux/helm/values-${environment}.yaml"
+def helm_deploy_name = "${environment}-albert-docs"
+def helm_chart = "docs/_aux/helm/albert-docs"
+def helm_chart_name = "sinqia/albert-docs"
+def chartmuseum_url = "http://dhp-infra-tools-01.sq-cloud.local:8088"
+def namespace = "infra"
+def image_version
+def helmParameters = ""
+
+
+try {
+
+  podTemplate(
+    label: label,
+    containers: [
+      containerTemplate(command: 'cat', image: 'us.gcr.io/dhp-infra/nodejs-nexus:node13', name: 'nodejs', ttyEnabled: true, privileged: true),
+      containerTemplate(name: 'docker', image: 'docker', command: 'cat', ttyEnabled: true, privileged: true),
+      containerTemplate(name: 'helm', image: 'lachlanevenson/k8s-helm:v2.14.3', command: 'cat', ttyEnabled: true, privileged: true)
+    ],
+    volumes: [
+      hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock'), hostPathVolume(mountPath: '/home/jenkins/agent/workspace/', hostPath: '/opt/jenkins/workspace/')
+    ]
+  ){
+
+    timeout(time: 20, unit: 'MINUTES') {
+      node(label) {
+
+        container('nodejs') {
+          stage('Instalando Dependencias') {
+            echo 'Baixando fontes e instalando dependências'
+            scmVars = checkout scm
+            dir("docs") {
+              sh 'npm cache verify'
+              sh 'npm install'
+            }
+          }
+
+          stage('Obtendo versão do projeto') {
+            dir("docs") {
+              def packageJson = readJSON file: 'package.json'
+              image_version = packageJson['version']
+              echo "VERSION: ${image_version}"
+            }
+          }
+
+          stage('Executa lint') {
+            dir("docs") {
+              sh "npm run lint"
+            }
+          }
+
+          stage('Build PROD') {
+            dir("docs") {
+              echo "Gerando versao"
+              sh "npm run build"
+
+              echo 'Versão Gerada'
+              echo 'Preparando dist... '
+              sh "npm run docker-prepare"
+            }
+          }
+
+        }
+
+        container('docker') {
+          stage('Gerando Docker...') {
+            echo 'Gerando imagem docker... '
+            dir("docs") {
+              sh "docker build -t ${dockerPrefix}/${dockerImage}:${dockerTag} docs/docker/."
+            }
+            echo 'Docker gerado =)'
+          }
+
+          stage('Package') {
+          echo 'Publicando Docker....'
+            dockerRegistryLogin(registryZone, registryPushCredentials) {
+              dockerPushWithBuildTagsV2(scmVars, dockerPrefix, dockerImage, dockerTag, image_version)
+            }
+          }
+        }
+
+        container('helm') {
+
+          stage('Helm lint') {
+            echo 'Helm lint'
+            sh """
+              helm init --client-only
+              helm lint --values $appValuesPath $helm_chart
+            """
+          }
+
+          stage('Instala dependencias') {
+            //TODO: criar uma imagem docker de Helm da Sinqia com todos plugins
+            echo 'Instala dependencias'
+            sh """
+              apk add git
+              helm plugin install https://github.com/chartmuseum/helm-push
+              helm repo add sinqia ${chartmuseum_url}
+              helm repo update
+            """
+          }
+
+          stage('Helm push') {
+            echo 'Helm push'
+            sh """
+              helm push $helm_chart sinqia -f
+            """
+          }
+
+          stage('Publicando nos ambientes...') {
+            k8sDeployHelm(chartmuseum_url, namespace, helm_deploy_name, helm_chart_name, dockerTag, appValuesPath, helmParameters)
+          }
+        }
+      }
+    }
+  }
+} catch (e) {
+  currentBuild.result = 'FAILURE'
+  throw e
+} finally {
+  notifyTeams(teamsWebhookUrl)
+  //notifyBuildResultSlack(currentBuild, slackChannel)
+}

@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsComponent",
+    "title": "Component Options Schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the Component.",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        },
+        "x-prompt": "What name would you like to use for the Component?"
+      },
+      "path": {
+        "type": "string",
+        "format": "path",
+        "description": "The path to create the Component."
+      },
+      "language": {
+        "type": "string",
+        "description": "Component language (ts/js)."
+      },
+      "sourceRoot": {
+        "type": "string",
+        "description": "Component source root directory."
+      },
+      "skipImport": {
+        "description": "Flag to skip the module import.",
+        "default": false
+      },
+      "module": {
+        "type": "string",
+        "description": "Allows specification of the declaring module."
+      },
+      "flat": {
+        "default": false,
+        "description": "Flag to indicate if a directory is created."
+      },
+      "spec": {
+        "default": true,
+        "description": "Specifies if a spec file is generated."
+      },
+      "scss": {
+        "default": true,
+        "description": "Specifies if a scss file is generated."
+      }
+    },
+    "required": ["name"]
+  }

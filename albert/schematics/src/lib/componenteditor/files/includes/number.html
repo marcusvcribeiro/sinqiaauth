@@ -1,0 +1,26 @@
+<% 
+    if (typeof placeholder === 'undefined' || placeholder === null) { placeholder = "" }
+    if (typeof decimal === 'undefined' || decimal === null) { decimal = "" }
+    if (typeof decimalLength === 'undefined' || decimalLength === null) { decimalLength = "" }
+    if (typeof value === 'undefined' || value === null) { value = "" }
+    if (typeof required === 'undefined' || required === null) { required = "" }
+    if (typeof thousandsSeparator === 'undefined' || thousandsSeparator === null) { thousandsSeparator = "" }
+    if (typeof decimalSeparator === 'undefined' || decimalSeparator === null) { decimalSeparator = "" }
+    if (typeof allowNegative === 'undefined' || allowNegative === null) { allowNegative = "" }
+    if (typeof disabled === 'undefined' || disabled === null) { disabled = "" }
+%>
+
+<alb-number
+    <% if (placeholder) { %>placeholder="<%= placeholder %>"<% } %> 
+    <% if (decimal) { %>[decimal]="<%= decimal %>"<% } %> 
+    <% if (decimalLength) { %>decimalLength="<%= decimalLength %>"<% } %> 
+    <% if (value) { %>[value]="<%= value %>" <% } %> 
+    <% if (textAlign) { %>textAlign="<%= textAlign %>" <% } %> 
+    <% if (length) { %>length="<%= length %>" <% } %> 
+    <% if (thousandsSeparator) { %>thousandsSeparator="<%= thousandsSeparator %>" <% } %> 
+    <% if (decimalSeparator) { %>decimalSeparator="<%= decimalSeparator %>" <% } %> 
+    <% if (allowNegative) { %>allowNegative<% } %> 
+    <% if (required) { %>required<% } %> 
+    <% if (disabled) { %>disabled<% } %>
+>
+</alb-number>

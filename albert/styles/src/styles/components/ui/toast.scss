@@ -1,0 +1,111 @@
+@mixin alb-toast() {
+
+  :root {
+    @import '../../core/design-tokens/color.scss';
+
+    --toast-text: #{$color-info-hard};
+    --toast-background: #{$color-border-regular};
+    --toast-border: #{$color-border-hard};
+
+    --toast-background-warn: #{$color-system-warn-light};
+    --toast-border-warn: #{$color-system-warn-dark};
+    --toast-background-alert: #{$color-system-alert-light};
+    --toast-border-alert: #{$color-system-alert-dark};
+    --toast-background-success: #{$color-system-success-light};
+    --toast-border-success: #{$color-system-success-dark};
+    --toast-background-info: #{$color-system-link-lighter};
+    --toast-border-info: #{$color-system-link-dark};
+  }
+
+  [theme="dark"]:root {
+    @import '../../core/design-tokens/color-dark.scss';
+    
+    --toast-background: #{$color-info-lightest};
+    --toast-border: #{$color-border-regular};
+
+  }
+
+  .alb-toast {
+    margin-bottom: 20px;
+    height: 72px;
+    width: 456px;
+    border-radius: 4px;
+    border-left: solid 5px var(--toast-border);
+    background-color: var(--toast-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3px 3px var(--disabled-font);
+  }
+
+  .alb-toast-close {
+    & button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 8px;
+      padding: 10px;
+    }
+
+    & i {
+      font-size: 20px;
+      color: var(--toast-border);
+    }
+  }
+
+  .alb-toast-icon {
+    color: var(--toast-border);
+    margin: 10px;
+
+    & i {
+      font-size: 32px;
+    }
+  }
+
+  .alb-toast-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .alb-toast-content {
+      color: var(--toast-text);
+    }
+  }
+
+  .alb-toast-info {
+    background-color: var(--toast-background-info);
+    border-color: var(--toast-border-info);
+
+    i {
+      color: var(--toast-border-info);
+    }
+  }
+
+  .alb-toast-error {
+    background-color: var(--toast-background-warn);
+    border-color: var(--toast-border-warn);
+
+    i {
+      color: var(--toast-border-warn);
+    }
+  }
+
+  .alb-toast-success {
+    background-color: var(--toast-background-success);
+    border-color: var(--toast-border-success);
+
+    i {
+      color: var(--toast-border-success);
+    }
+  }
+
+  .alb-toast-alert {
+    background-color: var(--toast-background-alert);
+    border-color: var(--toast-border-alert);
+
+    i {
+      color: var(--toast-border-alert);
+    }
+  }
+
+}

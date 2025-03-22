@@ -1,0 +1,5 @@
+<% 
+    if (typeof divisorClass === 'undefined' || divisorClass === null) { divisorClass = "" }
+%>
+
+<alb-box <% if (title) { %>title="<%= title %>"<% } %> <% if (formview) { %>formview<% } %> <% if (divisorClass) { %>class="<%= divisorClass %>"<% } %>>

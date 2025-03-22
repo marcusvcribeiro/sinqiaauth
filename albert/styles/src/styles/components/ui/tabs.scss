@@ -1,0 +1,173 @@
+@import "../../design-tokens.scss";
+@use '../../core/design-tokens/typography';
+
+@mixin alb-tabs() {
+  :root {
+    @import "../../core/design-tokens/color.scss";
+
+    .tab-header {
+      border-bottom: 1px solid #{$color-border-soft};
+    }
+    //background
+    --tab-header-background: #{$color-background-regular};
+    --tab-body-background: #{$color-background-regular};
+    --tab-header-hover: #{$color-background};
+
+    //font Color
+    --tab-active-color: #{$color-brand-regular};
+    --tab-inactive-color: #{$color-info-mild};
+    --tab-disabled-color: #{$color-border-soft};
+    --tab-scroll-color : #{$color-border-regular};
+  }
+  [theme="dark"]:root {
+    @import "../../core/design-tokens/color-dark.scss";
+
+    .tab-header {
+      border-bottom: none;
+    }
+
+    //background
+    --tab-header-background: #{$color-background-mild};
+    --tab-body-background: #{$color-background-hard};
+    --tab-header-hover: #{$color-background-hard};
+    --tab-border-color: none;
+
+    //font Color
+    --tab-active-color: #{$color-brand-regular};
+    --tab-inactive-color: #{$color-border-hard};
+    --tab-disabled-color: #{$color-info-soft};
+    --tab-scroll-color: #{$color-border-hard};
+  }
+
+  .alb-card-body :first-child > .tab-header,
+  .alb-card-body :first-child > .header-item {
+    background-color: var(--tab-header-background);
+  }
+  .tab-content {
+    padding: 0px $padding-slim;
+  }
+  .alb-card .tab-content {
+    padding: 0px;
+    .tab-header.small{
+      .tab-scroll {
+        &.active {
+          padding: 7px;
+        }
+      }
+    }
+  }
+
+  .tab-header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: var(--tab-header-background);
+    border-radius: $padding-thin $padding-thin 0px 0px;
+    position: relative;
+    &.small {
+      .alb-icon {
+        font-size: var(--icon-size-md);
+      }
+      .header-item, .tab-scroll.active {
+          padding: $padding-slim;
+      }
+    }
+    .tab-scroll {
+      .alb-icon {
+        color: var(--tab-scroll-color);
+      }
+    }
+
+    &.large {
+      .tab-scroll.active, .header-item {
+        padding: $padding-medium;
+      }
+    }
+
+    &:hover .header-item {
+      cursor: pointer;
+    }
+
+    .header-item {
+      text-align: center;
+      background: var(--tab-header-background);
+      border-radius: $padding-thin $padding-thin $padding-thin $padding-thin 0px 0px;
+      color: var(--tab-inactive-color);
+      min-width: fit-content;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: var(--tab-header-hover);
+      }
+    }
+    .--selected {
+      border-bottom: 2px solid var(--tab-active-color);
+      color: var(--tab-active-color);
+    }
+
+    .--disabled {
+      color: var(--tab-disabled-color);
+      cursor: default;
+      pointer-events: none;
+      border-bottom: none;
+    }
+    .tab-aside {
+      display: flex;
+      align-items: center;
+      &.end {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      &.start {
+        width: 100%;
+        justify-content: flex-start;
+      }
+      .divisor-button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .tab-body {
+    width: 100%;
+    overflow-x: auto;
+    padding: $padding-medium;
+    background-color: var(--tab-body-background);
+    margin-bottom: $margin-box-slim-bottom;
+    .alb-table .p-datatable {
+      margin-top: -16px;
+    }
+    .--hide {
+      display: none;
+    }
+  }
+
+  .tab-scroll {
+    position: sticky;
+    display: none;
+    button {
+      border: none;
+      background-color: transparent;
+    }
+    &.active {
+      display: initial;
+      visibility: visible;
+      background: var(--tab-header-background);
+      &.scroll-right {
+        right:0px;
+        border-left: solid 1px var(--tab-scroll-color);
+      }
+      &.scroll-left {
+        left:0px;
+        border-right: solid 1px var(--tab-scroll-color);
+      }
+      &:hover {
+        background: var(--tab-header-hover);
+      }
+    }
+  }
+}

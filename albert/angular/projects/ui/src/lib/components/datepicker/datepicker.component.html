@@ -1,0 +1,21 @@
+<alb-input
+  class="alb-datepicker-input"
+  [placeholder]="placeholder"
+  [disabled]="_disabled"
+  [mask]="{ mask: mask }"
+  [value]="textValue"
+  [hint]="hint"
+  [error]="error"
+  (changeValue)="onInputChange($event)"
+  (focusout)="focusOut()"
+  #inputRef>
+</alb-input>
+<alb-calendar
+  class="alb-datepicker-calendar"
+  [disabled]="_disabled"
+  [date]="date"
+  [append]="elementAppend"
+  (change)="onDateChange($event)"
+  onlyIcon>
+</alb-calendar>
+

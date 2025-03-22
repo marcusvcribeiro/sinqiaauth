@@ -1,0 +1,47 @@
+{
+    "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+    "schematics": {
+      "component": {
+        "factory": "./lib/component/component.factory#main",
+        "description": "Create a component.",
+        "schema": "./lib/component/schema.json",
+        "aliases": ["c"]
+      },
+      "module": {
+        "factory": "./lib/module/module.factory#main",
+        "description": "Create a module.",
+        "schema": "./lib/module/schema.json",
+        "aliases": ["m"]
+      },
+      "model": {
+        "factory": "./lib/model/model.factory#main",
+        "description": "Create a model.",
+        "schema": "./lib/model/schema.json",
+        "aliases": ["md"]
+      },
+      "ng-add": {
+        "factory": "./lib/ng-add/ng-add.factory#ngAdd",
+        "description": "Add all albert basics and plugins in package.json",
+        "aliases": ["alb-init"],
+        "schema": "./lib/ng-add/schema.json"
+      },
+      "componenteditor": {
+        "factory": "./lib/componenteditor/componenteditor.factory#main",
+        "description": "Create a Component Editor.",
+        "schema": "./lib/componenteditor/schema.json",
+        "aliases": ["edc"]
+      },
+      "service": {
+        "factory": "./lib/service/service.factory#main",
+        "description": "Create a Service.",
+        "schema": "./lib/service/schema.json",
+        "aliases": ["eds"]
+      },
+      "devops": {
+        "factory": "./lib/devops/devops.factory#main",
+        "description": "Create a devops.",
+        "schema": "./lib/devops/schema.json",
+        "aliases": ["d"]
+      }
+    }
+  }

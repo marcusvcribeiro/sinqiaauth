@@ -1,0 +1,115 @@
+@mixin alb-accordion() {
+  $height-title-accordion: 50px;
+
+  .alb-accordion {
+    border: 1px solid var(--border);
+    background-color: var(--contrast);
+    border-radius: 5px;
+
+    .alb-accordion-header {
+      position: relative;
+      cursor: pointer;
+      height: $height-title-accordion;
+    }
+
+    .alb-container {
+      display: flex;
+      width: 100%;
+      background-color: var(--contrast);
+      border-radius: 5px;
+    }
+
+    .alb-container-title {
+      display: flex;
+      width: 100%;
+      height: $height-title-accordion;
+    }
+
+    .alb-grid-icon {
+      cursor: pointer;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .alb-grid-without-icon {
+      padding: 15px 10px;
+    }
+
+    .alb-grid-header {
+      padding-left: 20px;
+      padding-right: 35px;
+    }
+
+    .max-height-max {
+      max-height: 5000px;
+    }
+
+    .max-height-zero {
+      max-height: 0;
+    }
+  }
+
+  .alb-accordion-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+  .alb-accordion-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .alb-accordion-toggle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      border: solid;
+      border-width: 0 3px 3px 0;
+      border-color: var(--accent);
+      padding: 3px;
+      transition: ease-in-out transform 0.2s;
+
+      .--open & {
+        transform: rotate(-135deg);
+      }
+
+      .--closed & {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .alb-accordion-icon {
+    margin-top: 8px;
+    margin-bottom: 7px;
+  }
+
+  albAccordionHeader {
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 auto;
+  }
+}

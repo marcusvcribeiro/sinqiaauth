@@ -1,0 +1,17 @@
+<div class="alb-toast" [ngClass]="getColor()" [@fadeAnimation]="{value: animationState}"
+  (@fadeAnimation.done)="onAnimationDone($event)">
+  <div class="alb-toast-container">
+    <aside class="alb-toast-icon">
+      <i class="alb-icon" [ngClass]="getColor()">
+        {{ icon[toast?.type ? toast?.type : 'regular'] }}</i>
+    </aside>
+    <span class="alb-toast-content">
+      {{  toast.text }}
+    </span>
+  </div>
+  <div class="alb-toast-close">
+    <button class="alb-toast-close-button" (click)="onClose()">
+      <i class="alb-icon">close</i>
+    </button>
+  </div>
+</div>

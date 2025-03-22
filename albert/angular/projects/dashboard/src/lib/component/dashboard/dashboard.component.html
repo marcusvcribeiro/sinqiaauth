@@ -1,0 +1,37 @@
+<div class="dashboard-header">
+  <div class="dashboard-header-title">
+    <h1>Dashboards</h1>
+  </div>
+  <aside>
+    <alb-tab-group (selectedTabChange)="dashboardSelected($event)">
+      <alb-tab *ngFor="let dashboard of dashboards" [id]="dashboard.id" selected>
+        <ng-template albTabHeaderWrapper>
+          <div class="dashboard-template-tab-header">
+            <span>{{dashboard.name}}</span>
+            <alb-menu [class.--hide]="selectedDashboard != dashboard" class="dashboard-template-tab-header-options">
+              <alb-menu-item (click)="openAddWidgetDrawer(dashboard)">
+                <ng-template albMenuTemplate>
+                  <span class="dashboard-template-tab-header-menu-item">Adicionar widget</span>
+                </ng-template>
+              </alb-menu-item>
+              <alb-menu-item (click)="deleteDashboard(dashboard)">
+                <ng-template albMenuTemplate>
+                  <span class="dashboard-template-tab-header-menu-item">Excluir dashboard</span>
+                </ng-template>
+              </alb-menu-item>
+            </alb-menu>
+          </div>
+        </ng-template>
+      </alb-tab>
+      <div class="dashboard-tab-aside" aside>
+        <button alb-button-icon icon="add" type="button" (click)="openDrawerNewDashboard()"></button>
+        <ng-content select="[aside]"></ng-content>
+      </div>
+    </alb-tab-group>
+  </aside>
+</div>
+
+<div class="dashboard-page" *ngIf="selectedDashboard">
+  <alb-dashboard-page [dashboard]="selectedDashboard" (dashboardChanged)="onDashboardChange($event)">
+  </alb-dashboard-page>
+</div>

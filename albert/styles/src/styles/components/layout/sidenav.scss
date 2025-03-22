@@ -1,0 +1,110 @@
+/**
+* O alb-navbar-simple é responsável por gerar o estilo de Navbar no seu formato 'completo'
+*/
+
+$alb-sidenav-width: 65px;
+@import "../../design-tokens.scss";
+@use '../../core/design-tokens/typography';
+
+
+@mixin alb-sidenav() {
+  :root {
+    @import "../../core/design-tokens/color.scss";
+  
+    --alb-sidenav-background: #{$color-vertical-medium};
+    --alb-logo-name-color: #{$color-info-mild};
+    --alb-sidenav-color: #{$color-brand-regular};
+    --alb-color: #{$color-background-hard};
+    --alb-border-color: #{$color-border-soft};
+    --alb-hover-item: #{$color-info-hard};
+    --alb-sidenav-icon: #{$color-background-hard};
+  }
+  
+  [theme="dark"]:root {
+    @import "../../core/design-tokens/color-dark.scss";
+  
+    --alb-sidenav-background: #{$color-vertical-medium};
+    --alb-logo-name-color: #{$color-info-lightest};
+    --alb-sidenav-color: #{$color-info-lightest};
+    --alb-color: #{$color-info-lightest};
+    --alb-border-color: #{$color-background};
+    --alb-hover-item: #{$color-background-hard};
+  }
+  .alb-sidenav {
+    position: fixed;
+    width: $alb-sidenav-width;
+    height: calc(100% - 1px);
+    background-color: var(--alb-sidenav-background);
+    z-index: var(--layer-navbar);
+    border-radius: 0px $border-radius-thick $border-radius-thick 0px;
+  }
+
+  .alb-sidenav-list {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    >*{
+      color: var(--alb-color);
+    }
+    .alb-sidenav-text{
+      @extend .typography-brand-regular-xs;
+    }
+    .alb-sidenav-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      height: 56px;
+      cursor: pointer;
+      padding: 0 8px;
+      transition: 0.3s color, background-color 0.3s;
+
+      &::before, &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 0;
+        top: 50%;
+        left: 0;
+        background-color: transparent;
+        transition: 0.3s height, 0.3s top;
+      }
+
+      .alb-icon {
+        color: var(--alb-sidenav-icon);
+        transition: 0.3s color;
+      }
+
+      &.--selected {
+        color: var(--sinqia);
+
+        &::before, &::after {
+          background-color: var(--sinqia);
+        }
+
+        &::before {
+          top: 0;
+          height: 50%;
+        }
+
+        &::after {
+          height: 50%;
+          top: 50%;
+        }
+
+        .alb-icon {
+          color: var(--sinqia);
+        }
+      }
+
+      &:hover {
+        background-color: var(--alb-hover-item);
+      }
+      &:first-child{
+        border-radius: 0px $border-radius-thick 0px 0px; 
+      }
+    }
+  }
+}

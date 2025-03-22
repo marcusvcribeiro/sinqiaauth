@@ -1,0 +1,70 @@
+# Default values for audit-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 2
+
+image:
+  repository: us.gcr.io/dhp-infra/albert-docs
+  tag: dev
+  pullPolicy: Always
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8888
+
+# ----------------------------------------
+# Limite de CPU e RAM
+# ----------------------------------------
+resources:
+  #Mínimo
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  #Máximo
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+application:
+  appBaseHref: /albert/docs/
+
+  # ----------------------------------------
+  # Health
+  # ----------------------------------------
+  health:
+    readiness:
+      uri: /actuator/health
+      initialDelaySeconds: 40
+      timeoutSeconds: 5
+      periodSeconds: 20
+      failureThreshold: 5
+    liveness:
+      uri: /actuator/health
+      initialDelaySeconds: 40
+      timeoutSeconds: 5
+      periodSeconds: 20
+      failureThreshold: 5
+
+ingress:
+  namespace: infra
+  kubernetesIoIngressClass: traefik
+  traefikFrontendRuleType: PathPrefixStrip
+  host: devk8.sinqia.com.br
+  path: /albert/docs
+
+labels:
+  release: dev
+  product: infra
+  tier: front

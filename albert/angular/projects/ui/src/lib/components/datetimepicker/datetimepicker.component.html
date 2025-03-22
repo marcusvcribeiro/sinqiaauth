@@ -1,0 +1,20 @@
+<alb-input
+  class="alb-datetimepicker-input"
+  [placeholder]="placeholder"
+  [disabled]="_disabled"
+  [mask]="{ mask: mask }"
+  [value]="textValue"
+  [hint]="hint"
+  [error]="error"
+  (changeValue)="onInputChange($event)"
+  (focusout)="focusOut()"
+  #inputRef>
+</alb-input>
+<alb-datetime
+  class="alb-datetimepicker-calendar"
+  [date]="date"
+  [disabled]="_disabled"
+  [append]="elementAppend"
+  (change)="onDateChange($event)"
+  onlyIcon>
+</alb-datetime>

@@ -1,0 +1,24 @@
+<div class="alb-input-container" [ngClass]="{'alb-input-hint-error': error || hint}">
+  <input
+  [type]="type"
+  class="alb-input-field"
+  [ngClass]="{'text-right': textAlign === 'right'}"
+  [value]="value !== undefined ? value : null"
+  [required]="_required"
+  [disabled]="_disabled"
+  [readOnly]="_readonly"
+  [maxLength]="_maxLength"
+  (change)="onChangeControlValueAcessor($event.target.value)"
+  (input)="onInput($event.target.value)"
+  (focusout)="onTouchControlValueAcessor()"
+  #inputRef>
+  <label class="alb-input-label">
+    <div>{{placeholder}}</div>
+  </label>
+  <div class="alb-input-error">
+   {{error}}
+  </div>
+  <div class="alb-input-hint">
+   {{hint}}
+  </div>
+</div>

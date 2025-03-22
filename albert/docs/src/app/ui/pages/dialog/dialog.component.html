@@ -1,0 +1,23 @@
+<alb-body>
+
+  <doc-template>
+
+    <docTemplateTitle class="alb-flex-space-between">
+      Dialog
+      <button alb-button type="secondary" (click)="openDS()">Design System</button>
+    </docTemplateTitle>
+
+    <docTemplateExample class="alb-flex-space-between">
+      <button alb-button (click)="showDialogInfo()"> Dialog Info </button>
+      <button alb-button (click)="showDialogError()"> Dialog Error </button>
+      <button alb-button (click)="showDialogConfirm()"> Dialog Confirm </button>
+    </docTemplateExample>
+
+    <docTemplateCode>
+      <markdown [src]="'./assets/markdown/dialog/README.md'"></markdown>
+    </docTemplateCode>
+
+  </doc-template>
+
+</alb-body>
+

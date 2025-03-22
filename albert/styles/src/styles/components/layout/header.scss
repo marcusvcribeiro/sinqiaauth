@@ -1,0 +1,121 @@
+/**
+* O alb-header é responsável por gerar o estilo de Header principal da aplicação
+*/
+@import "../../design-tokens.scss";
+@use '../../core/design-tokens/typography';
+
+
+$alb-header-height: 50px;
+
+
+@mixin alb-header() {
+    
+:root {
+  @import "../../core/design-tokens/color.scss";
+
+  --alb-header-background: #{$color-background-hard};
+  --alb-logo-name-color: #{$color-brand-regular};
+  --alb-header-color: #{$color-info-mild};
+  --alb-group-color: #{$color-border-hard};
+  --alb-border-color: #{$color-border-soft};
+
+}
+
+[theme="dark"]:root {
+  @import "../../core/design-tokens/color-dark.scss";
+
+  --alb-header-background: #000011;
+  --alb-logo-name-color: #{$color-info-lightest};
+  --alb-header-color: #{$color-info-lightest};
+  --alb-group-color: #{$color-info-lightest};
+  --alb-border-color: #{$color-background};
+}
+
+  .alb-header--background{
+    background: var(--alb-header-background-darker);
+    position: fixed;
+    z-index: var(--layer-navbar);
+    height: $alb-header-height;
+    width: -webkit-fill-available;
+  }
+
+  .alb-header {
+    position: fixed;
+    height: $alb-header-height;
+    width: 100%;
+    display: flex;
+    background-color: var(--alb-header-background);
+    z-index: var(--layer-navbar);
+    border-radius: 0px 0px 0px $border-radius-thick;
+    box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .alb-header-logo {
+    padding: $padding-slim;
+    display: flex;
+  }
+
+  .alb-header-name {
+    font-style: var(--font-family-aplication-name);
+    color: var(--alb-header-color);
+    font-size: var(--font-size-aplication-name);
+    white-space: nowrap;
+    align-self: center;
+    margin-left: $margin-box-thin-left;
+  }
+
+  .alb-header-subtitle {
+    @extend .typography-brand-regular-sm;
+    color: var(--accent);
+    white-space: nowrap;
+    align-self: center;
+    margin-left: $margin-box-thin-left;
+  }
+
+  .alb-header-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .alb-icon-logo-name {
+    font-size: 20px;
+    color: var(--alb-logo-name-color);
+    padding: $padding-box-slim-top $padding-box-thin-right 0 $padding-box-medium-left;
+  }
+
+  .alb-icon-pipe {
+    width: 1.8px;
+    background-color: var(--santas);
+    margin: 0 7px;
+  }
+
+  .alb-header-logo-icon {
+    position: relative;
+    padding: $padding-box-thin-top $padding-box-slim-right 0 $padding-box-slim-left;
+  }
+
+  .alb-header .alb-header-content > * {
+    display: flex;
+  }
+
+  .alb-header-group {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--alb-group-color);
+    margin-left: $padding-slim;
+    > * {
+      border-left: 1px solid var(--alb-border-color);
+      padding: $padding-medium;
+    }
+    &:not(:first-of-type) {
+      &:before {
+        content: "";
+        width: 5px;
+        height: $alb-header-height;
+        background-color: var(--background);
+      }
+    }
+  }
+}

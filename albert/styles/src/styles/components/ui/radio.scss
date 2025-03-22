@@ -1,0 +1,176 @@
+@mixin alb-radio() {
+  :root {
+    @import '../../core/design-tokens/color.scss';
+
+    --radio-input-color: #{$color-border-regular};
+    --radio-input-color-disable: #{$color-disable-regular};
+    --radio-input-color-checked: #{$color-brand-regular};
+    --radio-input-color-disable-checked: #{$color-brand-lighter};
+
+    --radio-label-color: #{$color-info-hard};
+    --radio-label-disable: #{$color-info-mild};
+
+  }
+
+  [theme='dark']:root {
+    @import '../../core/design-tokens/color-dark.scss';
+
+    --radio-input-color: #{$color-border-soft};
+    --radio-input-color-disable: #{$color-disable-mild};
+    --radio-input-color-checked: #{$color-brand-regular};
+    --radio-input-color-disable-checked: #{$color-disable-mild};
+    
+    --radio-label-color: #{$color-info-lightest};
+    --radio-label-disable: #{$color-info-mild};
+  }
+
+  $animationTime: 0.2s;
+
+  .alb-radio {
+    display: inline-block;
+  }
+
+  .alb-radio-group {
+    align-self: center;
+  }
+
+  .alb-radio-label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  .alb-radio-container {
+    box-sizing: border-box;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .alb-radio-input {
+    bottom: 0;
+    left: 50%;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    outline: 0;
+  }
+
+  .alb-radio-outer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    height: 20px;
+    position: absolute;
+    transition: border-color ease 280ms;
+    width: 20px;
+    border: 2px solid var(--radio-input-color);
+    border-radius: 50%;
+  }
+
+  .alb-radio-inner {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    left: -2px;
+    position: absolute;
+    background-color: transparent;
+    transform: scale(0);
+    transition: transform $animationTime;
+  }
+
+  .alb-radio-ripple {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+
+    .alb-radio-label:hover & {
+      background-color: var(--accent);
+      opacity: .1;
+    }
+  }
+
+  .alb-radio-content {
+    user-select: auto;
+    display: inline-block;
+    order: 0;
+    line-height: inherit;
+    padding-left: 0;
+    padding-right: 8px;
+    font-size: 14px;
+    color: var(--radio-label-color);
+  }
+
+  .alb-radio.--checked {
+    .alb-radio-inner {
+      background-color: var(--radio-input-color-checked);
+      transform: scale(.5);
+    }
+
+    .alb-radio-outer {
+      border-color: var(--radio-input-color-checked);
+    }
+  }
+
+  .alb-radio[disabled],
+  .alb-radio.--disabled {
+    pointer-events: none;
+
+    .alb-radio-outer {
+      background-color: var(--disabled);
+      border-color: var(--radio-input-color-disable);
+    }
+
+    .alb-radio-content {
+      color: var(--radio-label-disable);
+    }
+
+    .alb-radio-ripple:hover {
+      background-color: transparent;
+    }
+  }
+
+  // Estilos Disabled
+  .alb-radio[disabled],
+  .alb-radio.--disabled {
+    .alb-radio-outer {
+      background-color: transparent;
+    }
+
+    .alb-radio-inner {
+      background-color: var(--radio-input-color-disable);
+    }
+
+    &.--checked {
+      .alb-radio-outer {
+        border-color: var(--radio-input-color-disable-checked);
+      }
+  
+      .alb-radio-inner {
+        background-color: var(--radio-input-color-disable-checked);
+      }
+    }
+  }
+
+  //Estilos com erro
+  .alb-radio.ng-invalid .alb-radio-container,
+  .alb-radio.has-error {
+    background-color: var(--warn);
+  }
+}

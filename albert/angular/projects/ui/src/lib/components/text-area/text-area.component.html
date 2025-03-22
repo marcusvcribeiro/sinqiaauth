@@ -1,0 +1,19 @@
+<textarea
+  class="alb-text-area-field"
+  [value]="textArea"
+  (blur)="onBlur()"
+  [disabled]="_disabled"
+  autocomplete="off"
+  [rows]="rows"
+  wrap="off"
+  [maxLength]="length"
+  (keyup)="keyUp($event)"
+  #textAreaElement
+  >
+</textarea>
+<label class="alb-text-area-label">
+  <div>{{placeholder}}</div>
+</label>
+<div class="alb-text-area-count">
+  <span>{{textAreaLength}} / {{length}}</span>
+</div>

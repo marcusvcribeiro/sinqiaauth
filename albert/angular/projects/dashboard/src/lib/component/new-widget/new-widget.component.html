@@ -1,0 +1,21 @@
+<div class="new-widget">
+  <alb-tab-group>
+    <alb-tab *ngFor="let categoriaWidgets of WidgetCategoryMap" label="{{categoriaWidgets.category.name}}">
+      <ng-template albTabBodyWrapper>
+        <div class="alb-new-widget">
+          <div class="alb-new-widget-card" *ngFor="let widget of categoriaWidgets.widgets">
+
+            <h2>{{widget?.name}}</h2>
+            <h5>{{widget?.description}}</h5>
+            <div class="alb-new-widget-card-add">
+              <button alb-button (click)="createWidget(widget)">Adicionar</button>
+            </div>
+
+          </div>
+        </div>
+      </ng-template>
+
+    </alb-tab>
+  </alb-tab-group>
+
+</div>

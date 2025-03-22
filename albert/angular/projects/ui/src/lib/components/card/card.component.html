@@ -1,0 +1,24 @@
+<div class="alb-card-header">
+  <div class="alb-card-header-content">
+    <div class="alb-card-header-title">
+      <span *ngIf="icon">
+        <i class="alb-card-icon alb-icon">{{icon}}</i>
+      </span>
+      <span class="alb-card-title ">
+        {{title}}
+      </span>  
+    </div>
+    <div class="alb-card-aside">
+      <ng-content select="alb-card-aside"></ng-content>
+    </div>
+  </div>
+  <div  *ngIf="subTitle" class="alb-card-header-subtitle">
+    <span class="alb-card-subtitle">
+      {{subTitle}}
+    </span>
+  </div>
+</div>
+<div class="alb-card-body">
+  <ng-content></ng-content>
+</div>
+  <ng-content select="alb-card-footer"></ng-content>
