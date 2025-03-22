@@ -1,5 +1,0 @@
-export default class Seg {
-  CTA_MENU = "CTA_MENU";
-  CTA_ACESSO_TOTAL = "CTA_ACESSO_TOTAL";
-  CTA_BTN_EXPORTAR = "CTA_BTN_EXPORTAR";
-}

@@ -1,6 +1,0 @@
-export class Seg {
-
-  HFU_MENU='HFU_MENU';
-  HFU_ACESSO_TOTAL='HFU_ACESSO_TOTAL';
-
-}

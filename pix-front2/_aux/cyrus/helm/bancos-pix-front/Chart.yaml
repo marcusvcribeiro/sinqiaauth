@@ -1,6 +1,0 @@
-apiVersion: v1
-appVersion: "0.8.0"
-description: Sinqia - Front-end administrativo para o PIX (SPI)
-name: bancos-pix-front
-version: 0.8.0
-icon: https://www.sinqia.com.br/wp-content/themes/mziq_sinqia_insti/img/logotipo.png
